@@ -28,6 +28,52 @@ async function loadNavigation() {
 }
 
 /**
+ * Load footer HTML component
+ */
+async function loadFooter() {
+  try {
+    const response = await fetch('components/footer.html');
+    if (!response.ok) {
+      throw new Error('Failed to load footer');
+    }
+    const footerHTML = await response.text();
+
+    // Find and replace existing footer, or insert before closing body
+    const existingFooter = document.querySelector('.brutal-footer');
+    if (existingFooter) {
+      existingFooter.outerHTML = footerHTML;
+    } else {
+      document.body.insertAdjacentHTML('beforeend', footerHTML);
+    }
+
+    // Initialize footer features (social links)
+    initializeFooter();
+
+    return true;
+  } catch (error) {
+    console.error('Footer loading error:', error);
+    return false;
+  }
+}
+
+/**
+ * Initialize footer features after loading
+ */
+function initializeFooter() {
+  // Placeholder URLs - user will update these later
+  const substackLink = document.getElementById('substack-link');
+  const youtubeLink = document.getElementById('youtube-link');
+
+  // You can update these URLs later
+  if (substackLink) {
+    substackLink.href = 'https://substack.com/@yourusername'; // Update this URL
+  }
+  if (youtubeLink) {
+    youtubeLink.href = 'https://youtube.com/@yourchannel'; // Update this URL
+  }
+}
+
+/**
  * Initialize navigation features after loading
  */
 function initializeNavigation() {
@@ -132,8 +178,14 @@ function setupMobileMenu() {
 
 // Initialize on DOM ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadNavigation);
+  document.addEventListener('DOMContentLoaded', async () => {
+    await loadNavigation();
+    await loadFooter();
+  });
 } else {
   // DOM is already ready
-  loadNavigation();
+  (async () => {
+    await loadNavigation();
+    await loadFooter();
+  })();
 }
