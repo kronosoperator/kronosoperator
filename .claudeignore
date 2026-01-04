@@ -1,0 +1,5 @@
+# GitHub workflows and configuration
+.github/**
+
+# README.md contains GitHub profile stats, not related to website
+README.md
