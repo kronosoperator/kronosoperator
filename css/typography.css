@@ -1,88 +1,91 @@
 /* ============================================
-   TYPOGRAPHY.CSS - Minimal Digital Typography
-   IBM Plex Mono | Monospace | Computational
+   TYPOGRAPHY.CSS - Year 3734 Interface
+   Futuristic | Space Age | Ultra-Modern
    ============================================ */
 
 /* ============================================
-   FONT IMPORTS
+   FONT IMPORTS - Advanced Typography
    ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap');
 
 /* ============================================
-   HEADING HIERARCHY
+   HEADING HIERARCHY - Holographic Text
    ============================================ */
 h1 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 300;
   text-transform: lowercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.05em;
   color: var(--pure-white);
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 2rem;
 }
 
 h2 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 300;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 400;
   color: var(--pure-white);
   text-transform: lowercase;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
   margin-bottom: 1.5rem;
-  line-height: 1.3;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  line-height: 1.2;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h3 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
   color: var(--text-primary);
   text-transform: lowercase;
+  letter-spacing: 0.02em;
   margin-bottom: 1rem;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 h4 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
-  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   margin-bottom: 1rem;
 }
 
 h5 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: var(--text-lg);
   color: var(--text-secondary);
   margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 h6 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: var(--text-base);
   color: var(--text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   margin-bottom: 0.5rem;
 }
 
 /* ============================================
-   BODY TEXT
+   BODY TEXT - Clean Sans-Serif
    ============================================ */
 p {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(0.9375rem, 2vw, 1.0625rem);
   color: var(--text-primary);
-  line-height: 2;
-  margin-bottom: 2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
   font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 p:last-child {
@@ -90,23 +93,37 @@ p:last-child {
 }
 
 /* ============================================
-   LINKS
+   LINKS - Holographic Effect
    ============================================ */
 a {
   color: var(--text-primary);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  position: relative;
   transition: all var(--transition-base);
   cursor: pointer;
 }
 
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pure-white), transparent);
+  transition: width var(--transition-base);
+}
+
 a:hover {
   color: var(--pure-white);
-  border-bottom-color: var(--pure-white);
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 a:focus {
-  outline: 1px solid var(--pure-white);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
   outline-offset: 4px;
 }
 
@@ -115,7 +132,8 @@ a:focus {
    ============================================ */
 strong, .emphasis, b {
   color: var(--pure-white);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 em, i {
@@ -124,37 +142,39 @@ em, i {
 }
 
 /* ============================================
-   LISTS
+   LISTS - Minimal Future
    ============================================ */
 ul, ol {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   margin-bottom: 2rem;
 }
 
 li {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(0.9375rem, 2vw, 1.0625rem);
   color: var(--text-primary);
-  line-height: 2;
-  margin-bottom: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
 }
 
 li::marker {
-  color: var(--text-tertiary);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================
-   BLOCKQUOTES
+   BLOCKQUOTES - Space Age
    ============================================ */
 blockquote {
-  border-left: 2px solid var(--pure-white);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 2rem;
   margin: 3rem 0;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.125rem;
-  font-style: italic;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
   color: var(--text-secondary);
-  line-height: 2;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  font-weight: 300;
 }
 
 blockquote p {
@@ -162,20 +182,21 @@ blockquote p {
 }
 
 /* ============================================
-   CODE & PREFORMATTED TEXT
+   CODE - Advanced Terminal
    ============================================ */
 code {
-  font-family: 'IBM Plex Mono', monospace;
-  background: var(--bg-elevated);
+  font-family: 'Space Grotesk', monospace;
+  background: rgba(255, 255, 255, 0.05);
   color: var(--pure-white);
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--border);
-  font-size: 0.875em;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
 }
 
 pre {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   overflow-x: auto;
   margin: 2rem 0;
@@ -190,21 +211,23 @@ pre code {
 }
 
 /* ============================================
-   SMALL TEXT & CAPTIONS
+   SMALL TEXT
    ============================================ */
 small, .small-text {
   font-size: var(--text-sm);
   color: var(--text-tertiary);
+  letter-spacing: 0.05em;
 }
 
 figcaption {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: var(--text-sm);
   color: var(--text-tertiary);
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  font-weight: 500;
 }
 
 /* ============================================
@@ -212,7 +235,7 @@ figcaption {
    ============================================ */
 .text-uppercase {
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
 }
 
 .text-lowercase {
@@ -240,6 +263,20 @@ figcaption {
 }
 
 /* ============================================
+   HOLOGRAPHIC EFFECTS
+   ============================================ */
+.holographic-text {
+  background: linear-gradient(90deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.6)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
    READING EXPERIENCE
    ============================================ */
 .readable-content {
@@ -249,17 +286,18 @@ figcaption {
 }
 
 .drop-cap::first-letter {
-  font-size: 4rem;
-  line-height: 0.8;
+  font-size: 3.5rem;
+  line-height: 1;
   float: left;
   margin-right: 0.5rem;
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
   color: var(--pure-white);
   font-weight: 300;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 /* ============================================
-   MONOSPACE NUMBERS (Tabular)
+   TABULAR NUMBERS
    ============================================ */
 .tabular-nums {
   font-variant-numeric: tabular-nums;

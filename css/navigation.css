@@ -1,132 +1,164 @@
 /* ============================================
-   NAVIGATION.CSS - Shared Navigation Styles
+   NAVIGATION.CSS - Year 3734 Interface
+   Futuristic | Minimal | Space Age
    ============================================ */
 
 .brutal-nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--void-black);
-  border-bottom: 4px solid var(--electric-crimson);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
-  box-shadow: 0 4px 0 var(--raw-yellow);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.25rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 /* ============================================
-   LOGO
+   LOGO - Future Minimal
    ============================================ */
 .logo {
   text-decoration: none;
   border-bottom: none;
 }
 
+.logo::after {
+  display: none;
+}
+
 .logo-text {
-  font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 1.75rem;
-  color: var(--raw-yellow);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--pure-white);
   text-transform: lowercase;
-  letter-spacing: -0.05em;
-  transition: color 0.3s ease;
+  letter-spacing: 0.15em;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.logo-text::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--pure-white);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.logo:hover .logo-text::before {
+  opacity: 1;
 }
 
 .logo:hover .logo-text {
-  color: var(--electric-crimson);
-  text-shadow: 0 0 8px var(--electric-crimson);
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================
-   MAIN NAVIGATION
+   MAIN NAVIGATION - Holographic
    ============================================ */
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   list-style: none;
   margin: 0;
 }
 
 .nav-link {
-  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
-  font-size: 1.25rem;
-  color: var(--bone-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
+  letter-spacing: 0.15em;
   padding: 0.5rem 0;
-  border-bottom: none;
-  transition: color 0.3s ease;
+  position: relative;
+  transition: all var(--transition-base);
 }
 
-.nav-link::after {
+.nav-link::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  height: 3px;
-  background: var(--electric-crimson);
-  transition: width 0.3s ease;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pure-white), transparent);
+  transition: width var(--transition-base);
 }
 
-.nav-link:hover {
-  color: var(--electric-crimson);
-  text-shadow: none;
-  border-bottom: none;
+.nav-link::after {
+  display: none;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:hover,
+.nav-link.active {
+  color: var(--pure-white);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
   width: 100%;
 }
 
-.nav-link.active {
-  color: var(--electric-crimson);
-}
-
 /* ============================================
-   LANGUAGE TOGGLE
+   LANGUAGE TOGGLE - Advanced UI
    ============================================ */
 .lang-toggle {
-  background: var(--concrete);
-  border: 2px solid var(--neon-cyan);
-  color: var(--neon-cyan);
-  padding: 0.5rem 1rem;
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  font-size: 0.875rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  backdrop-filter: blur(10px);
 }
 
 .lang-toggle:hover {
-  background: var(--neon-cyan);
-  color: var(--void-black);
-  box-shadow: 0 0 12px var(--neon-cyan);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--pure-white);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .lang-icon {
-  font-size: 1rem;
+  font-size: 0.875rem;
+  opacity: 0.5;
 }
 
 /* ============================================
-   MOBILE TOGGLE (HAMBURGER)
+   MOBILE TOGGLE
    ============================================ */
 .mobile-toggle {
   display: none;
@@ -140,16 +172,16 @@
 }
 
 .mobile-toggle span {
-  width: 30px;
-  height: 3px;
-  background: var(--electric-crimson);
-  transition: all 0.3s ease;
+  width: 24px;
+  height: 1px;
+  background: var(--pure-white);
+  transition: all var(--transition-base);
   display: block;
 }
 
 /* Hamburger animation when active */
 .mobile-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .mobile-toggle[aria-expanded="true"] span:nth-child(2) {
@@ -157,7 +189,7 @@
 }
 
 .mobile-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* ============================================
@@ -178,11 +210,12 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--charcoal);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 2rem;
-    border-top: 4px solid var(--electric-crimson);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   }
 
   .main-nav.mobile-active {
@@ -196,29 +229,28 @@
   }
 
   .nav-link {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0.75rem 0;
   }
 
   .lang-toggle {
     width: 100%;
     justify-content: center;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
   }
 
   .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 }
 
 /* Tablet */
 @media (max-width: 1024px) and (min-width: 769px) {
   .nav-links {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .nav-link {
-    font-size: 1.125rem;
+    font-size: 0.8125rem;
   }
 }
