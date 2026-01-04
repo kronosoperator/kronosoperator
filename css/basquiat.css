@@ -1,10 +1,11 @@
 /* ============================================
-   BASQUIAT.CSS - Brutalist Aesthetic
-   Raw, aggressive, bold visual language
+   COMPUTATIONAL EXISTENTIALISM
+   The First Years of Artificial Intelligence
+   Black & White | Beautiful | Minimal
    ============================================ */
 
 /* ============================================
-   HERO SECTION - Brutal Landing
+   HERO SECTION - Digital Void
    ============================================ */
 .hero-brutal {
   min-height: 100vh;
@@ -13,91 +14,94 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: var(--void-black);
-  border-bottom: 8px solid var(--electric-crimson);
+  background: var(--pure-black);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
-  text-align: left;
-  max-width: 1200px;
+  text-align: center;
+  max-width: 900px;
   padding: 4rem 2rem;
 }
 
 .hero-title {
-  font-family: 'Anton', 'Impact', sans-serif;
-  font-size: clamp(4rem, 12vw, 10rem);
-  line-height: 0.85;
-  color: var(--dead-white);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--pure-white);
   text-transform: lowercase;
-  text-shadow:
-    6px 6px 0 var(--electric-crimson),
-    12px 12px 0 var(--raw-yellow);
-  margin-bottom: 2rem;
-  animation: glitchTitle 3s ease-in-out infinite;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: digitalFadeIn 1.5s ease-out 0.3s forwards;
 }
 
-@keyframes glitchTitle {
-  0%, 96%, 100% {
-    text-shadow:
-      6px 6px 0 var(--electric-crimson),
-      12px 12px 0 var(--raw-yellow);
+@keyframes digitalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    letter-spacing: 0.5em;
   }
-  97% {
-    text-shadow:
-      -6px 6px 0 var(--neon-cyan),
-      12px -12px 0 var(--toxic-green);
-  }
-  98% {
-    text-shadow:
-      6px -6px 0 var(--electric-crimson),
-      -12px 12px 0 var(--raw-yellow);
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: -0.02em;
   }
 }
 
 .hero-subtitle {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  color: var(--neon-cyan);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 3rem;
-  border-left: 4px solid var(--electric-crimson);
-  padding-left: 1.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 4rem;
+  font-weight: 400;
+  opacity: 0;
+  animation: digitalFadeIn 1.5s ease-out 0.6s forwards;
+}
+
+.hero-manifesto {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  opacity: 0;
+  animation: digitalFadeIn 1.5s ease-out 0.9s forwards;
 }
 
 .hero-manifesto p {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: var(--bone-white);
-  line-height: 1.8;
-  max-width: 800px;
-  margin-bottom: 3rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-primary);
+  line-height: 2;
+  font-weight: 300;
 }
 
 .hero-cta {
   display: inline-block;
-  background: var(--electric-crimson);
-  color: var(--dead-white);
-  padding: 1.5rem 3rem;
-  font-family: 'Bebas Neue', 'Impact', sans-serif;
-  font-size: 2rem;
+  background: transparent;
+  color: var(--pure-white);
+  padding: 1rem 3rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.875rem;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
   text-decoration: none;
-  border: none;
-  transition: all 0.3s ease;
-  box-shadow: 6px 6px 0 var(--raw-yellow);
+  border: 1px solid var(--pure-white);
+  transition: all var(--transition-base);
+  opacity: 0;
+  animation: digitalFadeIn 1.5s ease-out 1.2s forwards;
 }
 
 .hero-cta:hover {
-  transform: translate(6px, 6px);
-  box-shadow: 0 0 0 var(--raw-yellow);
-  background: var(--raw-yellow);
-  color: var(--void-black);
+  background: var(--pure-white);
+  color: var(--pure-black);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================
-   HERO BACKGROUND EFFECTS
+   HERO BACKGROUND EFFECTS - Matrix/Digital Rain
    ============================================ */
 .hero-background {
   position: absolute;
@@ -106,6 +110,11 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
 }
 
 .noise-texture {
@@ -114,295 +123,292 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  opacity: 0.15;
-  animation: noise 8s steps(10) infinite;
-}
-
-@keyframes noise {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -5%); }
-  20% { transform: translate(3%, 3%); }
-  30% { transform: translate(-7%, 2%); }
-  40% { transform: translate(5%, -3%); }
-  50% { transform: translate(-3%, 5%); }
-  60% { transform: translate(7%, -2%); }
-  70% { transform: translate(-2%, 7%); }
-  80% { transform: translate(3%, -5%); }
-  90% { transform: translate(-5%, 3%); }
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* ============================================
-   BRUTALIST REVEAL ANIMATIONS
+   SECTION STYLING
    ============================================ */
-.section, .project-card, .writing-card, .gallery-item {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+.section {
+  position: relative;
 }
 
-.brutalist-reveal {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* ============================================
-   AGGRESSIVE HOVER STATES
-   ============================================ */
-.project-card:hover,
-.writing-card:hover {
-  animation: glitch 0.3s ease-in-out;
-}
-
-@keyframes glitch {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-4px, 4px); }
-  50% { transform: translate(4px, -4px); }
-  75% { transform: translate(-4px, -4px); }
-}
-
-/* ============================================
-   SECTION TITLES
-   ============================================ */
 .section-title {
-  font-family: 'Bebas Neue', 'Impact', sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: var(--raw-yellow);
-  text-transform: uppercase;
-  border-left: 8px solid var(--electric-crimson);
-  padding-left: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--pure-white);
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
   margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .section-cta {
   display: inline-block;
   margin-top: 2rem;
-  color: var(--toxic-green);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
+  color: var(--text-secondary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.875rem;
   text-transform: uppercase;
+  letter-spacing: 0.15em;
   text-decoration: none;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-base);
 }
 
 .section-cta:hover {
-  border-bottom-color: var(--toxic-green);
-  text-shadow: 0 0 8px var(--toxic-green);
+  color: var(--pure-white);
+  border-bottom-color: var(--pure-white);
 }
 
 /* ============================================
    FOOTER
    ============================================ */
 .brutal-footer {
-  background: var(--charcoal);
-  border-top: 4px solid var(--electric-crimson);
-  padding: 3rem 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 4rem 0;
   text-align: center;
+  margin-top: var(--space-xxl);
 }
 
 .footer-text {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.875rem;
-  color: var(--ash-gray);
-  line-height: 1.8;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ============================================
-   BIO PAGE SPECIFIC STYLES
+   BIO PAGE STYLING
    ============================================ */
 .bio-page {
   padding-top: 80px;
 }
 
 .bio-hero {
-  background: linear-gradient(135deg, var(--void-black) 0%, var(--charcoal) 100%);
-  padding: 6rem 2rem;
+  background: var(--bg-primary);
+  padding: 8rem 2rem 6rem;
   text-align: center;
-  border-bottom: 6px solid var(--electric-crimson);
+  border-bottom: 1px solid var(--border);
 }
 
 .bio-title {
-  font-family: 'Anton', sans-serif;
-  font-size: clamp(4rem, 10vw, 8rem);
-  color: var(--dead-white);
-  text-transform: uppercase;
-  text-shadow:
-    4px 4px 0 var(--electric-crimson),
-    8px 8px 0 var(--raw-yellow);
-  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  color: var(--pure-white);
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
 
 .bio-subtitle {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--neon-cyan);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
+  font-weight: 400;
 }
 
 .bio-narrative {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .bio-text {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .influences-list {
   list-style: none;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-left: 0;
 }
 
 .influences-list li {
-  padding: 1rem;
-  border-left: 4px solid var(--electric-crimson);
-  margin-bottom: 1rem;
-  background: var(--charcoal);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
 }
 
 .influences-list strong {
-  color: var(--crown-gold);
-  display: block;
-  margin-bottom: 0.5rem;
+  color: var(--pure-white);
   font-size: 1.125rem;
+  font-weight: 400;
+  min-width: 200px;
+}
+
+.influences-list span {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-align: right;
 }
 
 /* ============================================
-   WRITINGS PAGE SPECIFIC STYLES
+   WRITINGS PAGE STYLING
    ============================================ */
 .writings-page {
   padding-top: 80px;
-  background: var(--void-black);
+  background: var(--bg-primary);
 }
 
 .writings-header {
   text-align: center;
-  padding: 4rem 2rem;
-  background: var(--charcoal);
-  border-bottom: 6px solid var(--electric-crimson);
+  padding: 6rem 2rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
 }
 
 .writings-header h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: var(--raw-yellow);
-  text-transform: uppercase;
-  text-shadow: 4px 4px 0 var(--electric-crimson);
-  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--pure-white);
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
 
 .subtitle {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--neon-cyan);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: var(--text-secondary);
   text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
 }
 
 /* ============================================
-   GALLERY PAGE SPECIFIC STYLES
+   GALLERY PAGE STYLING
    ============================================ */
 .gallery-page {
   padding-top: 80px;
-  background: var(--void-black);
+  background: var(--bg-primary);
 }
 
 .gallery-header {
   text-align: center;
-  padding: 4rem 2rem;
-  background: var(--charcoal);
-  border-bottom: 6px solid var(--electric-crimson);
+  padding: 6rem 2rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
 }
 
 .gallery-header h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: var(--raw-yellow);
-  text-transform: uppercase;
-  text-shadow: 4px 4px 0 var(--electric-crimson);
-  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--pure-white);
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
 
 /* ============================================
    WRITING SINGLE PAGE
    ============================================ */
 .writing-single {
-  background: var(--void-black);
+  background: var(--bg-primary);
   padding-top: 80px;
 }
 
 .writing-content {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .writing-header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   padding-bottom: 2rem;
-  border-bottom: 4px solid var(--electric-crimson);
+  border-bottom: 1px solid var(--border);
 }
 
 .writing-date {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.875rem;
-  color: var(--ash-gray);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
   text-transform: uppercase;
+  letter-spacing: 0.15em;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .writing-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  color: var(--bone-white);
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--pure-white);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
 }
 
 .writing-body {
-  margin-top: 3rem;
-  line-height: 1.9;
+  margin-top: 4rem;
+  line-height: 2;
 }
 
 .writing-body p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .writing-body h2 {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .writing-body blockquote {
-  border-left: 6px solid var(--electric-crimson);
+  border-left: 2px solid var(--pure-white);
   padding-left: 2rem;
-  margin: 2rem 0;
+  margin: 3rem 0;
   font-style: italic;
-  color: var(--ash-gray);
-  background: var(--charcoal);
-  padding: 2rem;
+  color: var(--text-secondary);
+  background: transparent;
+}
+
+.writing-body blockquote::before {
+  display: none;
 }
 
 .writing-footer {
-  margin-top: 4rem;
+  margin-top: 6rem;
   padding-top: 2rem;
-  border-top: 2px solid var(--smoke);
+  border-top: 1px solid var(--border);
 }
 
 .back-link {
-  color: var(--neon-cyan);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.875rem;
   text-transform: uppercase;
+  letter-spacing: 0.15em;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: color var(--transition-base);
 }
 
 .back-link:hover {
-  transform: translateX(-8px);
+  color: var(--pure-white);
+}
+
+/* ============================================
+   REVEAL ANIMATIONS
+   ============================================ */
+.brutalist-reveal {
+  opacity: 1;
+  transform: translateY(0);
 }

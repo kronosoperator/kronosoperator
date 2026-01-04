@@ -1,6 +1,7 @@
 /* ============================================
    CORE.CSS - Foundation Styles
-   Base reset, CSS variables, and core layout
+   Computational Existentialism Aesthetic
+   Black and White | AI Era | First Years
    ============================================ */
 
 /* Reset & Box Sizing */
@@ -12,30 +13,29 @@
 
 /* ============================================
    CSS CUSTOM PROPERTIES (Variables)
-   Basquiat-Inspired Brutalist Color Palette
+   Pure Black & White Palette
    ============================================ */
 :root {
-  /* Core Brutalist Palette */
-  --void-black: #0a0a0a;           /* Deep background */
-  --charcoal: #1a1a1a;             /* Secondary background */
-  --concrete: #2a2a2a;             /* Elevated surfaces */
+  /* Core Monochrome Palette */
+  --pure-black: #000000;           /* Absolute darkness */
+  --void: #0a0a0a;                 /* Deep void */
+  --dark-matter: #1a1a1a;          /* Background layers */
+  --shadow: #2a2a2a;               /* Elevated surfaces */
+  --neutral: #808080;              /* Perfect gray */
+  --mist: #cccccc;                 /* Light gray */
+  --cloud: #e5e5e5;                /* Lighter gray */
+  --paper: #f5f5f5;                /* Almost white */
+  --pure-white: #ffffff;           /* Absolute light */
 
-  /* Aggressive Accents */
-  --electric-crimson: #ff0040;     /* Primary aggressive accent */
-  --raw-yellow: #ffff00;           /* Basquiat signature yellow */
-  --bone-white: #f5f5f5;           /* High-contrast text */
-  --dead-white: #ffffff;           /* Pure white for impact */
-
-  /* Philosophical Grays */
-  --ash-gray: #666666;             /* Secondary text */
-  --smoke: #404040;                /* Borders, dividers */
-
-  /* Basquiat Crown */
-  --crown-gold: #d4af37;           /* Accent for titles */
-
-  /* Aggressive Highlights */
-  --neon-cyan: #00ffff;            /* Links, hover states */
-  --toxic-green: #39ff14;          /* Call-to-action */
+  /* Semantic Colors */
+  --bg-primary: var(--pure-black);
+  --bg-secondary: var(--void);
+  --bg-elevated: var(--dark-matter);
+  --text-primary: var(--paper);
+  --text-secondary: var(--mist);
+  --text-tertiary: var(--neutral);
+  --accent: var(--pure-white);
+  --border: var(--shadow);
 
   /* Spacing System */
   --space-xs: 0.5rem;
@@ -43,6 +43,7 @@
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 8rem;
+  --space-xxl: 12rem;
 
   /* Typography Scale */
   --text-xs: 0.75rem;
@@ -53,6 +54,12 @@
   --text-2xl: 2rem;
   --text-3xl: 3rem;
   --text-4xl: 4rem;
+  --text-5xl: 6rem;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
 }
 
 /* ============================================
@@ -64,19 +71,21 @@ html {
 }
 
 body {
-  background: var(--void-black);
-  color: var(--bone-white);
-  font-family: 'Space Mono', 'Courier New', monospace;
-  line-height: 1.7;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Courier New', monospace;
+  line-height: 1.8;
   overflow-x: hidden;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ============================================
    CONTAINER LAYOUT
    ============================================ */
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
@@ -85,44 +94,40 @@ body {
    SELECTION STYLING
    ============================================ */
 ::selection {
-  background: var(--electric-crimson);
-  color: var(--dead-white);
+  background: var(--pure-white);
+  color: var(--pure-black);
 }
 
 ::-moz-selection {
-  background: var(--electric-crimson);
-  color: var(--dead-white);
+  background: var(--pure-white);
+  color: var(--pure-black);
 }
 
 /* ============================================
    SCROLLBAR STYLING
    ============================================ */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--charcoal);
+  background: var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--electric-crimson);
-  border: 2px solid var(--charcoal);
+  background: var(--neutral);
+  transition: background var(--transition-base);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--raw-yellow);
+  background: var(--mist);
 }
 
 /* ============================================
    UTILITY CLASSES
    ============================================ */
 .section {
-  padding: var(--space-lg) 0;
-}
-
-.section:nth-child(even) {
-  background: var(--charcoal);
+  padding: var(--space-xl) 0;
 }
 
 /* Screen reader only */
@@ -140,6 +145,54 @@ body {
 
 /* Focus visible for accessibility */
 *:focus-visible {
-  outline: 3px solid var(--neon-cyan);
+  outline: 1px solid var(--pure-white);
   outline-offset: 4px;
+}
+
+/* ============================================
+   GRID SYSTEM (Binary/Digital)
+   ============================================ */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ============================================
+   COMPUTATIONAL ELEMENTS
+   ============================================ */
+.binary-border {
+  border: 1px solid var(--border);
+}
+
+.pixel-border {
+  border: 1px solid var(--pure-white);
+}
+
+.glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-slow) ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

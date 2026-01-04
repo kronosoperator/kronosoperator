@@ -1,72 +1,73 @@
 /* ============================================
-   TYPOGRAPHY.CSS - Bold Typography System
-   Aggressive, masculine, philosophical fonts
+   TYPOGRAPHY.CSS - Minimal Digital Typography
+   IBM Plex Mono | Monospace | Computational
    ============================================ */
 
 /* ============================================
    FONT IMPORTS
    ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
 
 /* ============================================
    HEADING HIERARCHY
    ============================================ */
 h1 {
-  font-family: 'Anton', 'Impact', sans-serif;
-  font-size: clamp(3rem, 8vw, 8rem);
-  font-weight: 400;
-  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  text-transform: lowercase;
   letter-spacing: -0.02em;
-  color: var(--dead-white);
-  line-height: 0.9;
-  margin-bottom: 1.5rem;
+  color: var(--pure-white);
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 400;
-  color: var(--raw-yellow);
-  text-transform: uppercase;
-  border-left: 8px solid var(--electric-crimson);
-  padding-left: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 300;
+  color: var(--pure-white);
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
-  line-height: 1.1;
+  line-height: 1.3;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 h3 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--crown-gold);
-  text-transform: uppercase;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  color: var(--text-primary);
+  text-transform: lowercase;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 h4 {
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  color: var(--neon-cyan);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
 }
 
 h5 {
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: var(--bone-white);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
   margin-bottom: 0.75rem;
 }
 
 h6 {
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  font-size: var(--text-lg);
-  color: var(--ash-gray);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: var(--text-base);
+  color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
@@ -76,11 +77,12 @@ h6 {
    BODY TEXT
    ============================================ */
 p {
-  font-family: 'Space Mono', 'Courier New', monospace;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  color: var(--bone-white);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  color: var(--text-primary);
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 p:last-child {
@@ -91,20 +93,20 @@ p:last-child {
    LINKS
    ============================================ */
 a {
-  color: var(--neon-cyan);
+  color: var(--text-primary);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, text-shadow 0.2s ease;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-base);
   cursor: pointer;
 }
 
 a:hover {
-  border-bottom-color: var(--neon-cyan);
-  text-shadow: 0 0 8px var(--neon-cyan);
+  color: var(--pure-white);
+  border-bottom-color: var(--pure-white);
 }
 
 a:focus {
-  outline: 3px solid var(--neon-cyan);
+  outline: 1px solid var(--pure-white);
   outline-offset: 4px;
 }
 
@@ -112,13 +114,13 @@ a:focus {
    EMPHASIS & STRONG
    ============================================ */
 strong, .emphasis, b {
-  color: var(--electric-crimson);
-  font-weight: 700;
+  color: var(--pure-white);
+  font-weight: 500;
 }
 
 em, i {
   font-style: italic;
-  color: var(--crown-gold);
+  color: var(--text-secondary);
 }
 
 /* ============================================
@@ -126,68 +128,54 @@ em, i {
    ============================================ */
 ul, ol {
   margin-left: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 li {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  color: var(--bone-white);
-  line-height: 1.8;
-  margin-bottom: 0.75rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  color: var(--text-primary);
+  line-height: 2;
+  margin-bottom: 1rem;
 }
 
 li::marker {
-  color: var(--electric-crimson);
+  color: var(--text-tertiary);
 }
 
 /* ============================================
    BLOCKQUOTES
    ============================================ */
 blockquote {
-  border-left: 6px solid var(--electric-crimson);
-  padding: 2rem;
-  margin: 2rem 0;
-  background: var(--charcoal);
-  font-family: 'Space Mono', monospace;
+  border-left: 2px solid var(--pure-white);
+  padding-left: 2rem;
+  margin: 3rem 0;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1.125rem;
   font-style: italic;
-  color: var(--ash-gray);
-  position: relative;
-}
-
-blockquote::before {
-  content: '"';
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  font-size: 4rem;
-  color: var(--electric-crimson);
-  opacity: 0.3;
-  line-height: 1;
+  color: var(--text-secondary);
+  line-height: 2;
 }
 
 blockquote p {
-  position: relative;
-  z-index: 1;
+  margin-bottom: 1rem;
 }
 
 /* ============================================
    CODE & PREFORMATTED TEXT
    ============================================ */
 code {
-  font-family: 'Space Mono', 'Courier New', monospace;
-  background: var(--charcoal);
-  color: var(--toxic-green);
+  font-family: 'IBM Plex Mono', monospace;
+  background: var(--bg-elevated);
+  color: var(--pure-white);
   padding: 0.25rem 0.5rem;
-  border: 1px solid var(--smoke);
-  border-radius: 3px;
-  font-size: 0.9em;
+  border: 1px solid var(--border);
+  font-size: 0.875em;
 }
 
 pre {
-  background: var(--charcoal);
-  border: 2px solid var(--electric-crimson);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   padding: 1.5rem;
   overflow-x: auto;
   margin: 2rem 0;
@@ -206,16 +194,17 @@ pre code {
    ============================================ */
 small, .small-text {
   font-size: var(--text-sm);
-  color: var(--ash-gray);
+  color: var(--text-tertiary);
 }
 
 figcaption {
-  font-family: 'Space Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: var(--text-sm);
-  color: var(--ash-gray);
+  color: var(--text-tertiary);
   text-align: center;
   margin-top: 0.5rem;
-  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ============================================
@@ -223,7 +212,11 @@ figcaption {
    ============================================ */
 .text-uppercase {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
 }
 
 .text-center {
@@ -234,53 +227,40 @@ figcaption {
   text-align: right;
 }
 
-.text-crimson {
-  color: var(--electric-crimson);
-}
-
-.text-yellow {
-  color: var(--raw-yellow);
-}
-
-.text-cyan {
-  color: var(--neon-cyan);
-}
-
-.text-gold {
-  color: var(--crown-gold);
-}
-
 .text-white {
-  color: var(--dead-white);
+  color: var(--pure-white);
 }
 
-/* ============================================
-   BRUTAL TEXT SHADOW EFFECTS
-   ============================================ */
-.text-shadow-brutal {
-  text-shadow:
-    4px 4px 0 var(--electric-crimson),
-    8px 8px 0 var(--raw-yellow);
+.text-muted {
+  color: var(--text-secondary);
 }
 
-.text-shadow-neon {
-  text-shadow: 0 0 10px currentColor;
+.text-subtle {
+  color: var(--text-tertiary);
 }
 
 /* ============================================
    READING EXPERIENCE
    ============================================ */
 .readable-content {
-  max-width: 65ch;
+  max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 .drop-cap::first-letter {
-  font-family: 'Anton', sans-serif;
-  font-size: 5rem;
-  line-height: 1;
+  font-size: 4rem;
+  line-height: 0.8;
   float: left;
   margin-right: 0.5rem;
-  color: var(--electric-crimson);
+  margin-top: 0.1rem;
+  color: var(--pure-white);
+  font-weight: 300;
+}
+
+/* ============================================
+   MONOSPACE NUMBERS (Tabular)
+   ============================================ */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }
