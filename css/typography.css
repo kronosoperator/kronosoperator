@@ -1,0 +1,286 @@
+/* ============================================
+   TYPOGRAPHY.CSS - Bold Typography System
+   Aggressive, masculine, philosophical fonts
+   ============================================ */
+
+/* ============================================
+   FONT IMPORTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
+
+/* ============================================
+   HEADING HIERARCHY
+   ============================================ */
+h1 {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--dead-white);
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--raw-yellow);
+  text-transform: uppercase;
+  border-left: 8px solid var(--electric-crimson);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--crown-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--bone-white);
+  margin-bottom: 0.75rem;
+}
+
+h6 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--ash-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   BODY TEXT
+   ============================================ */
+p {
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: var(--bone-white);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, text-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  border-bottom-color: var(--neon-cyan);
+  text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+a:focus {
+  outline: 3px solid var(--neon-cyan);
+  outline-offset: 4px;
+}
+
+/* ============================================
+   EMPHASIS & STRONG
+   ============================================ */
+strong, .emphasis, b {
+  color: var(--electric-crimson);
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+  color: var(--crown-gold);
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: var(--bone-white);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+li::marker {
+  color: var(--electric-crimson);
+}
+
+/* ============================================
+   BLOCKQUOTES
+   ============================================ */
+blockquote {
+  border-left: 6px solid var(--electric-crimson);
+  padding: 2rem;
+  margin: 2rem 0;
+  background: var(--charcoal);
+  font-family: 'Space Mono', monospace;
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--ash-gray);
+  position: relative;
+}
+
+blockquote::before {
+  content: '"';
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 4rem;
+  color: var(--electric-crimson);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+blockquote p {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   CODE & PREFORMATTED TEXT
+   ============================================ */
+code {
+  font-family: 'Space Mono', 'Courier New', monospace;
+  background: var(--charcoal);
+  color: var(--toxic-green);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--smoke);
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--charcoal);
+  border: 2px solid var(--electric-crimson);
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  display: block;
+  line-height: 1.6;
+}
+
+/* ============================================
+   SMALL TEXT & CAPTIONS
+   ============================================ */
+small, .small-text {
+  font-size: var(--text-sm);
+  color: var(--ash-gray);
+}
+
+figcaption {
+  font-family: 'Space Mono', monospace;
+  font-size: var(--text-sm);
+  color: var(--ash-gray);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ============================================
+   UTILITY TEXT CLASSES
+   ============================================ */
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-crimson {
+  color: var(--electric-crimson);
+}
+
+.text-yellow {
+  color: var(--raw-yellow);
+}
+
+.text-cyan {
+  color: var(--neon-cyan);
+}
+
+.text-gold {
+  color: var(--crown-gold);
+}
+
+.text-white {
+  color: var(--dead-white);
+}
+
+/* ============================================
+   BRUTAL TEXT SHADOW EFFECTS
+   ============================================ */
+.text-shadow-brutal {
+  text-shadow:
+    4px 4px 0 var(--electric-crimson),
+    8px 8px 0 var(--raw-yellow);
+}
+
+.text-shadow-neon {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* ============================================
+   READING EXPERIENCE
+   ============================================ */
+.readable-content {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drop-cap::first-letter {
+  font-family: 'Anton', sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+  float: left;
+  margin-right: 0.5rem;
+  color: var(--electric-crimson);
+}

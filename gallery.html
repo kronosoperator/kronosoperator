@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería de Arte IA - Exploraciones filosóficas generadas por inteligencia artificial">
+  <title data-i18n="gallery.page_title">Galería IA - hijodelgenesis</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/core.css">
+  <link rel="stylesheet" href="/css/basquiat.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/navigation.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="gallery-page">
+  <!-- Navigation loaded via JS -->
+
+  <main class="gallery-container">
+    <header class="gallery-header">
+      <h1 data-i18n="gallery.title">Galería de Arte IA</h1>
+      <p data-i18n="gallery.subtitle" class="subtitle">
+        Exploraciones filosóficas generadas por inteligencia artificial
+      </p>
+    </header>
+
+    <section id="gallery-grid" class="gallery-grid container">
+      <!-- Dynamically loaded from gallery.json -->
+      <p class="no-content" data-i18n="gallery.no_pieces">Pronto habrá más obras...</p>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="" class="lightbox-main-image">
+        <div class="lightbox-info">
+          <h2 id="lightbox-title"></h2>
+          <p id="lightbox-description"></p>
+          <div id="lightbox-tags"></div>
+          <time id="lightbox-date"></time>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="brutal-footer">
+    <div class="container">
+      <p class="footer-text">
+        <span data-i18n="footer.copyright">© 2026 hijodelgenesis</span>
+        <br>
+        <span data-i18n="footer.tagline">
+          Un legado digital frente al futuro desconocido
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/i18n.js"></script>
+  <script src="/js/navigation.js"></script>
+  <script src="/js/animations.js"></script>
+  <script src="/js/gallery-loader.js"></script>
+</body>
+</html>

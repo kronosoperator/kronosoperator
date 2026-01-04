@@ -1,0 +1,408 @@
+/* ============================================
+   BASQUIAT.CSS - Brutalist Aesthetic
+   Raw, aggressive, bold visual language
+   ============================================ */
+
+/* ============================================
+   HERO SECTION - Brutal Landing
+   ============================================ */
+.hero-brutal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--void-black);
+  border-bottom: 8px solid var(--electric-crimson);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  max-width: 1200px;
+  padding: 4rem 2rem;
+}
+
+.hero-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.85;
+  color: var(--dead-white);
+  text-transform: lowercase;
+  text-shadow:
+    6px 6px 0 var(--electric-crimson),
+    12px 12px 0 var(--raw-yellow);
+  margin-bottom: 2rem;
+  animation: glitchTitle 3s ease-in-out infinite;
+}
+
+@keyframes glitchTitle {
+  0%, 96%, 100% {
+    text-shadow:
+      6px 6px 0 var(--electric-crimson),
+      12px 12px 0 var(--raw-yellow);
+  }
+  97% {
+    text-shadow:
+      -6px 6px 0 var(--neon-cyan),
+      12px -12px 0 var(--toxic-green);
+  }
+  98% {
+    text-shadow:
+      6px -6px 0 var(--electric-crimson),
+      -12px 12px 0 var(--raw-yellow);
+  }
+}
+
+.hero-subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+  border-left: 4px solid var(--electric-crimson);
+  padding-left: 1.5rem;
+}
+
+.hero-manifesto p {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--bone-white);
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--electric-crimson);
+  color: var(--dead-white);
+  padding: 1.5rem 3rem;
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 0 var(--raw-yellow);
+}
+
+.hero-cta:hover {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 0 var(--raw-yellow);
+  background: var(--raw-yellow);
+  color: var(--void-black);
+}
+
+/* ============================================
+   HERO BACKGROUND EFFECTS
+   ============================================ */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.noise-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  animation: noise 8s steps(10) infinite;
+}
+
+@keyframes noise {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -5%); }
+  20% { transform: translate(3%, 3%); }
+  30% { transform: translate(-7%, 2%); }
+  40% { transform: translate(5%, -3%); }
+  50% { transform: translate(-3%, 5%); }
+  60% { transform: translate(7%, -2%); }
+  70% { transform: translate(-2%, 7%); }
+  80% { transform: translate(3%, -5%); }
+  90% { transform: translate(-5%, 3%); }
+}
+
+/* ============================================
+   BRUTALIST REVEAL ANIMATIONS
+   ============================================ */
+.section, .project-card, .writing-card, .gallery-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brutalist-reveal {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   AGGRESSIVE HOVER STATES
+   ============================================ */
+.project-card:hover,
+.writing-card:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-4px, 4px); }
+  50% { transform: translate(4px, -4px); }
+  75% { transform: translate(-4px, -4px); }
+}
+
+/* ============================================
+   SECTION TITLES
+   ============================================ */
+.section-title {
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--raw-yellow);
+  text-transform: uppercase;
+  border-left: 8px solid var(--electric-crimson);
+  padding-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--toxic-green);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.section-cta:hover {
+  border-bottom-color: var(--toxic-green);
+  text-shadow: 0 0 8px var(--toxic-green);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.brutal-footer {
+  background: var(--charcoal);
+  border-top: 4px solid var(--electric-crimson);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--ash-gray);
+  line-height: 1.8;
+}
+
+/* ============================================
+   BIO PAGE SPECIFIC STYLES
+   ============================================ */
+.bio-page {
+  padding-top: 80px;
+}
+
+.bio-hero {
+  background: linear-gradient(135deg, var(--void-black) 0%, var(--charcoal) 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  border-bottom: 6px solid var(--electric-crimson);
+}
+
+.bio-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: var(--dead-white);
+  text-transform: uppercase;
+  text-shadow:
+    4px 4px 0 var(--electric-crimson),
+    8px 8px 0 var(--raw-yellow);
+  margin-bottom: 1rem;
+}
+
+.bio-subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.bio-narrative {
+  padding: 4rem 0;
+}
+
+.bio-text {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.influences-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.influences-list li {
+  padding: 1rem;
+  border-left: 4px solid var(--electric-crimson);
+  margin-bottom: 1rem;
+  background: var(--charcoal);
+}
+
+.influences-list strong {
+  color: var(--crown-gold);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+/* ============================================
+   WRITINGS PAGE SPECIFIC STYLES
+   ============================================ */
+.writings-page {
+  padding-top: 80px;
+  background: var(--void-black);
+}
+
+.writings-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--charcoal);
+  border-bottom: 6px solid var(--electric-crimson);
+}
+
+.writings-header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--raw-yellow);
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0 var(--electric-crimson);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+}
+
+/* ============================================
+   GALLERY PAGE SPECIFIC STYLES
+   ============================================ */
+.gallery-page {
+  padding-top: 80px;
+  background: var(--void-black);
+}
+
+.gallery-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--charcoal);
+  border-bottom: 6px solid var(--electric-crimson);
+}
+
+.gallery-header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--raw-yellow);
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0 var(--electric-crimson);
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   WRITING SINGLE PAGE
+   ============================================ */
+.writing-single {
+  background: var(--void-black);
+  padding-top: 80px;
+}
+
+.writing-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.writing-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 4px solid var(--electric-crimson);
+}
+
+.writing-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--ash-gray);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.writing-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--bone-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.writing-body {
+  margin-top: 3rem;
+  line-height: 1.9;
+}
+
+.writing-body p {
+  margin-bottom: 1.5rem;
+}
+
+.writing-body h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.writing-body blockquote {
+  border-left: 6px solid var(--electric-crimson);
+  padding-left: 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--ash-gray);
+  background: var(--charcoal);
+  padding: 2rem;
+}
+
+.writing-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--smoke);
+}
+
+.back-link {
+  color: var(--neon-cyan);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-8px);
+}

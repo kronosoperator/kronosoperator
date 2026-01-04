@@ -1,0 +1,128 @@
+{
+  "es": {
+    "site": {
+      "title": "hijodelgenesis",
+      "description": "Legado digital en la era de la cibernética"
+    },
+    "nav": {
+      "home": "Inicio",
+      "bio": "Biografía",
+      "writings": "Escritos",
+      "gallery": "Galería IA",
+      "language": "English"
+    },
+    "home": {
+      "hero_title": "hijo\ndel\ngenesis",
+      "hero_subtitle": "Legado digital en la era de la cibernética",
+      "manifesto": "Escritor · Pensador · Artista Latinoamericano",
+      "manifesto_expanded": "Creando un futuro desconocido con las herramientas del presente",
+      "explore_bio": "Explorar →",
+      "latest_writings": "Últimos Escritos",
+      "view_all_writings": "Ver todos los escritos →",
+      "featured_gallery": "Galería IA",
+      "view_gallery": "Explorar galería →",
+      "read_more": "Leer →"
+    },
+    "bio": {
+      "page_title": "Biografía - hijodelgenesis",
+      "title": "Ivan",
+      "subtitle": "Escritor · Pensador · Artista Latinoamericano",
+      "about_heading": "Sobre Ivan",
+      "about_text_1": "Escritor, pensador y artista latinoamericano creando un legado digital en la era de la cibernética. Influenciado por la crudeza de Basquiat, la audacia de Bowie, la intensidad de Hemingway, y la profundidad filosófica de Nietzsche.",
+      "about_text_2": "Una propuesta artística enfrentando el futuro desconocido con las herramientas del presente - inteligencia artificial, arte generativo, y pensamiento crítico en la era digital.",
+      "philosophy_heading": "Filosofía",
+      "philosophy_quote": "El futuro no se predice, se crea. Con cada palabra, cada imagen, cada pensamiento, estamos forjando el mañana desconocido.",
+      "influences_heading": "Influencias",
+      "influence_basquiat": "Jean-Michel Basquiat",
+      "influence_basquiat_desc": "Crudeza visual, energía sin filtros",
+      "influence_bowie": "David Bowie",
+      "influence_bowie_desc": "Reinvención constante, desafío de límites",
+      "influence_hemingway": "Ernest Hemingway",
+      "influence_hemingway_desc": "Intensidad narrativa, verdad brutal",
+      "influence_nietzsche": "Friedrich Nietzsche",
+      "influence_nietzsche_desc": "Filosofía confrontativa, voluntad de poder"
+    },
+    "writings": {
+      "page_title": "Escritos - hijodelgenesis",
+      "title": "Escritos",
+      "subtitle": "Pensamientos cronológicos desde el abismo",
+      "no_posts": "Próximamente...",
+      "read_more": "Leer más →",
+      "back": "← Volver a Escritos"
+    },
+    "gallery": {
+      "page_title": "Galería IA - hijodelgenesis",
+      "title": "Galería de Arte IA",
+      "subtitle": "Exploraciones filosóficas generadas por inteligencia artificial",
+      "no_pieces": "Pronto habrá más obras...",
+      "close": "Cerrar"
+    },
+    "footer": {
+      "copyright": "© 2026 hijodelgenesis",
+      "tagline": "Un legado digital frente al futuro desconocido"
+    }
+  },
+  "en": {
+    "site": {
+      "title": "hijodelgenesis",
+      "description": "Digital legacy in the era of cybernetics"
+    },
+    "nav": {
+      "home": "Home",
+      "bio": "Bio",
+      "writings": "Writings",
+      "gallery": "AI Gallery",
+      "language": "Español"
+    },
+    "home": {
+      "hero_title": "hijo\ndel\ngenesis",
+      "hero_subtitle": "Digital legacy in the era of cybernetics",
+      "manifesto": "Latin American Writer · Thinker · Artist",
+      "manifesto_expanded": "Creating an unknown future with the tools of the present",
+      "explore_bio": "Explore →",
+      "latest_writings": "Latest Writings",
+      "view_all_writings": "View all writings →",
+      "featured_gallery": "AI Gallery",
+      "view_gallery": "Explore gallery →",
+      "read_more": "Read →"
+    },
+    "bio": {
+      "page_title": "Biography - hijodelgenesis",
+      "title": "Ivan",
+      "subtitle": "Latin American Writer · Thinker · Artist",
+      "about_heading": "About Ivan",
+      "about_text_1": "Latin American writer, thinker, and artist creating a digital legacy in the era of cybernetics. Influenced by the rawness of Basquiat, the boldness of Bowie, the intensity of Hemingway, and the philosophical depth of Nietzsche.",
+      "about_text_2": "An artistic proposal facing the unknown future with the tools of the present - artificial intelligence, generative art, and critical thinking in the digital age.",
+      "philosophy_heading": "Philosophy",
+      "philosophy_quote": "The future is not predicted, it is created. With every word, every image, every thought, we are forging the unknown tomorrow.",
+      "influences_heading": "Influences",
+      "influence_basquiat": "Jean-Michel Basquiat",
+      "influence_basquiat_desc": "Visual rawness, unfiltered energy",
+      "influence_bowie": "David Bowie",
+      "influence_bowie_desc": "Constant reinvention, pushing boundaries",
+      "influence_hemingway": "Ernest Hemingway",
+      "influence_hemingway_desc": "Narrative intensity, brutal truth",
+      "influence_nietzsche": "Friedrich Nietzsche",
+      "influence_nietzsche_desc": "Confrontational philosophy, will to power"
+    },
+    "writings": {
+      "page_title": "Writings - hijodelgenesis",
+      "title": "Writings",
+      "subtitle": "Chronological thoughts from the abyss",
+      "no_posts": "Coming soon...",
+      "read_more": "Read more →",
+      "back": "← Back to Writings"
+    },
+    "gallery": {
+      "page_title": "AI Gallery - hijodelgenesis",
+      "title": "AI Art Gallery",
+      "subtitle": "Philosophical explorations generated by artificial intelligence",
+      "no_pieces": "More pieces coming soon...",
+      "close": "Close"
+    },
+    "footer": {
+      "copyright": "© 2026 hijodelgenesis",
+      "tagline": "A digital legacy facing the unknown future"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+/* ============================================
+   CORE.CSS - Foundation Styles
+   Base reset, CSS variables, and core layout
+   ============================================ */
+
+/* Reset & Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   CSS CUSTOM PROPERTIES (Variables)
+   Basquiat-Inspired Brutalist Color Palette
+   ============================================ */
+:root {
+  /* Core Brutalist Palette */
+  --void-black: #0a0a0a;           /* Deep background */
+  --charcoal: #1a1a1a;             /* Secondary background */
+  --concrete: #2a2a2a;             /* Elevated surfaces */
+
+  /* Aggressive Accents */
+  --electric-crimson: #ff0040;     /* Primary aggressive accent */
+  --raw-yellow: #ffff00;           /* Basquiat signature yellow */
+  --bone-white: #f5f5f5;           /* High-contrast text */
+  --dead-white: #ffffff;           /* Pure white for impact */
+
+  /* Philosophical Grays */
+  --ash-gray: #666666;             /* Secondary text */
+  --smoke: #404040;                /* Borders, dividers */
+
+  /* Basquiat Crown */
+  --crown-gold: #d4af37;           /* Accent for titles */
+
+  /* Aggressive Highlights */
+  --neon-cyan: #00ffff;            /* Links, hover states */
+  --toxic-green: #39ff14;          /* Call-to-action */
+
+  /* Spacing System */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+  --text-4xl: 4rem;
+}
+
+/* ============================================
+   HTML & BODY BASE
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--void-black);
+  color: var(--bone-white);
+  font-family: 'Space Mono', 'Courier New', monospace;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ============================================
+   CONTAINER LAYOUT
+   ============================================ */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ============================================
+   SELECTION STYLING
+   ============================================ */
+::selection {
+  background: var(--electric-crimson);
+  color: var(--dead-white);
+}
+
+::-moz-selection {
+  background: var(--electric-crimson);
+  color: var(--dead-white);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--electric-crimson);
+  border: 2px solid var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--raw-yellow);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.section {
+  padding: var(--space-lg) 0;
+}
+
+.section:nth-child(even) {
+  background: var(--charcoal);
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--neon-cyan);
+  outline-offset: 4px;
+}

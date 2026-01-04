@@ -1,0 +1,224 @@
+/* ============================================
+   NAVIGATION.CSS - Shared Navigation Styles
+   ============================================ */
+
+.brutal-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--void-black);
+  border-bottom: 4px solid var(--electric-crimson);
+  z-index: 1000;
+  box-shadow: 0 4px 0 var(--raw-yellow);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+.logo {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.logo-text {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 1.75rem;
+  color: var(--raw-yellow);
+  text-transform: lowercase;
+  letter-spacing: -0.05em;
+  transition: color 0.3s ease;
+}
+
+.logo:hover .logo-text {
+  color: var(--electric-crimson);
+  text-shadow: 0 0 8px var(--electric-crimson);
+}
+
+/* ============================================
+   MAIN NAVIGATION
+   ============================================ */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-link {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: 1.25rem;
+  color: var(--bone-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  border-bottom: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--electric-crimson);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--electric-crimson);
+  text-shadow: none;
+  border-bottom: none;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--electric-crimson);
+}
+
+/* ============================================
+   LANGUAGE TOGGLE
+   ============================================ */
+.lang-toggle {
+  background: var(--concrete);
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 0.5rem 1rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle:hover {
+  background: var(--neon-cyan);
+  color: var(--void-black);
+  box-shadow: 0 0 12px var(--neon-cyan);
+}
+
+.lang-icon {
+  font-size: 1rem;
+}
+
+/* ============================================
+   MOBILE TOGGLE (HAMBURGER)
+   ============================================ */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.mobile-toggle span {
+  width: 30px;
+  height: 3px;
+  background: var(--electric-crimson);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Hamburger animation when active */
+.mobile-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--charcoal);
+    flex-direction: column;
+    padding: 2rem;
+    border-top: 4px solid var(--electric-crimson);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .main-nav.mobile-active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    padding: 0.75rem 0;
+  }
+
+  .lang-toggle {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1.125rem;
+  }
+}
