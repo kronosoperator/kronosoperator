@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Pago Exitoso! - Villano.ai</title>
+  <link rel="stylesheet" href="css/villano.css">
+  <link rel="stylesheet" href="css/oferta.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    .success-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .success-icon {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      animation: scaleIn 0.5s ease-out;
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .success-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: #10b981;
+    }
+
+    .success-message {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: var(--villain-text-dim);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .success-box {
+      background: var(--villain-gray);
+      padding: 2rem;
+      border-radius: var(--radius-xl);
+      border: 2px solid #10b981;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .success-box h2 {
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+
+    .success-box ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+
+    .success-box li {
+      padding: 0.75rem 0;
+      padding-left: 2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .success-box li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
+
+    .email-note {
+      background: rgba(220, 38, 38, 0.1);
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--villain-red);
+      margin-top: 2rem;
+    }
+
+    .email-note strong {
+      color: var(--villain-red);
+    }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <div class="success-icon">✅</div>
+
+    <h1 class="success-title">¡PAGO EXITOSO!</h1>
+
+    <p class="success-message">
+      Tu pago ha sido procesado correctamente. Bienvenido al Manual del Villano.
+    </p>
+
+    <div class="success-box">
+      <h2>📧 Revisa tu email ahora</h2>
+      <p style="margin-bottom: 1.5rem; color: var(--villain-text-dim);">
+        Hemos enviado tu acceso completo a tu correo electrónico. Recibirás:
+      </p>
+      <ul>
+        <li>Link de descarga del PDF completo (150+ páginas)</li>
+        <li>3 Mapas Mentales Gráficos en alta resolución</li>
+        <li>Audios de Sabiduría Narrados (formato MP3)</li>
+        <li>Guía de Implementación Rápida de 30 días</li>
+        <li>Instrucciones de acceso y soporte</li>
+      </ul>
+
+      <div class="email-note">
+        <p>
+          <strong>⚠️ Importante:</strong> Si no ves el email en tu bandeja de entrada
+          en los próximos 5 minutos, revisa tu carpeta de SPAM o correo no deseado.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-box">
+      <h2>🎯 Próximos pasos</h2>
+      <ol style="text-align: left; padding-left: 1.5rem;">
+        <li style="margin-bottom: 1rem;">
+          <strong>Descarga todo el material</strong> desde los links en tu email
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <strong>Lee el PDF completo</strong> - Empieza por el capítulo 1: "La Verdad Prohibida"
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <strong>Estudia los mapas mentales</strong> para visualizar los conceptos clave
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <strong>Escucha los audios</strong> mientras haces otras actividades para reforzar
+        </li>
+        <li>
+          <strong>Sigue la Guía de 30 días</strong> para aplicar todo paso a paso
+        </li>
+      </ol>
+    </div>
+
+    <div class="success-box">
+      <h2>💬 ¿Necesitas ayuda?</h2>
+      <p style="color: var(--villain-text-dim); margin-bottom: 1rem;">
+        Si tienes algún problema con tu compra o no recibes el email,
+        contáctanos inmediatamente:
+      </p>
+      <p style="font-size: 1.25rem; font-weight: 700; color: var(--villain-red);">
+        soporte@villano.ai
+      </p>
+      <p style="color: var(--villain-text-dim); margin-top: 1rem; font-size: 0.9rem;">
+        Tiempo de respuesta: Menos de 24 horas
+      </p>
+    </div>
+
+    <div style="margin-top: 2rem; color: var(--villain-text-dim);">
+      <p>Gracias por tu confianza.</p>
+      <p style="font-weight: 700; color: var(--villain-text);">- Villano.ai</p>
+    </div>
+  </div>
+</body>
+</html>

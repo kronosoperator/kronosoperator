@@ -3,70 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ivan - Legado digital en la era de la cibernética">
-  <meta name="author" content="Ivan">
-  <title data-i18n="site.title">Ivan - Digital Legacy</title>
+  <meta name="description" content="Villano.ai - Descubre tu arquetipo seductor">
+  <meta name="author" content="Villano.ai">
+  <title>Villano.ai - Test de Seducción</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/core.css">
-  <link rel="stylesheet" href="css/basquiat.css">
-  <link rel="stylesheet" href="css/typography.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/terminal.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
-<body class="home-page">
-  <!-- Navigation loaded via JS -->
+<body>
+  <!-- Quiz Container -->
+  <div class="quiz-wrapper">
+    <!-- Logo -->
+    <div class="logo">
+      <h1>VILLANO<span class="ai">.ai</span></h1>
+    </div>
 
-  <!-- Hero Section -->
-  <section class="hero-brutal">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        ivan
-      </h1>
-      <p class="hero-subtitle" data-i18n="home.hero_subtitle">
-        Legado digital en la era de la cibernética
-      </p>
+    <!-- Progress Bar -->
+    <div class="progress-container" id="progressContainer" style="display: none;">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text">
+        <span id="progressCurrent">1</span> / <span id="progressTotal">8</span>
+      </div>
+    </div>
 
-      <div class="hero-manifesto">
-        <p>
-          <span data-i18n="home.manifesto">Escritor · Pensador · Artista Latinoamericano</span>
-          <br>
-          <span data-i18n="home.manifesto_expanded">Creando un futuro desconocido con las herramientas del presente</span>
-        </p>
+    <!-- Quiz Screens -->
+    <div class="quiz-container" id="quizContainer">
+
+      <!-- Welcome Screen -->
+      <div class="quiz-screen active" id="welcomeScreen">
+        <div class="screen-content">
+          <div class="hero-icon">🎭</div>
+          <h1 class="screen-title">¿Conoces tu verdadero poder seductor?</h1>
+          <p class="screen-subtitle">
+            La mayoría de hombres operan con el 20% de su potencial.<br>
+            <strong>Descubre tu arquetipo oculto en 2 minutos.</strong>
+          </p>
+          <div class="feature-pills">
+            <div class="pill">🧠 Test psicológico</div>
+            <div class="pill">🔥 Análisis personalizado</div>
+            <div class="pill">⚡ Resultados instantáneos</div>
+          </div>
+          <button class="btn-primary" onclick="startQuiz()">
+            DESCUBRIR MI ARQUETIPO
+          </button>
+          <p class="disclaimer">🔒 100% privado y anónimo</p>
+        </div>
       </div>
 
-      <nav class="hero-nav">
-        <a href="bio.html" class="hero-cta" data-i18n="home.explore_bio">
-          Explorar →
-        </a>
-      </nav>
-    </div>
+      <!-- Question Screens (will be generated dynamically) -->
+      <div id="questionScreens"></div>
 
-    <!-- Abstract Background Animation -->
-    <div class="hero-background">
-      <div class="noise-texture"></div>
-    </div>
-  </section>
+      <!-- Analyzing Screen -->
+      <div class="quiz-screen" id="analyzingScreen">
+        <div class="screen-content">
+          <div class="analyzing-animation">
+            <div class="spinner"></div>
+            <div class="analyzing-text">
+              <h2>Analizando tus respuestas...</h2>
+              <p id="analyzingStatus">Procesando perfil psicológico</p>
+            </div>
+          </div>
+          <div class="analyzing-stats">
+            <div class="stat-item">
+              <div class="stat-icon">📊</div>
+              <div class="stat-text">
+                <strong>Patrones detectados</strong>
+                <span>8/8</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">🎯</div>
+              <div class="stat-text">
+                <strong>Precisión del análisis</strong>
+                <span>97.3%</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">🔥</div>
+              <div class="stat-text">
+                <strong>Potencial identificado</strong>
+                <span>Alto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- Footer -->
-  <footer class="brutal-footer">
-    <div class="container">
-      <p class="footer-text">
-        <span data-i18n="footer.copyright">© 2026 ivanro.com</span>
-        <br>
-        <span data-i18n="footer.tagline">
-          Un legado digital frente al futuro desconocido
-        </span>
-      </p>
+      <!-- Results Screen -->
+      <div class="quiz-screen" id="resultsScreen">
+        <div class="screen-content">
+          <div class="results-header">
+            <div class="result-badge">
+              <div class="badge-icon" id="archetypeIcon">👑</div>
+              <h2 class="result-title" id="archetypeTitle">TU ARQUETIPO:</h2>
+              <h1 class="archetype-name" id="archetypeName">EL CONQUISTADOR</h1>
+            </div>
+          </div>
+
+          <div class="result-description">
+            <h3>📊 Tu Perfil Completo:</h3>
+            <p id="archetypeDescription">
+              Tienes el perfil de un conquistador natural. Sabes lo que quieres
+              y no temes ir a por ello. Sin embargo, tu mayor fortaleza también
+              puede ser tu debilidad si no entiendes las dinámicas profundas
+              del juego...
+            </p>
+          </div>
+
+          <div class="result-stats">
+            <div class="stat-bar">
+              <div class="stat-label">
+                <span>Atracción Natural</span>
+                <strong id="stat1">85%</strong>
+              </div>
+              <div class="stat-progress">
+                <div class="stat-progress-fill" id="statBar1" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-label">
+                <span>Control de Frame</span>
+                <strong id="stat2">72%</strong>
+              </div>
+              <div class="stat-progress">
+                <div class="stat-progress-fill" id="statBar2" style="width: 72%"></div>
+              </div>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-label">
+                <span>Inteligencia Emocional</span>
+                <strong id="stat3">68%</strong>
+              </div>
+              <div class="stat-progress">
+                <div class="stat-progress-fill" id="statBar3" style="width: 68%"></div>
+              </div>
+            </div>
+            <div class="stat-bar">
+              <div class="stat-label">
+                <span>Dominio Sexual</span>
+                <strong id="stat4">79%</strong>
+              </div>
+              <div class="stat-progress">
+                <div class="stat-progress-fill" id="statBar4" style="width: 79%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-revelation">
+            <h3>🔥 La Verdad Que Necesitas Saber:</h3>
+            <div class="revelation-box">
+              <p>
+                Tu arquetipo tiene <strong>potencial masivo</strong>, pero estás
+                operando al <span class="highlight">60-70% de tu capacidad real</span>.
+              </p>
+              <p>
+                Hay conocimiento específico que puede <strong>desbloquear el 30% restante</strong>
+                y convertirte en la versión dominante que las mujeres persiguen.
+              </p>
+              <p class="revelation-hook">
+                No es sobre "técnicas" o "trucos"...<br>
+                Es sobre <strong>entender el juego a nivel profundo</strong>.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn-primary btn-large" onclick="showOffer()">
+            VER EL MANUAL COMPLETO PARA MI ARQUETIPO
+          </button>
+
+          <p class="result-note">
+            📥 Más de 2,847 hombres ya descubrieron su verdadero potencial
+          </p>
+        </div>
+      </div>
+
     </div>
-  </footer>
+  </div>
 
   <!-- Scripts -->
-  <script src="js/terminal.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
+  <script src="js/quiz.js"></script>
 </body>
 </html>

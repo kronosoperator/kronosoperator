@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago Pendiente - Villano.ai</title>
+  <link rel="stylesheet" href="css/villano.css">
+  <link rel="stylesheet" href="css/oferta.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    .pending-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .pending-icon {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      animation: pulse 2s infinite;
+    }
+
+    .pending-title {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: #fbbf24;
+    }
+
+    .pending-message {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: var(--villain-text-dim);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .pending-box {
+      background: var(--villain-gray);
+      padding: 2rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid #fbbf24;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="pending-container">
+    <div class="pending-icon">⏳</div>
+
+    <h1 class="pending-title">Tu pago está pendiente</h1>
+
+    <p class="pending-message">
+      Tu pago está siendo procesado. Esto puede tomar algunos minutos.
+    </p>
+
+    <div class="pending-box">
+      <h3 style="margin-bottom: 1rem; color: var(--villain-text);">¿Qué significa esto?</h3>
+      <p style="color: var(--villain-text-dim); line-height: 1.6; margin-bottom: 1rem;">
+        Algunos métodos de pago (como transferencias bancarias o pagos en efectivo)
+        requieren tiempo para ser confirmados.
+      </p>
+      <p style="color: var(--villain-text-dim); line-height: 1.6;">
+        <strong style="color: #fbbf24;">Te enviaremos un email</strong> en cuanto tu pago
+        sea confirmado con las instrucciones de acceso al material.
+      </p>
+    </div>
+
+    <div class="pending-box">
+      <h3 style="margin-bottom: 1rem; color: var(--villain-text);">⏱️ Tiempo estimado:</h3>
+      <ul style="text-align: left; list-style: none; padding: 0; color: var(--villain-text-dim);">
+        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+          <span style="position: absolute; left: 0;">•</span>
+          Tarjetas: 5-10 minutos
+        </li>
+        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+          <span style="position: absolute; left: 0;">•</span>
+          Transferencias: 1-2 días hábiles
+        </li>
+        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+          <span style="position: absolute; left: 0;">•</span>
+          Efectivo: Una vez realizado el pago en punto autorizado
+        </li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 2rem; color: var(--villain-text-dim); font-size: 0.9rem;">
+      ¿Preguntas? Escríbenos a <strong style="color: #fbbf24;">soporte@villano.ai</strong>
+    </p>
+  </div>
+</body>
+</html>
