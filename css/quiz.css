@@ -226,24 +226,33 @@ body {
   font-weight: 700;
 }
 
-/* Feature Pills */
-.feature-pills {
-  display: flex;
-  gap: var(--space-sm);
-  justify-content: center;
-  flex-wrap: wrap;
+/* Truth Preview (Welcome Screen) */
+.truth-preview {
+  background: var(--villain-dark);
+  border: 2px solid var(--villain-red);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
   margin-bottom: var(--space-xl);
+  text-align: left;
+  box-shadow: var(--shadow-red);
 }
 
-.pill {
-  background: var(--villain-dark);
-  border: 1px solid var(--villain-border);
-  padding: var(--space-xs) var(--space-md);
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+.truth-statement {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  color: var(--villain-text-dim);
+}
+
+.truth-hook {
+  font-size: 1.1rem;
+  text-align: center;
   color: var(--villain-text);
-  box-shadow: var(--shadow-sm);
+  margin-bottom: 0;
+}
+
+.truth-hook strong {
+  color: var(--villain-red);
 }
 
 /* Buttons */
@@ -389,6 +398,65 @@ body {
   font-size: 0.9rem;
   color: var(--villain-text-dim);
   line-height: 1.4;
+}
+
+/* ============================================
+   TRUTH REVEAL SCREEN
+   ============================================ */
+.truth-reveal {
+  animation: fadeIn 0.6s ease;
+}
+
+.truth-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.truth-header {
+  margin-bottom: var(--space-xl);
+}
+
+.truth-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.truth-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--villain-red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.truth-text {
+  background: var(--villain-dark);
+  border: 2px solid var(--villain-red);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  text-align: left;
+  box-shadow: var(--shadow-red);
+  animation: slideInUp 0.6s ease;
+}
+
+.truth-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--villain-text);
+  margin-bottom: 0;
+}
+
+.truth-text strong {
+  color: var(--villain-gold);
+  font-weight: 700;
+}
+
+.btn-continue {
+  font-size: 1rem;
+  padding: var(--space-md) var(--space-lg);
 }
 
 /* ============================================
@@ -636,6 +704,18 @@ body {
 
 .revelation-box p:last-child {
   margin-bottom: 0;
+}
+
+.revelation-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.revelation-box ul li {
+  padding: var(--space-xs) 0;
+  font-size: 1rem;
+  color: var(--villain-text);
+  line-height: 1.6;
 }
 
 .revelation-box .highlight {

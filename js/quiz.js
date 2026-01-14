@@ -1,308 +1,269 @@
 /**
- * Villano.ai - Visual Quiz Logic
+ * Villano.ai - Progressive Revelation Quiz
+ * Each question reveals the gap in the user's knowledge
  */
 
 // Quiz State
 const quizState = {
   currentQuestion: 0,
   answers: [],
-  scores: {
-    alpha: 0,      // Conquistador
-    strategic: 0,  // Estratega
-    charismatic: 0,// Carismático
-    dominant: 0    // Dominante
-  }
+  awakenessScore: 0, // How much they're realizing they're playing the wrong game
+  truthsRevealed: []
 };
 
-// Quiz Questions
+// Quiz Questions - Each one challenges a belief
 const questions = [
   {
     id: 1,
-    question: "¿Cómo reaccionas cuando una mujer te rechaza?",
+    question: "¿Por qué crees que las mujeres dicen que quieren 'un buen chico' pero terminan con otros?",
     options: [
       {
-        text: "Me retiro y busco otra oportunidad",
-        icon: "🚶",
-        description: "Mantienes la calma y sigues adelante",
-        scores: { strategic: 3, alpha: 1 }
+        text: "Porque no han encontrado al correcto",
+        icon: "😇",
+        description: "Sólo es cuestión de tiempo y paciencia",
+        truth: "Eso es lo que te dijeron que creas. La realidad es que las palabras de una mujer y sus acciones viven en universos diferentes."
       },
       {
-        text: "Insisto con más intensidad",
-        icon: "🔥",
-        description: "Ves el rechazo como un desafío a superar",
-        scores: { alpha: 3, dominant: 2 }
+        text: "Porque dicen una cosa pero sienten otra",
+        icon: "🎭",
+        description: "Hay una desconexión entre lo que dicen y hacen",
+        truth: "Estás empezando a ver el patrón. Pero la pregunta real es: ¿por qué existe esa desconexión? Hay reglas biológicas que nadie te ha explicado."
       },
       {
-        text: "Uso el humor para cambiar la dinámica",
-        icon: "😏",
-        description: "Transformas la situación con carisma",
-        scores: { charismatic: 3, strategic: 1 }
+        text: "Porque 'buen chico' no significa lo que crees",
+        icon: "🧠",
+        description: "El concepto está deliberadamente mal definido",
+        truth: "Exacto. 'Buen chico' es un código. Significa algo completamente distinto en el lenguaje femenino. Y nadie te enseñó a traducir."
       },
       {
-        text: "No acepto un no por respuesta fácilmente",
-        icon: "👑",
-        description: "Eres persistente y dominante",
-        scores: { dominant: 3, alpha: 2 }
+        text: "Es una prueba para filtrar hombres débiles",
+        icon: "⚡",
+        description: "Separan a los que creen todo lo que dicen",
+        truth: "Vas varios pasos adelante. Pero esto es solo la superficie. Hay un sistema completo operando bajo todo esto."
       }
     ]
   },
   {
     id: 2,
-    question: "En una primera cita, ¿quién lleva el control?",
+    question: "Un hombre exitoso, educado y atento es ignorado. Otro, sin trabajo estable y problemático, las tiene haciendo fila. ¿Por qué?",
     options: [
       {
-        text: "Yo decido todo desde el principio",
-        icon: "⚡",
-        description: "Tomas el liderazgo completo",
-        scores: { dominant: 3, alpha: 2 }
+        text: "Esas mujeres tienen problemas personales",
+        icon: "🤷",
+        description: "Son casos aislados de mujeres con issues",
+        truth: "Esa es la explicación que te dieron para que sigas durmiendo. No son 'casos aislados'. Es un patrón universal que se repite en cada cultura."
       },
       {
-        text: "Dejamos que fluya naturalmente",
-        icon: "🌊",
-        description: "Prefieres equilibrio y autenticidad",
-        scores: { charismatic: 2, strategic: 2 }
+        text: "El segundo genera más emoción e incertidumbre",
+        icon: "🎲",
+        description: "La imprevisibilidad es adictiva",
+        truth: "Correcto. Pero ¿por qué la 'estabilidad' mata la atracción mientras que el 'caos' la enciende? Hay razones evolutivas que nadie menciona."
       },
       {
-        text: "Leo la situación y me adapto",
-        icon: "🧠",
-        description: "Eres estratégico y observador",
-        scores: { strategic: 3, charismatic: 1 }
+        text: "El primero pide permiso, el segundo toma lo que quiere",
+        icon: "👑",
+        description: "Es sobre dominancia y frame, no bondad",
+        truth: "Ahí está. Frame y poder. Pero el 99% de hombres ni siquiera sabe que están en un juego de poder. Y pierden por default."
       },
       {
-        text: "Yo dirijo pero hago que parezca idea de ella",
-        icon: "🎭",
-        description: "Control sutil e inteligente",
-        scores: { strategic: 3, dominant: 2 }
+        text: "Las mujeres no valoran lo que obtienen fácilmente",
+        icon: "💎",
+        description: "La disponibilidad mata el deseo",
+        truth: "Bingo. Economía básica aplicada a la seducción. Pero hay capas más profundas: hipergamia, preselección, psicología evolutiva. ¿Conoces esos términos?"
       }
     ]
   },
   {
     id: 3,
-    question: "¿Qué es lo más importante en la seducción?",
+    question: "¿Qué crees que pasa en la mente de una mujer cuando un hombre hace TODO lo que ella pide?",
     options: [
       {
-        text: "Dominancia y presencia física",
-        icon: "💪",
-        description: "El poder y la masculinidad son clave",
-        scores: { alpha: 3, dominant: 2 }
+        text: "Se siente valorada y amada",
+        icon: "💕",
+        description: "Aprecia el esfuerzo y la atención",
+        truth: "Eso es lo que 'debería' pasar en un mundo lógico. Pero el cerebro femenino no opera con lógica. Opera con biología de 200,000 años."
       },
       {
-        text: "Inteligencia emocional y conexión",
-        icon: "💭",
-        description: "Entender y conectar profundamente",
-        scores: { charismatic: 3, strategic: 1 }
+        text: "Pierde respeto y atracción por él",
+        icon: "📉",
+        description: "Lo ve como débil y manipulable",
+        truth: "Exactamente. Y no es 'maldad'. Es programación evolutiva. Una mujer NO PUEDE sentir atracción por un hombre que ella controla. Es imposible biológicamente."
       },
       {
-        text: "Timing y estrategia perfecta",
-        icon: "⏰",
-        description: "Saber cuándo y cómo actuar",
-        scores: { strategic: 3, alpha: 1 }
+        text: "Lo pone a prueba con demandas más extremas",
+        icon: "🔬",
+        description: "Busca dónde está su límite real",
+        truth: "Sí. Las 'pruebas' nunca terminan si sigues pasándolas todas. Porque inconscientemente busca un hombre que diga 'no'. Que tenga su propio frame."
       },
       {
-        text: "Control absoluto del frame",
-        icon: "🎯",
-        description: "Quien controla el marco, controla todo",
-        scores: { dominant: 3, strategic: 2 }
+        text: "Empieza a buscar a alguien más interesante",
+        icon: "👀",
+        description: "La previsibilidad total la aburre",
+        truth: "Correcto. Mientras más 'disponible' y 'bueno' eres, más rápido te reemplaza. Es contraintuitivo, pero es la verdad que nadie te dice."
       }
     ]
   },
   {
     id: 4,
-    question: "Una mujer te pone a prueba con drama. ¿Qué haces?",
+    question: "¿Por qué tantas mujeres tienen 'historias de exes tóxicos' pero ninguna de 'exes buenos'?",
     options: [
       {
-        text: "Ignoro completamente y sigo con lo mío",
-        icon: "🚫",
-        description: "No reaccionas a manipulación",
-        scores: { alpha: 3, dominant: 2 }
+        text: "Tienen mala suerte eligiendo",
+        icon: "🍀",
+        description: "No han encontrado a los correctos",
+        truth: "Si fuera 'mala suerte', las estadísticas serían 50/50. Pero es 95/5. No es suerte. Es selección deliberada basada en atracción visceral."
       },
       {
-        text: "Le demuestro que veo el juego",
-        icon: "🔍",
-        description: "Reconoces y expones la prueba",
-        scores: { strategic: 3, charismatic: 1 }
+        text: "Los 'buenos' no generan historias memorables",
+        icon: "📖",
+        description: "Lo aburrido no se recuerda",
+        truth: "Exacto. Los 'buenos' no activan su sistema nervioso. Son paisaje. Los 'tóxicos' sí. Porque entienden (consciente o inconscientemente) las reglas reales."
       },
       {
-        text: "Uso humor para desarmarla",
-        icon: "😄",
-        description: "Transformas tensión en atracción",
-        scores: { charismatic: 3, strategic: 1 }
+        text: "Solo los 'tóxicos' llegaron a relación real",
+        icon: "🎯",
+        description: "Los buenos se quedaron en friendzone",
+        truth: "Brutal pero cierto. Los 'buenos' nunca activaron atracción sexual. Los 'malos' sí. Y la atracción sexual no es negociable ni 'se construye con tiempo'."
       },
       {
-        text: "Establezco un límite claro e inmediato",
-        icon: "⛔",
-        description: "Impones tu frame con firmeza",
-        scores: { dominant: 3, alpha: 2 }
+        text: "'Tóxico' es cómo llaman a quien no pudieron controlar",
+        icon: "🔥",
+        description: "Etiquetan así a quien mantuvo su frame",
+        truth: "Ahí está la verdad incómoda. 'Tóxico' muchas veces = 'no se dejó manipular'. Porque un hombre con opciones no tolera mierda. Y eso las vuelve locas."
       }
     ]
   },
   {
     id: 5,
-    question: "¿Cómo manejas la tensión sexual?",
+    question: "Una mujer te dice: 'Necesito espacio'. ¿Qué está pasando REALMENTE?",
     options: [
       {
-        text: "La escalo progresivamente con tacto",
-        icon: "📈",
-        description: "Construyes anticipación gradual",
-        scores: { strategic: 3, charismatic: 1 }
+        text: "Necesita tiempo para pensar en la relación",
+        icon: "🤔",
+        description: "Está procesando sus sentimientos",
+        truth: "No. Cuando una mujer dice 'necesito espacio', ya tomó la decisión. El 'espacio' es para que TÚ proceses que ya perdiste."
       },
       {
-        text: "Voy directo cuando siento el momento",
-        icon: "⚡",
-        description: "Actúas con decisión y confianza",
-        scores: { alpha: 3, dominant: 2 }
+        text: "Está probando si te vuelves suplicante",
+        icon: "🧪",
+        description: "Ve cómo reaccionas a la distancia",
+        truth: "Correcto. Es una prueba de frame. Si suplicas, confirmas que eres de bajo valor. Si desapareces, crea duda. Pero ya hay daño previo."
       },
       {
-        text: "Juego con ella, acerco y retiro",
-        icon: "🎲",
-        description: "Creas tensión con push-pull",
-        scores: { strategic: 3, charismatic: 2 }
+        text: "Ya hay otro hombre en la ecuación",
+        icon: "👤",
+        description: "El 'espacio' es para explorar opciones",
+        truth: "En el 80% de casos, sí. 'Espacio' = 'quiero ver si este otro funciona sin cerrar esta puerta'. Hipergamia pura. Siempre buscan upgrade."
       },
       {
-        text: "Tomo el control físico sutilmente",
-        icon: "🤝",
-        description: "Lideras con kino y presencia",
-        scores: { dominant: 3, alpha: 1 }
+        text: "Perdiste el frame hace semanas, esto es el final",
+        icon: "⚰️",
+        description: "Esto es síntoma, no la causa",
+        truth: "Exacto. Cuando dice 'necesito espacio' ya llevas semanas o meses perdiendo frame. Cediendo, siendo predecible, perdiendo misterio. Esto es solo el coup de grâce."
       }
     ]
   },
   {
     id: 6,
-    question: "Tu mayor ventaja con las mujeres es:",
+    question: "¿Qué tiene más impacto en la atracción femenina?",
     options: [
       {
-        text: "Mi presencia y energía masculina",
-        icon: "⚡",
-        description: "Irradias confianza natural",
-        scores: { alpha: 3, dominant: 1 }
+        text: "Tu personalidad y sentido del humor",
+        icon: "😄",
+        description: "Ser divertido y auténtico",
+        truth: "La personalidad importa... DESPUÉS de la atracción inicial. Pero no la crea. Es como el empaque de un producto que primero tuvo que llamar su atención."
       },
       {
-        text: "Mi capacidad de leer situaciones",
-        icon: "👁️",
-        description: "Ves lo que otros no ven",
-        scores: { strategic: 3, charismatic: 1 }
+        text: "Cómo te ve interactuando con otros",
+        icon: "👥",
+        description: "La preselección y validación social",
+        truth: "Sí. Preselección. Si otras mujeres te quieren, tu valor sube exponencialmente. Es selección sexual 101. Pero hay más capas."
       },
       {
-        text: "Mi personalidad magnética",
-        icon: "✨",
-        description: "Naturalmente atraes atención",
-        scores: { charismatic: 3, alpha: 1 }
+        text: "Tu indiferencia hacia su validación",
+        icon: "😐",
+        description: "No necesitar su aprobación",
+        truth: "Oro puro. La indiferencia es afrodisíaco. Porque comunica opciones, alto valor, abundancia. Lo opuesto (necesidad) es repelente instantáneo."
       },
       {
-        text: "Mi capacidad de dominar el frame",
+        text: "Todas las anteriores, en orden específico",
         icon: "🎯",
-        description: "Controlas cualquier interacción",
-        scores: { dominant: 3, strategic: 1 }
+        description: "Hay una jerarquía y timing exactos",
+        truth: "Correcto. Hay un SISTEMA. Secuencia, timing, calibración. No es 'sé tú mismo'. Es dominar un juego con reglas específicas que nadie te enseñó."
       }
     ]
   },
   {
     id: 7,
-    question: "¿Cómo ves las relaciones a largo plazo?",
+    question: "¿Por qué las mujeres 'cambian' después de que las conquistas?",
     options: [
       {
-        text: "Yo establezco las reglas desde el inicio",
-        icon: "📜",
-        description: "Liderazgo claro desde día uno",
-        scores: { dominant: 3, alpha: 2 }
+        text: "Mostraron su verdadero yo",
+        icon: "🎭",
+        description: "Dejaron caer la máscara",
+        truth: "Parcialmente. Pero la pregunta real es: ¿por qué TÚ dejaste de hacer lo que causó la atracción inicial? Ellas responden a tu frame, no al contrato."
       },
       {
-        text: "Prefiero mantener opciones abiertas",
-        icon: "🔓",
-        description: "No te comprometes fácilmente",
-        scores: { alpha: 3, strategic: 1 }
+        text: "Tú dejaste de ser un desafío",
+        icon: "🏆",
+        description: "Te volviste predecible y disponible",
+        truth: "Exacto. Ganaste el juego y dejaste de jugar. Error fatal. La atracción femenina no es un logro permanente. Es un estado que mantienes o pierdes."
       },
       {
-        text: "Busco equilibrio entre libertad y conexión",
-        icon: "⚖️",
-        description: "Estrategia de relación balanceada",
-        scores: { strategic: 3, charismatic: 2 }
+        text: "Empezaron a probar límites",
+        icon: "🔍",
+        description: "Buscan hasta dónde pueden llegar",
+        truth: "Sí. Las pruebas nunca paran. Si cedes en las pequeñas, vendrán las grandes. Establecer frame desde el día 1 es no negociable."
       },
       {
-        text: "Construyo conexión profunda pero mantengo frame",
-        icon: "🏛️",
-        description: "Intimidad con liderazgo",
-        scores: { charismatic: 2, dominant: 2, strategic: 1 }
+        text: "No cambiaron, tú perdiste el poder",
+        icon: "⚡",
+        description: "Es shift de dinámica de poder",
+        truth: "Ahí está todo. En relaciones, el que menos necesita tiene el poder. Si cediste ese poder (siendo 'bueno', disponible, predecible), ella TIENE que perder atracción. Es automático."
       }
     ]
   },
   {
     id: 8,
-    question: "Tu filosofía sobre las mujeres:",
+    question: "¿Cuál es la verdad más incómoda sobre las relaciones que nadie quiere decirte?",
     options: [
       {
-        text: "Responden a fuerza y confianza",
-        icon: "💪",
-        description: "La masculinidad atrae naturalmente",
-        scores: { alpha: 3, dominant: 1 }
+        text: "El amor no conquista todo",
+        icon: "💔",
+        description: "Los sentimientos no son suficientes",
+        truth: "Correcto. El 'amor' sin atracción es amistad. Y la atracción tiene reglas. Reglas que contradicen todo lo que te enseñaron."
       },
       {
-        text: "Son predecibles si entiendes psicología",
-        icon: "🧩",
-        description: "Todo es un sistema comprensible",
-        scores: { strategic: 3, alpha: 1 }
+        text: "Las mujeres no aman como los hombres",
+        icon: "🔄",
+        description: "Su amor es condicional y oportunista",
+        truth: "Brutal pero cierto. El amor masculino es idealista. El femenino es hipergámico. Ella ama al hombre que eres HOY. Mañana puedes ser reemplazado. Acepta eso o sufre."
       },
       {
-        text: "Cada una es única y requiere calibración",
-        icon: "🎨",
-        description: "Adaptabilidad y empatía",
-        scores: { charismatic: 3, strategic: 1 }
+        text: "Ser 'bueno' es la estrategia perdedora",
+        icon: "♟️",
+        description: "Nice guys finish last por razones biológicas",
+        truth: "Sí. Porque 'bueno' en lenguaje femenino = predecible, controlable, sin opciones, bajo valor. No es opinión. Es cómo funciona su cerebro reptiliano."
       },
       {
-        text: "Necesitan un líder que las domine",
+        text: "Todo es un juego de poder desde el día 1",
         icon: "👑",
-        description: "Dominancia es la clave absoluta",
-        scores: { dominant: 3, alpha: 2 }
+        description: "No hay 'conexión genuina', hay estrategia",
+        truth: "Welcome to the red pill. Cada interacción es negociación de poder. Frame, límites, valor. Quien lo niega, pierde. Quien lo domina, gana. Simple y oscuro."
       }
     ]
   }
 ];
 
-// Archetypes
-const archetypes = {
-  alpha: {
-    name: "EL CONQUISTADOR",
-    icon: "⚡",
-    description: "Eres un hombre de acción directa. Tu energía masculina es tu mayor activo y no tienes miedo de ir por lo que quieres. Las mujeres perciben tu confianza innata, pero a veces tu intensidad puede ser excesiva. Tu mayor desafío es aprender a calibrar y entender las dinámicas psicológicas más sutiles.",
-    stats: { attraction: 85, frame: 72, emotional: 68, dominance: 79 }
-  },
-  strategic: {
-    name: "EL ESTRATEGA",
-    icon: "🧠",
-    description: "Eres un maestro del timing y la lectura de situaciones. Entiendes que la seducción es un juego de ajedrez, no de fuerza bruta. Tu capacidad analítica te da ventaja, pero a veces te quedas en tu cabeza y pierdes el momento de actuar. Tu desafío es combinar tu inteligencia con más acción decisiva.",
-    stats: { attraction: 75, frame: 88, emotional: 82, dominance: 71 }
-  },
-  charismatic: {
-    name: "EL CARISMÁTICO",
-    icon: "✨",
-    description: "Tu personalidad magnética es tu superpoder. Sabes conectar, hacer reír, y crear química instantánea. Las mujeres disfrutan tu compañía, pero a veces eres demasiado disponible o amigable. Tu desafío es mantener la polaridad sexual y no caer en la friendzone por ser 'demasiado bueno'.",
-    stats: { attraction: 88, frame: 71, emotional: 91, dominance: 65 }
-  },
-  dominant: {
-    name: "EL DOMINANTE",
-    icon: "👑",
-    description: "Control del frame es tu segunda naturaleza. Sabes establecer límites, liderar, y nunca cedes tu poder. Las mujeres respetan tu liderazgo, pero a veces tu rigidez puede crear fricción innecesaria. Tu desafío es balancear tu dominancia con inteligencia emocional y flexibilidad estratégica.",
-    stats: { attraction: 80, frame: 95, emotional: 73, dominance: 92 }
-  }
-};
-
 /**
  * Start Quiz
  */
 function startQuiz() {
-  // Hide welcome screen
   document.getElementById('welcomeScreen').classList.remove('active');
-
-  // Show progress bar
   document.getElementById('progressContainer').style.display = 'block';
-
-  // Update progress
   document.getElementById('progressTotal').textContent = questions.length;
 
-  // Generate question screens
   generateQuestionScreens();
-
-  // Show first question
   showQuestion(0);
 }
 
@@ -342,6 +303,29 @@ function generateQuestionScreens() {
     `;
 
     container.appendChild(screenDiv);
+
+    // Add truth reveal screen after each question
+    const truthDiv = document.createElement('div');
+    truthDiv.className = 'quiz-screen truth-reveal';
+    truthDiv.id = `truth${index}`;
+    truthDiv.innerHTML = `
+      <div class="screen-content">
+        <div class="truth-container">
+          <div class="truth-header">
+            <div class="truth-icon">🔥</div>
+            <h2 class="truth-title">LA VERDAD:</h2>
+          </div>
+          <div class="truth-text" id="truthText${index}">
+            <!-- Truth will be inserted here -->
+          </div>
+          <button class="btn-primary btn-continue" onclick="continueToNext(${index})">
+            CONTINUAR REVELACIÓN →
+          </button>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(truthDiv);
   });
 }
 
@@ -349,15 +333,11 @@ function generateQuestionScreens() {
  * Show Question
  */
 function showQuestion(index) {
-  // Hide all screens
   document.querySelectorAll('.quiz-screen').forEach(screen => {
     screen.classList.remove('active');
   });
 
-  // Show current question
   document.getElementById(`question${index}`).classList.add('active');
-
-  // Update progress
   updateProgress(index + 1);
 }
 
@@ -379,49 +359,68 @@ function selectOption(questionIndex, optionIndex) {
 
   // Store answer
   quizState.answers[questionIndex] = option;
+  quizState.truthsRevealed.push(option.truth);
 
-  // Add scores
-  Object.keys(option.scores).forEach(key => {
-    quizState.scores[key] += option.scores[key];
-  });
+  // Calculate awakeness based on how "red pill" the answer is
+  const awakenessPoints = [1, 2, 3, 4]; // Later options show more awareness
+  quizState.awakenessScore += awakenessPoints[optionIndex];
 
   // Visual feedback
   const optionCards = document.querySelectorAll(`#question${questionIndex} .option-card`);
   optionCards.forEach(card => card.classList.remove('selected'));
   optionCards[optionIndex].classList.add('selected');
 
-  // Move to next question or show results
+  // Show truth reveal
   setTimeout(() => {
-    if (questionIndex < questions.length - 1) {
-      showQuestion(questionIndex + 1);
-    } else {
-      showAnalyzing();
-    }
-  }, 500);
+    showTruthReveal(questionIndex, option.truth);
+  }, 600);
+}
+
+/**
+ * Show Truth Reveal
+ */
+function showTruthReveal(questionIndex, truthText) {
+  // Hide question
+  document.querySelectorAll('.quiz-screen').forEach(screen => {
+    screen.classList.remove('active');
+  });
+
+  // Show truth
+  document.getElementById(`truthText${questionIndex}`).innerHTML = `
+    <p>${truthText}</p>
+  `;
+  document.getElementById(`truth${questionIndex}`).classList.add('active');
+}
+
+/**
+ * Continue to Next
+ */
+function continueToNext(currentIndex) {
+  if (currentIndex < questions.length - 1) {
+    showQuestion(currentIndex + 1);
+  } else {
+    showAnalyzing();
+  }
 }
 
 /**
  * Show Analyzing Screen
  */
 function showAnalyzing() {
-  // Hide all screens
   document.querySelectorAll('.quiz-screen').forEach(screen => {
     screen.classList.remove('active');
   });
 
-  // Hide progress bar
   document.getElementById('progressContainer').style.display = 'none';
-
-  // Show analyzing screen
   document.getElementById('analyzingScreen').classList.add('active');
 
-  // Simulate analyzing process
+  // Analyzing messages
   const messages = [
-    "Procesando perfil psicológico...",
-    "Analizando patrones de respuesta...",
-    "Identificando arquetipo dominante...",
-    "Calculando potencial seductor...",
-    "Generando análisis personalizado..."
+    "Analizando nivel de consciencia...",
+    "Detectando patrones de pensamiento...",
+    "Calculando grado de programación social...",
+    "Identificando gaps de conocimiento...",
+    "Generando diagnóstico personalizado..."
   ];
 
   let messageIndex = 0;
@@ -444,59 +443,70 @@ function showAnalyzing() {
  * Show Results
  */
 function showResults() {
-  // Calculate dominant archetype
-  const archetype = calculateArchetype();
-
-  // Hide all screens
   document.querySelectorAll('.quiz-screen').forEach(screen => {
     screen.classList.remove('active');
   });
 
-  // Populate results
-  document.getElementById('archetypeIcon').textContent = archetype.icon;
-  document.getElementById('archetypeName').textContent = archetype.name;
-  document.getElementById('archetypeDescription').textContent = archetype.description;
+  // Calculate awakeness level
+  const maxScore = questions.length * 4; // 4 is max points per question
+  const awakenessPercentage = (quizState.awakenessScore / maxScore) * 100;
 
-  // Update stats
-  document.getElementById('stat1').textContent = `${archetype.stats.attraction}%`;
-  document.getElementById('statBar1').style.width = `${archetype.stats.attraction}%`;
+  let diagnosis, awakeness, icon, gapPercentage;
 
-  document.getElementById('stat2').textContent = `${archetype.stats.frame}%`;
-  document.getElementById('statBar2').style.width = `${archetype.stats.frame}%`;
+  if (awakenessPercentage < 30) {
+    diagnosis = "COMPLETAMENTE DORMIDO";
+    awakeness = "Matrix Total";
+    icon = "😴";
+    gapPercentage = "85-90%";
+  } else if (awakenessPercentage < 60) {
+    diagnosis = "EMPEZANDO A DESPERTAR";
+    awakeness = "Bluepill con dudas";
+    icon = "🤔";
+    gapPercentage = "60-75%";
+  } else if (awakenessPercentage < 85) {
+    diagnosis = "PARCIALMENTE CONSCIENTE";
+    awakeness = "Redpill incompleto";
+    icon = "👁️";
+    gapPercentage = "35-50%";
+  } else {
+    diagnosis = "ALTO NIVEL DE CONSCIENCIA";
+    awakeness = "Casi allá";
+    icon = "🔥";
+    gapPercentage = "15-25%";
+  }
 
-  document.getElementById('stat3').textContent = `${archetype.stats.emotional}%`;
-  document.getElementById('statBar3').style.width = `${archetype.stats.emotional}%`;
+  // Update results screen
+  document.getElementById('archetypeIcon').textContent = icon;
+  document.getElementById('archetypeName').textContent = diagnosis;
+  document.getElementById('archetypeDescription').innerHTML = `
+    <strong>Nivel de Consciencia:</strong> ${awakeness}<br><br>
 
-  document.getElementById('stat4').textContent = `${archetype.stats.dominance}%`;
-  document.getElementById('statBar4').style.width = `${archetype.stats.dominance}%`;
+    Has visto algunas piezas del puzzle, pero te falta el mapa completo.
 
-  // Show results screen
+    <strong>Estás operando con el ${100 - parseInt(gapPercentage)}% de la información.</strong>
+    El ${gapPercentage} restante es la diferencia entre seguir luchando o dominar el juego.
+  `;
+
+  // Update stats to reflect gaps
+  const stats = [
+    { label: "Entiendes las reglas reales", value: Math.min(awakenessPercentage, 90) },
+    { label: "Conoces la psicología femenina", value: Math.min(awakenessPercentage - 10, 85) },
+    { label: "Dominas el frame y poder", value: Math.min(awakenessPercentage - 5, 88) },
+    { label: "Sabes jugar el juego", value: Math.min(awakenessPercentage + 5, 92) }
+  ];
+
+  stats.forEach((stat, index) => {
+    const statNum = index + 1;
+    document.getElementById(`stat${statNum}`).textContent = `${Math.round(stat.value)}%`;
+    document.getElementById(`statBar${statNum}`).style.width = `${stat.value}%`;
+    document.querySelector(`#statBar${statNum}`).closest('.stat-bar').querySelector('.stat-label span').textContent = stat.label;
+  });
+
   document.getElementById('resultsScreen').classList.add('active');
 
-  // Animate stats
   setTimeout(() => {
     animateStats();
   }, 500);
-}
-
-/**
- * Calculate Archetype
- */
-function calculateArchetype() {
-  const scores = quizState.scores;
-
-  // Find highest score
-  let maxScore = 0;
-  let dominantType = 'alpha';
-
-  Object.keys(scores).forEach(type => {
-    if (scores[type] > maxScore) {
-      maxScore = scores[type];
-      dominantType = type;
-    }
-  });
-
-  return archetypes[dominantType];
 }
 
 /**
@@ -520,7 +530,7 @@ function showOffer() {
   window.location.href = 'oferta.html';
 }
 
-// Initialize on load
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Villano.ai Quiz initialized');
+  console.log('Villano.ai - Progressive Revelation Quiz initialized');
 });
