@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VILLANO.AI — Crypto: La economía paralela. DeFi, wallets, yield farming, seguridad on-chain para el operador cibernético.">
+  <meta name="theme-color" content="#000000">
+  <title>Crypto — VILLANO.AI</title>
+  <link rel="stylesheet" href="css/dondelukas.css">
+</head>
+<body>
+
+  <canvas id="matrix-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="scanlines"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="logo">VILLANO<span>.AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#domains">Dominios</a></li>
+      <li><a href="index.html#gallery">Arsenal</a></li>
+      <li><a href="index.html#protocol">Protocolo</a></li>
+    </ul>
+  </nav>
+
+  <!-- Domain Hero -->
+  <section class="domain-hero">
+    <div class="domain-hero-content">
+      <span class="hero-tag animate-in">02 // Vector de Poder</span>
+      <h1 class="hero-title animate-in delay-1">
+        <span class="glitch" data-text="CRYPTO">CRYPTO</span>
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        La economía paralela. Dinero programable, finanzas sin intermediarios,
+        soberanía sobre tu capital. El sistema que los bancos no quieren que entiendas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Knowledge Base -->
+  <section class="knowledge-base">
+    <div class="kb-container">
+
+      <!-- Intro Block -->
+      <div class="kb-block intro-block">
+        <div class="kb-header">
+          <span class="kb-index">00</span>
+          <h2 class="kb-title">¿Por qué crypto?</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Bitcoin nació en 2009 como respuesta a la crisis financiera. La promesa: dinero
+            que ningún gobierno puede imprimir, ningún banco puede congelar, ninguna frontera
+            puede detener. Esa promesa sigue viva.
+          </p>
+          <p>
+            Crypto no es solo inversión especulativa. Es infraestructura financiera alternativa.
+            Entender cómo funciona te da opciones que la mayoría no tiene. Aquí está el mapa básico.
+          </p>
+        </div>
+      </div>
+
+      <!-- Concept 1 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">01</span>
+          <h2 class="kb-title">Blockchain: El Libro Contable Global</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Una <strong>blockchain</strong> es una base de datos distribuida. En vez de un servidor
+            central (como un banco), miles de computadoras tienen copias idénticas del registro.
+            Cuando haces una transacción, todas las copias se actualizan simultáneamente.
+          </p>
+          <div class="kb-formula">
+            <code>BLOQUE = TRANSACCIONES + HASH DEL BLOQUE ANTERIOR + TIMESTAMP</code>
+          </div>
+          <p>
+            Cada bloque está enlazado al anterior mediante criptografía. Alterar un bloque histórico
+            requeriría reescribir toda la cadena posterior—computacionalmente imposible.
+          </p>
+          <div class="kb-tip">
+            <span class="tip-label">// IMPLICACIÓN</span>
+            <p>Por primera vez en la historia, puedes transferir valor sin confiar en un tercero. El código es la ley.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">02</span>
+          <h2 class="kb-title">Wallets: Tu Bóveda Personal</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Una <strong>wallet</strong> no "guarda" crypto. Guarda las llaves privadas que te dan
+            control sobre direcciones en la blockchain. Quien tiene las llaves, tiene el dinero.
+          </p>
+          <div class="kb-comparison">
+            <div class="kb-col">
+              <h4 class="col-title">HOT WALLETS</h4>
+              <p>Conectadas a internet:</p>
+              <ul>
+                <li>MetaMask (browser)</li>
+                <li>Trust Wallet (móvil)</li>
+                <li>Exchange wallets</li>
+              </ul>
+              <p class="kb-note">Convenientes pero vulnerables</p>
+            </div>
+            <div class="kb-col">
+              <h4 class="col-title positive">COLD WALLETS</h4>
+              <p>Sin conexión a internet:</p>
+              <ul>
+                <li>Ledger (hardware)</li>
+                <li>Trezor (hardware)</li>
+                <li>Paper wallets</li>
+              </ul>
+              <p class="kb-note">Máxima seguridad</p>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// REGLA DE ORO</span>
+            <p>Not your keys, not your coins. Si tu crypto está en un exchange, no es realmente tuya.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 3 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">03</span>
+          <h2 class="kb-title">Bitcoin vs Altcoins</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            <strong>Bitcoin (BTC)</strong> es el original. Máxima descentralización, máxima seguridad,
+            suministro limitado a 21 millones. Es "oro digital"—reserva de valor.
+          </p>
+          <p>
+            <strong>Altcoins</strong> son todas las demás criptomonedas. Cada una tiene su propósito:
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">ETHEREUM (ETH)</span>
+              <span class="item-desc">Plataforma de contratos inteligentes. Base de DeFi y NFTs.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">STABLECOINS</span>
+              <span class="item-desc">USDT, USDC. Atadas al dólar. Útiles para trading y pagos sin volatilidad.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">LAYER 2s</span>
+              <span class="item-desc">Polygon, Arbitrum. Transacciones más rápidas y baratas sobre Ethereum.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">SOLANA, AVALANCHE</span>
+              <span class="item-desc">Competidores de Ethereum. Más rápidos pero menos descentralizados.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// ESTRATEGIA</span>
+            <p>Bitcoin para ahorrar. Ethereum para operar. Stablecoins para liquidez. El resto es especulación.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 4 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">04</span>
+          <h2 class="kb-title">DeFi: Finanzas Descentralizadas</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            <strong>DeFi</strong> recrea servicios financieros tradicionales (préstamos, trading, ahorro)
+            usando contratos inteligentes en vez de bancos. Sin KYC, sin fronteras, 24/7.
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">DEXs</span>
+              <span class="item-desc">Uniswap, Curve. Intercambios descentralizados. Tradeas directo desde tu wallet.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">LENDING</span>
+              <span class="item-desc">Aave, Compound. Presta tu crypto y gana interés. O pide prestado con colateral.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">YIELD FARMING</span>
+              <span class="item-desc">Proveer liquidez a protocolos a cambio de recompensas. Alto riesgo, alto retorno.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">STAKING</span>
+              <span class="item-desc">Bloquear tokens para validar la red. Ganas recompensas por asegurar el protocolo.</span>
+            </div>
+          </div>
+          <div class="kb-example">
+            <span class="example-label">// EJEMPLO</span>
+            <p>
+              Depositas $10,000 USDC en Aave → Ganas ~5% anual → Tu dinero trabaja sin intermediarios.<br>
+              Provees liquidez ETH/USDC en Uniswap → Ganas fees de cada trade + tokens de recompensa.
+            </p>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// ADVERTENCIA</span>
+            <p>DeFi tiene riesgos reales: hacks, exploits, impermanent loss. Nunca inviertas más de lo que puedes perder.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 5 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">05</span>
+          <h2 class="kb-title">Seguridad: Paranoia Productiva</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            En crypto, tú eres tu propio banco. Eso significa que tú eres responsable de tu seguridad.
+            Un error puede costarte todo.
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">SEED PHRASE</span>
+              <span class="item-desc">12-24 palabras que controlan tu wallet. NUNCA la compartas. NUNCA la guardes digitalmente.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">HARDWARE WALLET</span>
+              <span class="item-desc">Para cualquier cantidad significativa. El costo de $80 es nada comparado con lo que proteges.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">MULTISIG</span>
+              <span class="item-desc">Requiere múltiples firmas para mover fondos. Protección contra robo y error humano.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">OPSEC</span>
+              <span class="item-desc">No presumas holdings. Usa VPN. Verifica URLs. Asume que todo link es phishing.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// REGLA</span>
+            <p>Si alguien te contacta primero sobre crypto, es scam. Sin excepciones.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 6 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">06</span>
+          <h2 class="kb-title">Cómo Empezar</h2>
+        </div>
+        <div class="kb-content">
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">PASO 1</span>
+              <span class="item-desc">Crea cuenta en exchange (Binance, Kraken). Completa KYC.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">PASO 2</span>
+              <span class="item-desc">Deposita fiat. Compra Bitcoin o USDT como inicio.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">PASO 3</span>
+              <span class="item-desc">Instala MetaMask. Aprende a mover crypto del exchange a tu wallet.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">PASO 4</span>
+              <span class="item-desc">Experimenta con pequeñas cantidades. Haz swaps en un DEX. Entiende el gas.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">PASO 5</span>
+              <span class="item-desc">Cuando tengas cantidad significativa, compra hardware wallet.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// MENTALIDAD</span>
+            <p>Crypto es skill, no suerte. Cada error es tuition. Empieza pequeño, aprende, escala.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Related Modules -->
+  <section class="related-modules">
+    <div class="section-header">
+      <span class="section-index">// Módulos Relacionados</span>
+      <h2 class="section-title">Implementa el conocimiento</h2>
+    </div>
+
+    <div class="modules-grid">
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#002</span>
+        <h3 class="module-title">DeFi Crash Course</h3>
+        <span class="module-price">$45</span>
+      </a>
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#004</span>
+        <h3 class="module-title">Seguridad On-Chain</h3>
+        <span class="module-price">$35</span>
+      </a>
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#007</span>
+        <h3 class="module-title">Trading Bot Setup</h3>
+        <span class="module-price">$55</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">VILLANO.AI</div>
+        <p class="footer-tagline">
+          Repositorio digital para la minoría. Herramientas para empresarios cibernéticos
+          que construyen desde las sombras.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Dominios</h4>
+          <ul>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="toolkits.html">Toolkits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sistema</h4>
+          <ul>
+            <li><a href="index.html#protocol">Protocolo</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 VILLANO.AI — Conocimiento para la minoría</span>
+      <div class="payment-methods">
+        <span>VISA</span>
+        <span>MC</span>
+        <span>MPAGO</span>
+        <span>PSE</span>
+        <span>BTC</span>
+        <span>ETH</span>
+        <span>USDT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dondelukas.js"></script>
+</body>
+</html>

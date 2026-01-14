@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VILLANO.AI — Toolkits: Las herramientas del operador moderno. Apps, software, stacks tecnológicos listos para implementar.">
+  <meta name="theme-color" content="#000000">
+  <title>Toolkits — VILLANO.AI</title>
+  <link rel="stylesheet" href="css/dondelukas.css">
+</head>
+<body>
+
+  <canvas id="matrix-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="scanlines"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="logo">VILLANO<span>.AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#domains">Dominios</a></li>
+      <li><a href="index.html#gallery">Arsenal</a></li>
+      <li><a href="index.html#protocol">Protocolo</a></li>
+    </ul>
+  </nav>
+
+  <!-- Domain Hero -->
+  <section class="domain-hero">
+    <div class="domain-hero-content">
+      <span class="hero-tag animate-in">03 // Vector de Poder</span>
+      <h1 class="hero-title animate-in delay-1">
+        <span class="glitch" data-text="TOOLKITS">TOOLKITS</span>
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        Las herramientas correctas en el momento correcto. Listas curadas de apps,
+        software y stacks tecnológicos. Deja de buscar. Empieza a operar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Knowledge Base -->
+  <section class="knowledge-base">
+    <div class="kb-container">
+
+      <!-- Intro Block -->
+      <div class="kb-block intro-block">
+        <div class="kb-header">
+          <span class="kb-index">00</span>
+          <h2 class="kb-title">¿Por qué toolkits?</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            El mundo está lleno de herramientas. Demasiadas. El problema no es encontrarlas—es
+            saber cuáles valen la pena. Cada hora buscando la app perfecta es una hora que no
+            estás produciendo.
+          </p>
+          <p>
+            Los toolkits son atajos. Listas curadas por operadores para operadores. Software
+            probado, workflows optimizados, stacks que funcionan. Copia, pega, ejecuta.
+          </p>
+        </div>
+      </div>
+
+      <!-- Concept 1 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">01</span>
+          <h2 class="kb-title">Anatomía de un Stack Tecnológico</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Un <strong>stack</strong> es el conjunto de herramientas que usas para operar.
+            No hay stack universal—el mejor es el que dominas. Pero hay categorías que
+            todo operador necesita cubrir:
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">COMUNICACIÓN</span>
+              <span class="item-desc">Email, chat, video. Cómo te conectas con clientes, equipo, mundo.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">PRODUCTIVIDAD</span>
+              <span class="item-desc">Notas, tareas, calendario. El sistema operativo de tu día.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">CREACIÓN</span>
+              <span class="item-desc">Diseño, video, escritura. Herramientas para producir contenido.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">AUTOMATIZACIÓN</span>
+              <span class="item-desc">Scripts, workflows, integraciones. Máquinas que trabajan por ti.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">FINANZAS</span>
+              <span class="item-desc">Contabilidad, facturación, pagos. El flujo del dinero.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">SEGURIDAD</span>
+              <span class="item-desc">Passwords, VPN, backups. Protección del sistema.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// PRINCIPIO</span>
+            <p>Menos herramientas, mejor dominadas. Maestría en 5 apps supera conocimiento superficial de 50.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">02</span>
+          <h2 class="kb-title">El Stack Mínimo Viable</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Si tuvieras que empezar de cero con el mínimo necesario para operar como
+            freelancer o microempresario digital, este es el stack:
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">NOTION</span>
+              <span class="item-desc">Wiki personal, tareas, bases de datos. El cerebro externo. Gratis hasta que escales.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">GMAIL + CALENDAR</span>
+              <span class="item-desc">Email profesional y agenda. Integra con todo. Gratis.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">CANVA</span>
+              <span class="item-desc">Diseño sin saber diseñar. Templates para todo. Plan gratis funcional.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">STRIPE / MERCADOPAGO</span>
+              <span class="item-desc">Recibir pagos. Configuración en minutos. Comisión por transacción.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">WHATSAPP BUSINESS</span>
+              <span class="item-desc">Comunicación directa con clientes. Catálogo, respuestas rápidas. Gratis.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">BITWARDEN</span>
+              <span class="item-desc">Gestor de contraseñas. Seguridad básica. Gratis.</span>
+            </div>
+          </div>
+          <div class="kb-example">
+            <span class="example-label">// COSTO TOTAL</span>
+            <p>
+              <span class="highlight">$0/mes</span> para empezar.<br>
+              Escala cuando el ingreso lo justifique, no antes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 3 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">03</span>
+          <h2 class="kb-title">Automatización: Tu Primer Empleado Virtual</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            <strong>Automatización</strong> es programar máquinas para hacer tareas repetitivas.
+            No necesitas saber código. Herramientas como Zapier o Make conectan apps entre sí
+            con lógica visual.
+          </p>
+          <div class="kb-comparison">
+            <div class="kb-col">
+              <h4 class="col-title negative">ANTES</h4>
+              <p>Proceso manual:</p>
+              <ul>
+                <li>Cliente llena formulario</li>
+                <li>Copias datos a Excel</li>
+                <li>Envías email de confirmación</li>
+                <li>Agregas a lista de WhatsApp</li>
+                <li>Creas factura</li>
+              </ul>
+              <p class="kb-note">15 minutos por cliente</p>
+            </div>
+            <div class="kb-col">
+              <h4 class="col-title positive">DESPUÉS</h4>
+              <p>Automatizado:</p>
+              <ul>
+                <li>Cliente llena formulario</li>
+                <li>→ Datos van a CRM automático</li>
+                <li>→ Email de confirmación sale solo</li>
+                <li>→ Notificación en Slack</li>
+                <li>→ Factura se genera sola</li>
+              </ul>
+              <p class="kb-note">0 minutos por cliente</p>
+            </div>
+          </div>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">ZAPIER</span>
+              <span class="item-desc">El más popular. 5,000+ integraciones. Plan gratis limitado pero funcional.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">MAKE</span>
+              <span class="item-desc">Más potente que Zapier, más barato. Curva de aprendizaje mayor.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">N8N</span>
+              <span class="item-desc">Open source. Self-hosted. Gratis si tienes servidor. Máximo control.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// REGLA</span>
+            <p>Si haces algo más de 3 veces por semana, automatízalo. Tu tiempo vale más que cualquier herramienta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 4 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">04</span>
+          <h2 class="kb-title">AI como Multiplicador</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            La inteligencia artificial no reemplaza operadores—los multiplica. Las mismas
+            herramientas que usan corporaciones están disponibles para ti.
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">CHATGPT / CLAUDE</span>
+              <span class="item-desc">Escritura, análisis, código, brainstorming. Un junior universal disponible 24/7.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">MIDJOURNEY</span>
+              <span class="item-desc">Generación de imágenes. Conceptos visuales en segundos, no horas.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">RUNWAY</span>
+              <span class="item-desc">Video AI. Edición, efectos, generación. Producción profesional sin equipo.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">ELEVENLABS</span>
+              <span class="item-desc">Voz AI. Clona tu voz, narra contenido, múltiples idiomas.</span>
+            </div>
+          </div>
+          <div class="kb-example">
+            <span class="example-label">// WORKFLOW</span>
+            <p>
+              <span class="highlight">1.</span> ChatGPT escribe el guión →
+              <span class="highlight">2.</span> ElevenLabs lo narra →
+              <span class="highlight">3.</span> Midjourney genera visuales →
+              <span class="highlight">4.</span> Runway lo edita<br><br>
+              Video de 5 minutos. 2 horas de trabajo. Antes tomaba días.
+            </p>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// MENTALIDAD</span>
+            <p>AI es herramienta, no magia. Amplifica tu criterio. Basura entra, basura sale. Aprende a dar buenos prompts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 5 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">05</span>
+          <h2 class="kb-title">Seguridad Digital Básica</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Tu operación digital es tan fuerte como su eslabón más débil. La mayoría de
+            brechas vienen de errores humanos, no de hackeos sofisticados.
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">PASSWORD MANAGER</span>
+              <span class="item-desc">Bitwarden o 1Password. Una contraseña maestra, el resto generadas y únicas.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">2FA EN TODO</span>
+              <span class="item-desc">Autenticación de dos factores. Preferiblemente app (Authy), no SMS.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">VPN</span>
+              <span class="item-desc">Mullvad, ProtonVPN. Especialmente en WiFi público. ~$5/mes.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">BACKUPS</span>
+              <span class="item-desc">Regla 3-2-1: 3 copias, 2 medios diferentes, 1 offsite. Automatízalo.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">EMAIL SEGURO</span>
+              <span class="item-desc">ProtonMail para comunicaciones sensibles. Encriptación end-to-end.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// MÍNIMO</span>
+            <p>Password manager + 2FA cubre el 90% de los riesgos. Implementa hoy, no mañana.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 6 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">06</span>
+          <h2 class="kb-title">Principios de Selección</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Cuando evalúes cualquier herramienta nueva, usa este framework:
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">PROBLEMA</span>
+              <span class="item-desc">¿Qué problema específico resuelve? Si no puedes articularlo, no lo necesitas.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">COSTO TOTAL</span>
+              <span class="item-desc">Dinero + tiempo de aprendizaje + tiempo de mantenimiento. Todo cuenta.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">INTEGRACIÓN</span>
+              <span class="item-desc">¿Se conecta con tu stack actual? Herramientas aisladas crean fricciones.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">ESCALABILIDAD</span>
+              <span class="item-desc">¿Crece contigo o tendrás que migrar? Migrar es costoso.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">SALIDA</span>
+              <span class="item-desc">¿Puedes exportar tus datos? Nunca seas rehén de una plataforma.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// FILTRO</span>
+            <p>Antes de agregar una herramienta nueva, pregunta: ¿puedo lograr esto con algo que ya tengo?</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Related Modules -->
+  <section class="related-modules">
+    <div class="section-header">
+      <span class="section-index">// Módulos Relacionados</span>
+      <h2 class="section-title">Implementa el conocimiento</h2>
+    </div>
+
+    <div class="modules-grid">
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#003</span>
+        <h3 class="module-title">Stack del Creador Digital</h3>
+        <span class="module-price">$19</span>
+      </a>
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#006</span>
+        <h3 class="module-title">Automatización Personal</h3>
+        <span class="module-price">$25</span>
+      </a>
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#008</span>
+        <h3 class="module-title">Stack del Hacker Ético</h3>
+        <span class="module-price">$39</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">VILLANO.AI</div>
+        <p class="footer-tagline">
+          Repositorio digital para la minoría. Herramientas para empresarios cibernéticos
+          que construyen desde las sombras.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Dominios</h4>
+          <ul>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="toolkits.html">Toolkits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sistema</h4>
+          <ul>
+            <li><a href="index.html#protocol">Protocolo</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 VILLANO.AI — Conocimiento para la minoría</span>
+      <div class="payment-methods">
+        <span>VISA</span>
+        <span>MC</span>
+        <span>MPAGO</span>
+        <span>PSE</span>
+        <span>BTC</span>
+        <span>ETH</span>
+        <span>USDT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dondelukas.js"></script>
+</body>
+</html>

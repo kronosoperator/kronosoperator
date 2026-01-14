@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VILLANO.AI — Finanzas: El código del dinero. Cash flow, inversión, estructura fiscal para el operador cibernético.">
+  <meta name="theme-color" content="#000000">
+  <title>Finanzas — VILLANO.AI</title>
+  <link rel="stylesheet" href="css/dondelukas.css">
+</head>
+<body>
+
+  <canvas id="matrix-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="scanlines"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="logo">VILLANO<span>.AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#domains">Dominios</a></li>
+      <li><a href="index.html#gallery">Arsenal</a></li>
+      <li><a href="index.html#protocol">Protocolo</a></li>
+    </ul>
+  </nav>
+
+  <!-- Domain Hero -->
+  <section class="domain-hero">
+    <div class="domain-hero-content">
+      <span class="hero-tag animate-in">01 // Vector de Poder</span>
+      <h1 class="hero-title animate-in delay-1">
+        <span class="glitch" data-text="FINANZAS">FINANZAS</span>
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        El dinero es código. Flujos de entrada, flujos de salida, algoritmos de acumulación.
+        No es magia. Es arquitectura. Aquí aprendes a escribirla.
+      </p>
+    </div>
+  </section>
+
+  <!-- Knowledge Base -->
+  <section class="knowledge-base">
+    <div class="kb-container">
+
+      <!-- Intro Block -->
+      <div class="kb-block intro-block">
+        <div class="kb-header">
+          <span class="kb-index">00</span>
+          <h2 class="kb-title">¿Por qué finanzas?</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Todo lo que construyes requiere combustible. El combustible del siglo XXI es el dinero digital
+            moviéndose a través de sistemas que puedes aprender a controlar. No necesitas un MBA.
+            Necesitas entender tres cosas: cómo entra, cómo sale, y cómo se multiplica.
+          </p>
+          <p>
+            Las finanzas personales y empresariales operan bajo las mismas leyes. La diferencia está
+            en la escala y la estructura. Aquí te damos el mapa para ambas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Concept 1 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">01</span>
+          <h2 class="kb-title">Cash Flow: El Pulso del Sistema</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            <strong>Cash flow</strong> es el movimiento de dinero dentro y fuera de tu sistema.
+            Es la métrica más importante. Una empresa rentable puede morir por falta de cash flow.
+            Una persona con buen salario puede estar quebrada si su flujo es negativo.
+          </p>
+          <div class="kb-formula">
+            <code>CASH FLOW = INGRESOS - GASTOS - INVERSIONES + RETORNOS</code>
+          </div>
+          <p>
+            <strong>Cash flow positivo</strong>: entra más de lo que sale. Puedes reinvertir, escalar, sobrevivir crisis.<br>
+            <strong>Cash flow negativo</strong>: sale más de lo que entra. Estás consumiendo reservas. Tiempo limitado.
+          </p>
+          <div class="kb-tip">
+            <span class="tip-label">// REGLA</span>
+            <p>Nunca gastes dinero que no ha entrado. El crédito es deuda disfrazada de oportunidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">02</span>
+          <h2 class="kb-title">Activos vs Pasivos</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            La distinción más importante en finanzas personales. La mayoría la ignora y por eso
+            trabajan toda su vida sin acumular riqueza.
+          </p>
+          <div class="kb-comparison">
+            <div class="kb-col">
+              <h4 class="col-title positive">ACTIVOS</h4>
+              <p>Cosas que ponen dinero en tu bolsillo:</p>
+              <ul>
+                <li>Inversiones que generan dividendos</li>
+                <li>Propiedades en renta</li>
+                <li>Negocios que operan sin ti</li>
+                <li>Propiedad intelectual (royalties)</li>
+                <li>Crypto en staking</li>
+              </ul>
+            </div>
+            <div class="kb-col">
+              <h4 class="col-title negative">PASIVOS</h4>
+              <p>Cosas que sacan dinero de tu bolsillo:</p>
+              <ul>
+                <li>Tu casa (si no genera renta)</li>
+                <li>Tu carro</li>
+                <li>Suscripciones que no usas</li>
+                <li>Deudas con interés</li>
+                <li>Lujos que deprecian</li>
+              </ul>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// ESTRATEGIA</span>
+            <p>Compra activos. Minimiza pasivos. Cada peso gastado en pasivos es un peso que no trabaja para ti.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 3 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">03</span>
+          <h2 class="kb-title">El Poder del Interés Compuesto</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Einstein lo llamó "la octava maravilla del mundo". El interés compuesto es el efecto
+            de ganar interés sobre interés. Pequeñas cantidades, con tiempo suficiente, se
+            convierten en fortunas.
+          </p>
+          <div class="kb-formula">
+            <code>A = P(1 + r/n)^(nt)</code>
+          </div>
+          <p class="formula-legend">
+            A = Monto final | P = Principal | r = Tasa anual | n = Veces por año | t = Años
+          </p>
+          <div class="kb-example">
+            <span class="example-label">// EJEMPLO</span>
+            <p>
+              $10,000 invertidos al 10% anual:<br>
+              <span class="highlight">Año 10:</span> $25,937<br>
+              <span class="highlight">Año 20:</span> $67,275<br>
+              <span class="highlight">Año 30:</span> $174,494
+            </p>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// CLAVE</span>
+            <p>El tiempo es más importante que la cantidad. Empezar hoy con poco supera a empezar mañana con mucho.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 4 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">04</span>
+          <h2 class="kb-title">Estructura Fiscal</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            Los impuestos son el gasto más grande de tu vida. La diferencia entre un operador
+            y un empleado no es solo el ingreso—es cuánto de ese ingreso conservas.
+          </p>
+          <div class="kb-comparison">
+            <div class="kb-col">
+              <h4 class="col-title">EMPLEADO</h4>
+              <p>Gana → Paga impuestos → Gasta lo que queda</p>
+            </div>
+            <div class="kb-col">
+              <h4 class="col-title positive">EMPRESARIO</h4>
+              <p>Gana → Gasta (deduce) → Paga impuestos sobre lo que queda</p>
+            </div>
+          </div>
+          <p>
+            <strong>Estructuras legales</strong> como LLCs, holdings, y entidades en jurisdicciones
+            favorables permiten optimizar la carga fiscal. No es evasión. Es arquitectura legal.
+          </p>
+          <div class="kb-tip">
+            <span class="tip-label">// AVISO</span>
+            <p>Consulta siempre con profesionales locales. Las leyes varían por jurisdicción.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 5 -->
+      <div class="kb-block">
+        <div class="kb-header">
+          <span class="kb-index">05</span>
+          <h2 class="kb-title">Diversificación: No Todos los Huevos</h2>
+        </div>
+        <div class="kb-content">
+          <p>
+            El riesgo se mitiga distribuyendo capital en diferentes clases de activos.
+            Si uno falla, los otros sostienen el sistema.
+          </p>
+          <div class="kb-list">
+            <div class="list-item">
+              <span class="item-label">EFECTIVO</span>
+              <span class="item-desc">Liquidez para emergencias y oportunidades. 3-6 meses de gastos.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">RENTA FIJA</span>
+              <span class="item-desc">Bonos, CDTs. Bajo riesgo, bajo retorno. Estabilidad.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">RENTA VARIABLE</span>
+              <span class="item-desc">Acciones, ETFs. Mayor riesgo, mayor potencial de retorno.</span>
+            </div>
+            <div class="list-item">
+              <span class="item-label">ALTERNATIVOS</span>
+              <span class="item-desc">Crypto, real estate, startups. Alto riesgo, alto potencial.</span>
+            </div>
+          </div>
+          <div class="kb-tip">
+            <span class="tip-label">// FRAMEWORK</span>
+            <p>100 - tu edad = % en renta variable. El resto en fija y alternativos. Ajusta según tolerancia al riesgo.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Related Modules -->
+  <section class="related-modules">
+    <div class="section-header">
+      <span class="section-index">// Módulos Relacionados</span>
+      <h2 class="section-title">Implementa el conocimiento</h2>
+    </div>
+
+    <div class="modules-grid">
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#001</span>
+        <h3 class="module-title">Cash Flow para Operadores</h3>
+        <span class="module-price">$29</span>
+      </a>
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#005</span>
+        <h3 class="module-title">Estructura Fiscal Offshore</h3>
+        <span class="module-price">$79</span>
+      </a>
+      <a href="index.html#gallery" class="module-card">
+        <span class="module-id">#009</span>
+        <h3 class="module-title">Ingresos Pasivos Digitales</h3>
+        <span class="module-price">$49</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">VILLANO.AI</div>
+        <p class="footer-tagline">
+          Repositorio digital para la minoría. Herramientas para empresarios cibernéticos
+          que construyen desde las sombras.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Dominios</h4>
+          <ul>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="toolkits.html">Toolkits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sistema</h4>
+          <ul>
+            <li><a href="index.html#protocol">Protocolo</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 VILLANO.AI — Conocimiento para la minoría</span>
+      <div class="payment-methods">
+        <span>VISA</span>
+        <span>MC</span>
+        <span>MPAGO</span>
+        <span>PSE</span>
+        <span>BTC</span>
+        <span>ETH</span>
+        <span>USDT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dondelukas.js"></script>
+</body>
+</html>
