@@ -3,198 +3,430 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Villano.ai - Descubre tu arquetipo seductor">
-  <meta name="author" content="Villano.ai">
-  <title>Villano.ai - Test de Seducción</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/quiz.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <meta name="description" content="VILLANO.AI — Repositorio digital para empresarios cibernéticos. Finanzas, Crypto, Toolkits. Herramientas para la minoría que construye desde las sombras.">
+  <meta name="theme-color" content="#000000">
+  <title>VILLANO.AI</title>
+  <link rel="stylesheet" href="css/dondelukas.css">
 </head>
 <body>
-  <!-- Quiz Container -->
-  <div class="quiz-wrapper">
-    <!-- Logo -->
-    <div class="logo">
-      <h1>VILLANO<span class="ai">.ai</span></h1>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Grid Overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- Scanlines -->
+  <div class="scanlines"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="logo">VILLANO<span>.AI</span></a>
+    <ul class="nav-links">
+      <li><a href="#domains">Dominios</a></li>
+      <li><a href="#gallery">Arsenal</a></li>
+      <li><a href="#protocol">Protocolo</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-tag animate-in">Repositorio digital para la minoría</span>
+      <h1 class="hero-title animate-in delay-1">
+        <span class="glitch" data-text="CONSTRUYE">CONSTRUYE</span><br>
+        DESDE LAS SOMBRAS
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        Finanzas. Crypto. Toolkits. Módulos de conocimiento para empresarios cibernéticos,
+        filósofos digitales y artistas del underground. Un curso a la vez. Un imperio a la vez.
+      </p>
+      <a href="#gallery" class="hero-cta animate-in delay-3">Acceder al arsenal</a>
+    </div>
+  </section>
+
+  <!-- DOMAINS -->
+  <section class="domains" id="domains">
+    <div class="section-header">
+      <span class="section-index">01 // Dominios</span>
+      <h2 class="section-title">Vectores de poder</h2>
     </div>
 
-    <!-- Progress Bar -->
-    <div class="progress-container" id="progressContainer" style="display: none;">
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
+    <div class="domains-grid">
+      <div class="domain-card">
+        <div class="domain-index">01</div>
+        <h3 class="domain-title">Finanzas</h3>
+        <p class="domain-desc">
+          Cash flow, inversión, estructura fiscal. Frameworks financieros para construir
+          sin pedir permiso. El dinero es código. Aprende a escribirlo.
+        </p>
+        <div class="domain-count"><span>4</span> módulos disponibles</div>
       </div>
-      <div class="progress-text">
-        <span id="progressCurrent">1</span> / <span id="progressTotal">8</span>
+
+      <div class="domain-card">
+        <div class="domain-index">02</div>
+        <h3 class="domain-title">Crypto</h3>
+        <p class="domain-desc">
+          DeFi, wallets, yield farming, seguridad on-chain. Crash courses para operar
+          en la economía paralela. Sin bancos. Sin intermediarios. Sin límites.
+        </p>
+        <div class="domain-count"><span>5</span> módulos disponibles</div>
+      </div>
+
+      <div class="domain-card">
+        <div class="domain-index">03</div>
+        <h3 class="domain-title">Toolkits</h3>
+        <p class="domain-desc">
+          Listas curadas de apps, software y stacks tecnológicos listos para implementar.
+          Automatización, productividad, creación. Las herramientas del operador moderno.
+        </p>
+        <div class="domain-count"><span>6</span> kits disponibles</div>
       </div>
     </div>
+  </section>
 
-    <!-- Quiz Screens -->
-    <div class="quiz-container" id="quizContainer">
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <span class="section-index">02 // Arsenal</span>
+      <h2 class="section-title">Módulos disponibles</h2>
+    </div>
 
-      <!-- Welcome Screen -->
-      <div class="quiz-screen active" id="welcomeScreen">
-        <div class="screen-content">
-          <div class="hero-icon">⚠️</div>
-          <h1 class="screen-title">Te han mentido sobre las mujeres</h1>
-          <p class="screen-subtitle">
-            Todo lo que te enseñaron sobre seducción está diseñado para que fracases.<br>
-            <strong>Hay reglas ocultas que nadie te dice.</strong>
-          </p>
-          <div class="truth-preview">
-            <p class="truth-statement">
-              ❌ "Sé tú mismo" = Código para seguir perdiendo<br>
-              ❌ "Respeta y serás respetado" = Garantía de friendzone<br>
-              ❌ "Las mujeres valoran la bondad" = La mentira más grande
-            </p>
-            <p class="truth-hook">
-              <strong>¿Listo para ver qué tan profundo llega el engaño?</strong>
-            </p>
-          </div>
-          <button class="btn-primary" onclick="startQuiz()">
-            DESCUBRIR LO QUE ME OCULTAN
-          </button>
-          <p class="disclaimer">⚠️ Advertencia: Esto contradice todo lo "socialmente aceptable"</p>
+    <div class="gallery-grid">
+
+      <!-- Artifact 001 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category finance">FINANZAS</span>
+          <span class="artifact-id">#001</span>
         </div>
-      </div>
-
-      <!-- Question Screens (will be generated dynamically) -->
-      <div id="questionScreens"></div>
-
-      <!-- Analyzing Screen -->
-      <div class="quiz-screen" id="analyzingScreen">
-        <div class="screen-content">
-          <div class="analyzing-animation">
-            <div class="spinner"></div>
-            <div class="analyzing-text">
-              <h2>Analizando tus respuestas...</h2>
-              <p id="analyzingStatus">Procesando perfil psicológico</p>
-            </div>
-          </div>
-          <div class="analyzing-stats">
-            <div class="stat-item">
-              <div class="stat-icon">📊</div>
-              <div class="stat-text">
-                <strong>Patrones detectados</strong>
-                <span>8/8</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🎯</div>
-              <div class="stat-text">
-                <strong>Precisión del análisis</strong>
-                <span>97.3%</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🔥</div>
-              <div class="stat-text">
-                <strong>Potencial identificado</strong>
-                <span>Alto</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Results Screen -->
-      <div class="quiz-screen" id="resultsScreen">
-        <div class="screen-content">
-          <div class="results-header">
-            <div class="result-badge">
-              <div class="badge-icon" id="archetypeIcon">👑</div>
-              <h2 class="result-title" id="archetypeTitle">TU ARQUETIPO:</h2>
-              <h1 class="archetype-name" id="archetypeName">EL CONQUISTADOR</h1>
-            </div>
-          </div>
-
-          <div class="result-description">
-            <h3>🔍 Tu Diagnóstico:</h3>
-            <p id="archetypeDescription">
-              Has visto algunas piezas del puzzle, pero te falta el mapa completo.
-              Estás operando con información incompleta en un juego donde otros
-              conocen las reglas...
-            </p>
-          </div>
-
-          <div class="result-stats">
-            <div class="stat-bar">
-              <div class="stat-label">
-                <span>Atracción Natural</span>
-                <strong id="stat1">85%</strong>
-              </div>
-              <div class="stat-progress">
-                <div class="stat-progress-fill" id="statBar1" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="stat-bar">
-              <div class="stat-label">
-                <span>Control de Frame</span>
-                <strong id="stat2">72%</strong>
-              </div>
-              <div class="stat-progress">
-                <div class="stat-progress-fill" id="statBar2" style="width: 72%"></div>
-              </div>
-            </div>
-            <div class="stat-bar">
-              <div class="stat-label">
-                <span>Inteligencia Emocional</span>
-                <strong id="stat3">68%</strong>
-              </div>
-              <div class="stat-progress">
-                <div class="stat-progress-fill" id="statBar3" style="width: 68%"></div>
-              </div>
-            </div>
-            <div class="stat-bar">
-              <div class="stat-label">
-                <span>Dominio Sexual</span>
-                <strong id="stat4">79%</strong>
-              </div>
-              <div class="stat-progress">
-                <div class="stat-progress-fill" id="statBar4" style="width: 79%"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="result-revelation">
-            <h3>⚠️ El Problema Real:</h3>
-            <div class="revelation-box">
-              <p>
-                <strong>No es tu culpa que no te lo hayan dicho.</strong><br>
-                Pero SÍ es tu responsabilidad hacer algo al respecto.
-              </p>
-              <p>
-                Mientras lees esto, otros hombres están usando este conocimiento para:
-              </p>
-              <ul style="text-align: left; margin: 1rem 0;">
-                <li>✓ Generar atracción a voluntad (sin suplicar)</li>
-                <li>✓ Mantener el poder en cualquier relación</li>
-                <li>✓ Entender EXACTAMENTE qué hacer y cuándo</li>
-                <li>✓ Dejar de ser "el buen chico" que termina solo</li>
-              </ul>
-              <p class="revelation-hook">
-                La pregunta no es SI este conocimiento existe.<br>
-                La pregunta es: <strong>¿Cuánto más tiempo vas a perder sin él?</strong>
-              </p>
-            </div>
-          </div>
-
-          <button class="btn-primary btn-large" onclick="showOffer()">
-            ACCEDER AL CONOCIMIENTO COMPLETO
-          </button>
-
-          <p class="result-note">
-            🔥 El manual que la sociedad no quiere que leas
+        <div class="artifact-body">
+          <h3 class="artifact-title">Cash Flow para Operadores</h3>
+          <p class="artifact-excerpt">
+            Estructurar ingresos, gastos e inversión como sistema. Framework para generar
+            flujo de caja positivo desde el primer mes. Sin teoría. Solo ejecución.
           </p>
         </div>
-      </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$29</span>
+            <span class="price-crypto">≈ 0.0008 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="001">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 002 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category crypto">CRYPTO</span>
+          <span class="artifact-id">#002</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">DeFi Crash Course</h3>
+          <p class="artifact-excerpt">
+            De cero a yield farming en 48 horas. Protocolos, pools, bridges.
+            Cómo mover capital en la economía descentralizada sin perderlo todo.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$45</span>
+            <span class="price-crypto">≈ 0.0013 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="002">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 003 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category toolkit">TOOLKIT</span>
+          <span class="artifact-id">#003</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Stack del Creador Digital</h3>
+          <p class="artifact-excerpt">
+            50+ apps curadas para crear, editar, publicar y monetizar contenido.
+            Diseño, video, audio, escritura. El arsenal completo del artista digital.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$19</span>
+            <span class="price-crypto">≈ 0.0005 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="003">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 004 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category crypto">CRYPTO</span>
+          <span class="artifact-id">#004</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Seguridad On-Chain</h3>
+          <p class="artifact-excerpt">
+            Cold wallets, multisig, seed phrases, opsec. Cómo proteger tu capital digital
+            de hackers, scams y errores humanos. Paranoia productiva.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$35</span>
+            <span class="price-crypto">≈ 0.001 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="004">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 005 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category finance">FINANZAS</span>
+          <span class="artifact-id">#005</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Estructura Fiscal Offshore</h3>
+          <p class="artifact-excerpt">
+            LLCs, jurisdicciones, cuentas internacionales. Cómo estructurar legalmente
+            para minimizar impuestos y maximizar libertad. El mapa del nómada fiscal.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$79</span>
+            <span class="price-crypto">≈ 0.0022 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="005">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 006 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category toolkit">TOOLKIT</span>
+          <span class="artifact-id">#006</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Automatización Personal</h3>
+          <p class="artifact-excerpt">
+            Zapier, Make, n8n, scripts. 30+ flujos de automatización listos para copiar.
+            Elimina trabajo manual. Escala sin contratar. Opera como máquina.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$25</span>
+            <span class="price-crypto">≈ 0.0007 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="006">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 007 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category crypto">CRYPTO</span>
+          <span class="artifact-id">#007</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Trading Bot Setup</h3>
+          <p class="artifact-excerpt">
+            Configurar bots de trading en CEX y DEX. Grid trading, DCA automático,
+            arbitraje. El capital trabaja mientras duermes.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$55</span>
+            <span class="price-crypto">≈ 0.0015 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="007">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 008 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category toolkit">TOOLKIT</span>
+          <span class="artifact-id">#008</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Stack del Hacker Ético</h3>
+          <p class="artifact-excerpt">
+            Herramientas OSINT, pentesting, privacidad. El toolkit para entender cómo
+            funciona la seguridad digital. Conocimiento es protección.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$39</span>
+            <span class="price-crypto">≈ 0.0011 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="008">ADQUIRIR</button>
+        </div>
+      </article>
+
+      <!-- Artifact 009 -->
+      <article class="artifact">
+        <div class="artifact-header">
+          <span class="artifact-category finance">FINANZAS</span>
+          <span class="artifact-id">#009</span>
+        </div>
+        <div class="artifact-body">
+          <h3 class="artifact-title">Ingresos Pasivos Digitales</h3>
+          <p class="artifact-excerpt">
+            7 modelos de ingreso pasivo probados. Afiliados, digital products, SaaS micro.
+            Construir máquinas de dinero que escalan sin tu tiempo.
+          </p>
+        </div>
+        <div class="artifact-footer">
+          <div class="artifact-price">
+            <span class="price-fiat">$49</span>
+            <span class="price-crypto">≈ 0.0014 BTC</span>
+          </div>
+          <button class="btn-acquire" data-product="009">ADQUIRIR</button>
+        </div>
+      </article>
 
     </div>
-  </div>
+  </section>
 
-  <!-- Scripts -->
-  <script src="js/quiz.js"></script>
+  <!-- PROTOCOL -->
+  <section class="protocol" id="protocol">
+    <div class="section-header">
+      <span class="section-index">03 // Protocolo</span>
+      <h2 class="section-title">Proceso de adquisición</h2>
+    </div>
+
+    <div class="protocol-steps">
+      <div class="protocol-step">
+        <span class="step-number">PASO 01</span>
+        <h3 class="step-title">Seleccionar</h3>
+        <p class="step-desc">
+          Identifica el módulo que corresponde a tu siguiente nivel de operación.
+        </p>
+      </div>
+
+      <div class="protocol-step">
+        <span class="step-number">PASO 02</span>
+        <h3 class="step-title">Ejecutar</h3>
+        <p class="step-desc">
+          Transacción instantánea. Fiat o crypto. Acceso inmediato al contenido.
+        </p>
+      </div>
+
+      <div class="protocol-step">
+        <span class="step-number">PASO 03</span>
+        <h3 class="step-title">Implementar</h3>
+        <p class="step-desc">
+          Cada módulo es accionable. Frameworks, plantillas, listas. Listo para usar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINAL -->
+  <section class="terminal-section">
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">villano.ai — sistema de métricas</span>
+      </div>
+      <div class="terminal-body">
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command"> villano --status</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">Sistema activo. Build: <span class="highlight">2025.01.14</span></span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">Módulos en arsenal: <span class="highlight">15</span></span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">Operadores activos: <span class="highlight">1,247</span></span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">Transacciones completadas: <span class="highlight">4,891</span></span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">Jurisdicciones: <span class="highlight">47 países</span></span>
+        </span>
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command"> _</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <div class="manifesto-content">
+      <span class="section-index">// Manifiesto</span>
+      <blockquote class="manifesto-text">
+        "No somos estudiantes. Somos operadores.<br>
+        No buscamos títulos. Buscamos resultados.<br>
+        Construimos imperios desde palacios digitales,<br>
+        lejos del sistema que nunca nos quiso."
+      </blockquote>
+      <span class="manifesto-author">— VILLANO.AI</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">VILLANO.AI</div>
+        <p class="footer-tagline">
+          Repositorio digital para la minoría. Herramientas para empresarios cibernéticos
+          que construyen desde las sombras.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Dominios</h4>
+          <ul>
+            <li><a href="#domains">Finanzas</a></li>
+            <li><a href="#domains">Crypto</a></li>
+            <li><a href="#domains">Toolkits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sistema</h4>
+          <ul>
+            <li><a href="#protocol">Protocolo</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 VILLANO.AI — Conocimiento para la minoría</span>
+      <div class="payment-methods">
+        <span>VISA</span>
+        <span>MC</span>
+        <span>BTC</span>
+        <span>ETH</span>
+        <span>USDT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dondelukas.js"></script>
 </body>
 </html>
