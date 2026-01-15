@@ -458,6 +458,29 @@ a.domain-card:hover {
   color: var(--cyan);
 }
 
+/* Featured domain card - Para Dónde Empezar */
+.domain-card.featured {
+  border: 1px solid var(--red);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, var(--void) 100%);
+}
+
+.domain-card.featured::before {
+  background: var(--red);
+}
+
+.domain-card.featured:hover {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, var(--void-light) 100%);
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.2);
+}
+
+.domain-card.featured .domain-index {
+  color: var(--red);
+}
+
+.domain-card.featured .domain-count span {
+  color: var(--red);
+}
+
 .domain-title {
   font-family: var(--font-display);
   font-size: 1.5rem;
