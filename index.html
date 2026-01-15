@@ -7,8 +7,63 @@
   <meta name="theme-color" content="#000000">
   <title>VILLANO.AI</title>
   <link rel="stylesheet" href="css/dondelukas.css">
+  <link rel="stylesheet" href="css/casino.css">
 </head>
 <body>
+
+  <!-- ENTRY MODAL - CASINO STYLE -->
+  <div class="entry-modal" id="entry-modal">
+    <div class="modal-glow"></div>
+    <div class="modal-content">
+      <div class="modal-badge pulse-glow">ACCESO EXCLUSIVO</div>
+      <h2 class="modal-title">
+        <span class="text-gradient">¿LISTO PARA APOSTAR</span><br>
+        EN TI MISMO?
+      </h2>
+      <p class="modal-text">
+        El 99% nunca invierte en su propio conocimiento.<br>
+        <strong>El 1% construye imperios.</strong>
+      </p>
+      <div class="modal-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-count="1247">0</span>
+          <span class="stat-label">Operadores activos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="47">0</span>
+          <span class="stat-label">Países</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="15">0</span>
+          <span class="stat-label">Módulos</span>
+        </div>
+      </div>
+      <button class="modal-cta pulse-btn" id="enter-btn">
+        <span class="cta-icon">⚡</span>
+        ENTRAR AL SISTEMA
+      </button>
+      <p class="modal-disclaimer">
+        Solo para quienes están dispuestos a ejecutar.
+      </p>
+    </div>
+  </div>
+
+  <!-- FLOATING URGENCY BAR -->
+  <div class="urgency-bar" id="urgency-bar">
+    <div class="urgency-content">
+      <span class="urgency-icon pulse-glow">🔥</span>
+      <span class="urgency-text">
+        <strong id="visitors-count">23</strong> personas viendo esto ahora
+      </span>
+      <span class="urgency-divider">|</span>
+      <span class="urgency-text">
+        Última compra hace <strong id="last-purchase">3 min</strong>
+      </span>
+      <a href="empezar.html#transformacion" class="urgency-cta">
+        VER OFERTA EXCLUSIVA →
+      </a>
+    </div>
+  </div>
 
   <!-- Matrix Rain Canvas -->
   <canvas id="matrix-canvas"></canvas>
@@ -28,23 +83,64 @@
     <ul class="nav-links">
       <li><a href="#domains">Dominios</a></li>
       <li><a href="#gallery">Arsenal</a></li>
-      <li><a href="#protocol">Protocolo</a></li>
+      <li><a href="empezar.html" class="nav-cta">INVERTIR EN MÍ →</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO - AGGRESSIVE -->
   <section class="hero" id="hero">
     <div class="hero-content">
-      <span class="hero-tag animate-in">Repositorio digital para la minoría</span>
+      <div class="hero-badge animate-in">
+        <span class="badge-dot pulse-dot"></span>
+        <span>SISTEMA ACTIVO — BUILD 2026</span>
+      </div>
       <h1 class="hero-title animate-in delay-1">
-        <span class="glitch" data-text="CONSTRUYE">CONSTRUYE</span><br>
-        DESDE LAS SOMBRAS
+        <span class="glitch" data-text="¿CUÁNTO MÁS">¿CUÁNTO MÁS</span><br>
+        <span class="text-gradient-hero">VAS A ESPERAR?</span>
       </h1>
       <p class="hero-subtitle animate-in delay-2">
-        Finanzas. Crypto. Toolkits. Módulos de conocimiento para empresarios cibernéticos,
-        filósofos digitales y artistas del underground. Un curso a la vez. Un imperio a la vez.
+        Mientras tú lo piensas, otros ejecutan. Cada día sin invertir en tu conocimiento
+        es un día regalado a tu competencia. <strong>El mercado no espera. Tú tampoco deberías.</strong>
       </p>
-      <a href="#gallery" class="hero-cta animate-in delay-3">Acceder al arsenal</a>
+      <div class="hero-ctas animate-in delay-3">
+        <a href="empezar.html#transformacion" class="hero-cta-primary pulse-btn">
+          <span>🔥 TRANSFORMACIÓN COMPLETA — $70.000</span>
+        </a>
+        <a href="#gallery" class="hero-cta-secondary">
+          Ver módulos individuales →
+        </a>
+      </div>
+      <div class="hero-proof animate-in delay-4">
+        <div class="proof-avatars">
+          <span class="avatar">👤</span>
+          <span class="avatar">👤</span>
+          <span class="avatar">👤</span>
+          <span class="avatar">+</span>
+        </div>
+        <span class="proof-text">
+          <strong>1,247 operadores</strong> ya están dentro
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION BAR -->
+  <section class="value-bar">
+    <div class="value-item">
+      <span class="value-icon">💰</span>
+      <span class="value-text">ROI promedio <strong>3-6 meses</strong></span>
+    </div>
+    <div class="value-item">
+      <span class="value-icon">⚡</span>
+      <span class="value-text">Acceso <strong>inmediato</strong></span>
+    </div>
+    <div class="value-item">
+      <span class="value-icon">🔒</span>
+      <span class="value-text">Garantía <strong>7 días</strong></span>
+    </div>
+    <div class="value-item">
+      <span class="value-icon">♾️</span>
+      <span class="value-text">Acceso <strong>de por vida</strong></span>
     </div>
   </section>
 
@@ -107,201 +203,108 @@
 
     <div class="gallery-grid">
 
-      <!-- Artifact 001 -->
+      <!-- Artifact 001 - English Terms -->
       <article class="artifact">
         <div class="artifact-header">
-          <span class="artifact-category finance">FINANZAS</span>
+          <span class="artifact-category toolkit">LENGUAJE</span>
           <span class="artifact-id">#001</span>
         </div>
         <div class="artifact-body">
-          <h3 class="artifact-title">Cash Flow para Operadores</h3>
+          <h3 class="artifact-title">Money Words: Inglés que Paga</h3>
           <p class="artifact-excerpt">
-            Estructurar ingresos, gastos e inversión como sistema. Framework para generar
-            flujo de caja positivo desde el primer mes. Sin teoría. Solo ejecución.
+            Crash course de términos en inglés que generan dinero. Para quien no habla inglés pero
+            quiere entender el lenguaje de los negocios globales. Las palabras que abren puertas.
           </p>
         </div>
         <div class="artifact-footer">
           <div class="artifact-price">
-            <span class="price-fiat">$29</span>
-            <span class="price-crypto">≈ 0.0008 BTC</span>
+            <span class="price-fiat">$29.000 CLP</span>
           </div>
-          <button class="btn-acquire" data-product="001">ADQUIRIR</button>
+          <a href="https://mpago.li/2koX85s" class="btn-acquire" target="_blank">ADQUIRIR</a>
         </div>
       </article>
 
-      <!-- Artifact 002 -->
+      <!-- Artifact 002 - Addictive Personalities -->
       <article class="artifact">
         <div class="artifact-header">
-          <span class="artifact-category crypto">CRYPTO</span>
+          <span class="artifact-category finance">PSICOLOGÍA</span>
           <span class="artifact-id">#002</span>
         </div>
         <div class="artifact-body">
-          <h3 class="artifact-title">DeFi Crash Course</h3>
+          <h3 class="artifact-title">Personalidad Adictiva = Negocio Sostenible</h3>
           <p class="artifact-excerpt">
-            De cero a yield farming en 48 horas. Protocolos, pools, bridges.
-            Cómo mover capital en la economía descentralizada sin perderlo todo.
+            La naturaleza de las personalidades adictivas y cómo esa intensidad puede ser
+            la llave para crear negocios sostenibles. Tu "defecto" es tu superpoder.
           </p>
         </div>
         <div class="artifact-footer">
           <div class="artifact-price">
-            <span class="price-fiat">$45</span>
-            <span class="price-crypto">≈ 0.0013 BTC</span>
+            <span class="price-fiat">$35.000 CLP</span>
           </div>
-          <button class="btn-acquire" data-product="002">ADQUIRIR</button>
+          <a href="https://mpago.li/2koX85s" class="btn-acquire" target="_blank">ADQUIRIR</a>
         </div>
       </article>
 
-      <!-- Artifact 003 -->
+      <!-- Artifact 003 - Writing & Creativity -->
       <article class="artifact">
         <div class="artifact-header">
-          <span class="artifact-category toolkit">TOOLKIT</span>
+          <span class="artifact-category toolkit">CREATIVIDAD</span>
           <span class="artifact-id">#003</span>
         </div>
         <div class="artifact-body">
-          <h3 class="artifact-title">Stack del Creador Digital</h3>
+          <h3 class="artifact-title">Escribir para Pensar Mejor</h3>
           <p class="artifact-excerpt">
-            50+ apps curadas para crear, editar, publicar y monetizar contenido.
-            Diseño, video, audio, escritura. El arsenal completo del artista digital.
+            La escritura como mecanismo de pensamiento, no solo de comunicación.
+            Creatividad aplicada. Claridad mental a través de las palabras.
           </p>
         </div>
         <div class="artifact-footer">
           <div class="artifact-price">
-            <span class="price-fiat">$19</span>
-            <span class="price-crypto">≈ 0.0005 BTC</span>
+            <span class="price-fiat">$25.000 CLP</span>
           </div>
-          <button class="btn-acquire" data-product="003">ADQUIRIR</button>
+          <a href="https://mpago.li/2koX85s" class="btn-acquire" target="_blank">ADQUIRIR</a>
         </div>
       </article>
 
-      <!-- Artifact 004 -->
+      <!-- Artifact 004 - Crypto for All Ages -->
       <article class="artifact">
         <div class="artifact-header">
           <span class="artifact-category crypto">CRYPTO</span>
           <span class="artifact-id">#004</span>
         </div>
         <div class="artifact-body">
-          <h3 class="artifact-title">Seguridad On-Chain</h3>
+          <h3 class="artifact-title">Crypto Sin Edad</h3>
           <p class="artifact-excerpt">
-            Cold wallets, multisig, seed phrases, opsec. Cómo proteger tu capital digital
-            de hackers, scams y errores humanos. Paranoia productiva.
+            Todo lo que necesitas saber sobre Crypto sin importar tu edad. Ni muy técnico
+            ni muy básico. El punto exacto para entender y operar en la economía digital.
           </p>
         </div>
         <div class="artifact-footer">
           <div class="artifact-price">
-            <span class="price-fiat">$35</span>
-            <span class="price-crypto">≈ 0.001 BTC</span>
+            <span class="price-fiat">$40.000 CLP</span>
           </div>
-          <button class="btn-acquire" data-product="004">ADQUIRIR</button>
+          <a href="https://mpago.li/2koX85s" class="btn-acquire" target="_blank">ADQUIRIR</a>
         </div>
       </article>
 
-      <!-- Artifact 005 -->
+      <!-- Artifact 005 - Physical Exercise as Mental -->
       <article class="artifact">
         <div class="artifact-header">
-          <span class="artifact-category finance">FINANZAS</span>
+          <span class="artifact-category finance">BIENESTAR</span>
           <span class="artifact-id">#005</span>
         </div>
         <div class="artifact-body">
-          <h3 class="artifact-title">Estructura Fiscal Offshore</h3>
+          <h3 class="artifact-title">Ejercicio Físico = Ejercicio Mental</h3>
           <p class="artifact-excerpt">
-            LLCs, jurisdicciones, cuentas internacionales. Cómo estructurar legalmente
-            para minimizar impuestos y maximizar libertad. El mapa del nómada fiscal.
+            El ejercicio físico como ejercicio mental, más que corporal. La conexión entre
+            movimiento y claridad cognitiva. Tu cuerpo como herramienta de productividad.
           </p>
         </div>
         <div class="artifact-footer">
           <div class="artifact-price">
-            <span class="price-fiat">$79</span>
-            <span class="price-crypto">≈ 0.0022 BTC</span>
+            <span class="price-fiat">$30.000 CLP</span>
           </div>
-          <button class="btn-acquire" data-product="005">ADQUIRIR</button>
-        </div>
-      </article>
-
-      <!-- Artifact 006 -->
-      <article class="artifact">
-        <div class="artifact-header">
-          <span class="artifact-category toolkit">TOOLKIT</span>
-          <span class="artifact-id">#006</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Automatización Personal</h3>
-          <p class="artifact-excerpt">
-            Zapier, Make, n8n, scripts. 30+ flujos de automatización listos para copiar.
-            Elimina trabajo manual. Escala sin contratar. Opera como máquina.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-fiat">$25</span>
-            <span class="price-crypto">≈ 0.0007 BTC</span>
-          </div>
-          <button class="btn-acquire" data-product="006">ADQUIRIR</button>
-        </div>
-      </article>
-
-      <!-- Artifact 007 -->
-      <article class="artifact">
-        <div class="artifact-header">
-          <span class="artifact-category crypto">CRYPTO</span>
-          <span class="artifact-id">#007</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Trading Bot Setup</h3>
-          <p class="artifact-excerpt">
-            Configurar bots de trading en CEX y DEX. Grid trading, DCA automático,
-            arbitraje. El capital trabaja mientras duermes.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-fiat">$55</span>
-            <span class="price-crypto">≈ 0.0015 BTC</span>
-          </div>
-          <button class="btn-acquire" data-product="007">ADQUIRIR</button>
-        </div>
-      </article>
-
-      <!-- Artifact 008 -->
-      <article class="artifact">
-        <div class="artifact-header">
-          <span class="artifact-category toolkit">TOOLKIT</span>
-          <span class="artifact-id">#008</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Stack del Hacker Ético</h3>
-          <p class="artifact-excerpt">
-            Herramientas OSINT, pentesting, privacidad. El toolkit para entender cómo
-            funciona la seguridad digital. Conocimiento es protección.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-fiat">$39</span>
-            <span class="price-crypto">≈ 0.0011 BTC</span>
-          </div>
-          <button class="btn-acquire" data-product="008">ADQUIRIR</button>
-        </div>
-      </article>
-
-      <!-- Artifact 009 -->
-      <article class="artifact">
-        <div class="artifact-header">
-          <span class="artifact-category finance">FINANZAS</span>
-          <span class="artifact-id">#009</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Ingresos Pasivos Digitales</h3>
-          <p class="artifact-excerpt">
-            7 modelos de ingreso pasivo probados. Afiliados, digital products, SaaS micro.
-            Construir máquinas de dinero que escalan sin tu tiempo.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-fiat">$49</span>
-            <span class="price-crypto">≈ 0.0014 BTC</span>
-          </div>
-          <button class="btn-acquire" data-product="009">ADQUIRIR</button>
+          <a href="https://mpago.li/2koX85s" class="btn-acquire" target="_blank">ADQUIRIR</a>
         </div>
       </article>
 
@@ -360,7 +363,7 @@
           <span class="output">Sistema activo. Build: <span class="highlight">2025.01.14</span></span>
         </span>
         <span class="terminal-line">
-          <span class="output">Módulos en arsenal: <span class="highlight">15</span></span>
+          <span class="output">Módulos en arsenal: <span class="highlight">5</span></span>
         </span>
         <span class="terminal-line">
           <span class="output">Operadores activos: <span class="highlight">1,247</span></span>

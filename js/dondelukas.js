@@ -452,6 +452,181 @@
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // ENTRY MODAL - CASINO STYLE
+  // ═══════════════════════════════════════════════════════════════════════════
+  function initEntryModal() {
+    const modal = document.getElementById('entry-modal');
+    const enterBtn = document.getElementById('enter-btn');
+
+    if (!modal || !enterBtn) return;
+
+    // Check if already entered this session
+    if (sessionStorage.getItem('villano_entered')) {
+      modal.classList.add('hidden');
+      setTimeout(() => modal.remove(), 500);
+      showUrgencyBar();
+      return;
+    }
+
+    // Animate stats counter
+    animateCounters();
+
+    // Enter button click
+    enterBtn.addEventListener('click', () => {
+      sessionStorage.setItem('villano_entered', 'true');
+      modal.classList.add('hidden');
+      setTimeout(() => modal.remove(), 500);
+      showUrgencyBar();
+      startSocialProofToasts();
+    });
+  }
+
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number[data-count]');
+
+    counters.forEach(counter => {
+      const target = parseInt(counter.dataset.count);
+      const duration = 2000;
+      const start = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - start;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(target * easeOut);
+
+        counter.textContent = current.toLocaleString();
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // URGENCY BAR
+  // ═══════════════════════════════════════════════════════════════════════════
+  function showUrgencyBar() {
+    const bar = document.getElementById('urgency-bar');
+    if (!bar) return;
+
+    // Show after a delay
+    setTimeout(() => {
+      bar.classList.add('visible');
+    }, 3000);
+
+    // Update dynamic numbers
+    updateUrgencyNumbers();
+    setInterval(updateUrgencyNumbers, 30000); // Update every 30s
+  }
+
+  function updateUrgencyNumbers() {
+    const visitorsEl = document.getElementById('visitors-count');
+    const purchaseEl = document.getElementById('last-purchase');
+
+    if (visitorsEl) {
+      const visitors = Math.floor(Math.random() * 20) + 15; // 15-35
+      visitorsEl.textContent = visitors;
+    }
+
+    if (purchaseEl) {
+      const minutes = Math.floor(Math.random() * 10) + 1; // 1-10
+      purchaseEl.textContent = `${minutes} min`;
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SOCIAL PROOF TOASTS
+  // ═══════════════════════════════════════════════════════════════════════════
+  function startSocialProofToasts() {
+    const names = ['Carlos', 'María', 'Juan', 'Ana', 'Pedro', 'Laura', 'Diego', 'Sofia', 'Andrés', 'Valentina'];
+    const cities = ['Bogotá', 'CDMX', 'Buenos Aires', 'Lima', 'Santiago', 'Madrid', 'Barcelona', 'Medellín', 'Monterrey', 'Quito'];
+    const products = ['Cash Flow para Operadores', 'DeFi Crash Course', 'Transformación del Villano', 'Seguridad On-Chain', 'Trading Bot Setup'];
+
+    function showToast() {
+      const name = names[Math.floor(Math.random() * names.length)];
+      const city = cities[Math.floor(Math.random() * cities.length)];
+      const product = products[Math.floor(Math.random() * products.length)];
+      const minutes = Math.floor(Math.random() * 15) + 1;
+
+      // Remove existing toast
+      const existing = document.querySelector('.social-proof-toast');
+      if (existing) existing.remove();
+
+      const toast = document.createElement('div');
+      toast.className = 'social-proof-toast';
+      toast.innerHTML = `
+        <div class="toast-content">
+          <span class="toast-icon">✅</span>
+          <div class="toast-info">
+            <div class="toast-text"><strong>${name}</strong> de ${city} adquirió</div>
+            <div class="toast-text"><strong>${product}</strong></div>
+            <div class="toast-time">Hace ${minutes} minutos</div>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(toast);
+
+      // Show toast
+      setTimeout(() => toast.classList.add('visible'), 100);
+
+      // Hide toast
+      setTimeout(() => {
+        toast.classList.remove('visible');
+        setTimeout(() => toast.remove(), 500);
+      }, 5000);
+    }
+
+    // Show first toast after 15 seconds
+    setTimeout(showToast, 15000);
+
+    // Then show every 45-90 seconds
+    setInterval(showToast, Math.random() * 45000 + 45000);
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FLOATING ACTION BUTTON
+  // ═══════════════════════════════════════════════════════════════════════════
+  function initFloatingCTA() {
+    // Create FAB if it doesn't exist
+    if (document.querySelector('.fab-cta')) return;
+
+    const fab = document.createElement('a');
+    fab.className = 'fab-cta';
+    fab.href = 'empezar.html#transformacion';
+    fab.innerHTML = '🔥';
+    fab.title = 'Ver oferta exclusiva';
+
+    document.body.appendChild(fab);
+
+    // Show/hide based on scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > 500) {
+        fab.style.opacity = '1';
+        fab.style.pointerEvents = 'auto';
+      } else {
+        fab.style.opacity = '0';
+        fab.style.pointerEvents = 'none';
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    fab.style.opacity = '0';
+    fab.style.pointerEvents = 'none';
+    fab.style.transition = 'opacity 0.3s ease';
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // INITIALIZATION
   // ═══════════════════════════════════════════════════════════════════════════
   function init() {
@@ -478,8 +653,12 @@
     initGlitchOnScroll();
     initParallax();
 
+    // Initialize Casino/Marketing elements
+    initEntryModal();
+    initFloatingCTA();
+
     console.log('%c VILLANO.AI ', 'background: #00ffff; color: #000; font-weight: bold; padding: 4px 8px;');
-    console.log('%c Construye desde las sombras ', 'color: #606060;');
+    console.log('%c ¿Listo para apostar en ti mismo? ', 'color: #ff00ff;');
   }
 
   // Run when DOM is ready
