@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escribir Copy que sí Vende - VILLANO.AI. El arte de convertir palabras en dinero.">
+  <meta name="theme-color" content="#000000">
+  <title>Escribir Copy que sí Vende - VILLANO.AI</title>
+  <link rel="stylesheet" href="css/dondelukas.css">
+  <link rel="stylesheet" href="css/empezar.css">
+  <link rel="stylesheet" href="css/copy.css">
+</head>
+
+<body>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Grid Overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- Scanlines -->
+  <div class="scanlines"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Timer Bar Flotante -->
+  <div class="copy-timer-bar" id="copy-timer-bar">
+    <div class="timer-content">
+      <span class="timer-label">OFERTA EXPIRA EN</span>
+      <div class="timer-display">
+        <span class="timer-digit" id="timer-minutes">15</span>
+        <span class="timer-separator">:</span>
+        <span class="timer-digit" id="timer-seconds">00</span>
+      </div>
+      <div class="timer-price">
+        <span class="price-original">$99.000</span>
+        <span class="price-discount">$79.000</span>
+      </div>
+      <a href="#cta-principal" class="timer-cta">APROVECHAR</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="logo">VILLANO<span>.AI</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#domains">Dominios</a></li>
+      <li><a href="index.html#gallery">Arsenal</a></li>
+      <li><a href="empezar.html">Empezar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero copy-hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-warning">ADVERTENCIA: Esta pagina te va a vender algo</span>
+      <span class="hero-tag animate-in">// Protocolo de persuasion</span>
+      <h1 class="hero-title animate-in delay-1">
+        <span class="glitch" data-text="TUS PALABRAS">TUS PALABRAS</span><br>
+        NO VENDEN
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        Y no es tu culpa. Nadie te enseno la diferencia entre escribir y persuadir.
+        Entre informar y convertir. Esta pagina la vas a leer completa.
+        <strong>¿Sabes por que?</strong> Porque esta escrita con el mismo sistema que vas a aprender.
+      </p>
+      <a href="#cta-principal" class="hero-cta animate-in delay-3">Desbloquear protocolo</a>
+    </div>
+  </section>
+
+  <!-- DIAGNOSTICO -->
+  <section class="diagnostico">
+    <div class="section-header">
+      <span class="section-index">00 // Diagnostico</span>
+      <h2 class="section-title">Escaneo de persuasion</h2>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">villano.ai — copywriting_scan</span>
+      </div>
+      <div class="terminal-body">
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command"> villano --scan-copywriting</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">Escaneando habilidades de persuasion...</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output error">[!] Textos que informan pero no venden</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output error">[!] CTAs que nadie clickea</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output error">[!] Emails que van directo al spam mental</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output error">[!] Landing pages con 0% conversion</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output error">[!] Propuestas rechazadas sistematicamente</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output success">[OK] Solucion disponible: copywriting_protocolo.exe</span>
+        </span>
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command"> _</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL PROBLEMA -->
+  <section class="problem-section">
+    <div class="section-header">
+      <span class="section-index">01 // El problema</span>
+      <h2 class="section-title">Por que nadie compra lo que vendes</h2>
+    </div>
+
+    <div class="problem-content">
+      <div class="problem-stat">
+        <span class="stat-number">99%</span>
+        <span class="stat-text">escribe para informar, no para convertir</span>
+      </div>
+
+      <div class="problem-explanation">
+        <p>
+          Pasas horas escribiendo el texto "perfecto". Lo revisas. Lo editas.
+          Lo publicas. Y... <strong>nada</strong>. Cero likes. Cero clicks. Cero ventas.
+        </p>
+        <p>
+          El problema no es tu producto. El problema no es tu audiencia.
+          El problema es que <span class="highlight-magenta">estas escribiendo para ti, no para ellos</span>.
+        </p>
+        <p>
+          El copy que vende no suena bonito. Suena <strong>inevitable</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EJEMPLOS -->
+  <section class="copy-examples">
+    <div class="section-header">
+      <span class="section-index">02 // La diferencia</span>
+      <h2 class="section-title">Copy malo vs Copy que vende</h2>
+    </div>
+
+    <div class="example-container with-arrow">
+      <div class="copy-example copy-bad" data-label="ANTES">
+        "Nuestro producto es de alta calidad y tiene muchas caracteristicas
+        que te van a gustar. Tenemos anos de experiencia en el mercado.
+        Compralo ahora y no te arrepentiras."
+      </div>
+      <div class="example-arrow">→</div>
+      <div class="copy-example copy-good" data-label="DESPUES">
+        "Mientras lees esto, tu competencia esta cerrando la venta que
+        deberia ser tuya. La unica diferencia: ellos saben escribir
+        copy que convierte. Tu tambien puedes. Hoy."
+      </div>
+    </div>
+
+    <div class="example-container with-arrow" style="margin-top: 2rem;">
+      <div class="copy-example copy-bad" data-label="ANTES">
+        "Somos lideres en el sector con mas de 10 anos de experiencia.
+        Nuestro equipo de profesionales esta listo para ayudarte.
+        Contactanos para mas informacion."
+      </div>
+      <div class="example-arrow">→</div>
+      <div class="copy-example copy-good" data-label="DESPUES">
+        "Tu cliente tiene 3 segundos para decidir si sigue leyendo.
+        ¿Que le vas a decir? Tenemos el framework exacto.
+        No teoria. Plantillas que copias, pegas y vendes."
+      </div>
+    </div>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="upgrade-separator">
+    <div class="separator-line"></div>
+    <span class="separator-text">// EL SISTEMA COMPLETO</span>
+    <div class="separator-line"></div>
+  </div>
+
+  <!-- PROGRAMA -->
+  <section class="programa-premium" id="programa">
+    <div class="section-header">
+      <span class="section-index">03 // El programa</span>
+      <h2 class="section-title">Escribir Copy que si Vende</h2>
+    </div>
+
+    <div class="premium-intro">
+      <p>
+        Este no es un curso de "como escribir mejor".
+        Es un <span class="highlight-magenta">sistema de conversion</span> que vas a aplicar
+        a cada email, cada landing, cada propuesta, cada mensaje.
+      </p>
+      <p>
+        Vas a aprender la psicologia detras de por que la gente compra.
+        Y vas a tener las plantillas exactas para aplicarlo hoy.
+      </p>
+      <p class="premium-warning">
+        Advertencia: Despues de esto, vas a ver publicidad de otra manera. Para siempre.
+      </p>
+    </div>
+
+    <!-- Contenido del programa -->
+    <div class="premium-modules">
+      <h3 class="modules-title">// Contenido del programa:</h3>
+
+      <div class="module-grid">
+        <div class="module-item">
+          <span class="module-icon">📕</span>
+          <div class="module-info">
+            <h4>PDF del Sistema Completo</h4>
+            <p>El documento maestro con frameworks de copywriting, estructuras de persuasion y ejemplos reales. Sin relleno.</p>
+          </div>
+        </div>
+
+        <div class="module-item">
+          <span class="module-icon">📋</span>
+          <div class="module-info">
+            <h4>Templates Listos para Usar</h4>
+            <p>Plantillas de emails, landing pages, CTAs, headlines y mas. Copia, pega, personaliza y vende.</p>
+          </div>
+        </div>
+
+        <div class="module-item">
+          <span class="module-icon">🎧</span>
+          <div class="module-info">
+            <h4>Audio Narrado Completo</h4>
+            <p>El sistema completo en audio. Aprende mientras caminas, manejas o entrenas. Tu tiempo muerto ahora produce.</p>
+          </div>
+        </div>
+
+        <div class="module-item">
+          <span class="module-icon">🧠</span>
+          <div class="module-info">
+            <h4>Psicologia de la Persuasion</h4>
+            <p>Los triggers mentales que hacen que la gente compre. Usados eticamente, te dan una ventaja injusta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transformacion -->
+    <div class="transformation-block">
+      <h3 class="transform-title">// Diff del sistema:</h3>
+
+      <div class="diff-container">
+        <div class="diff-before">
+          <span class="diff-label">- - - ANTES (tu copy actual)</span>
+          <ul>
+            <li><span class="diff-minus">-</span> Textos que nadie lee completos</li>
+            <li><span class="diff-minus">-</span> CTAs ignorados sistematicamente</li>
+            <li><span class="diff-minus">-</span> Emails sin respuesta</li>
+            <li><span class="diff-minus">-</span> Propuestas rechazadas</li>
+            <li><span class="diff-minus">-</span> 0 conversiones de tu contenido</li>
+          </ul>
+        </div>
+
+        <div class="diff-after">
+          <span class="diff-label">+ + + DESPUES (post-sistema)</span>
+          <ul>
+            <li><span class="diff-plus">+</span> Copy que atrapa desde la primera linea</li>
+            <li><span class="diff-plus">+</span> CTAs que la gente QUIERE clickear</li>
+            <li><span class="diff-plus">+</span> Emails que abren y responden</li>
+            <li><span class="diff-plus">+</span> Propuestas que cierran</li>
+            <li><span class="diff-plus">+</span> Conversion consistente y predecible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Target user -->
+    <div class="target-block">
+      <h3 class="target-title">// Target user:</h3>
+      <ul class="target-list">
+        <li><span class="bullet">→</span> Emprendedores que venden online y necesitan mas conversiones</li>
+        <li><span class="bullet">→</span> Freelancers que quieren cerrar mas clientes con sus propuestas</li>
+        <li><span class="bullet">→</span> Creadores de contenido que quieren monetizar su audiencia</li>
+        <li><span class="bullet">→</span> Cualquiera que necesite persuadir con palabras (todos)</li>
+        <li><span class="bullet">→</span> Personas cansadas de escribir sin resultados</li>
+      </ul>
+    </div>
+
+    <!-- CTA Principal con Timer -->
+    <div class="cta-with-timer" id="cta-principal">
+      <div class="cta-timer-inline">
+        <span class="cta-timer-label">DESCUENTO EXPIRA EN:</span>
+        <span class="cta-timer-digits">15:00</span>
+      </div>
+
+      <div class="cta-prices">
+        <div class="cta-price-original">$99.000 CLP</div>
+        <div class="cta-price-discount">$79.000</div>
+        <div class="cta-price-note">Acceso inmediato • De por vida</div>
+      </div>
+
+      <a href="https://mpago.li/2koX85s" class="cta-btn-copy" target="_blank">
+        DESBLOQUEAR SISTEMA DE COPY
+      </a>
+
+      <p class="secure-text">🔒 Transaccion segura via Mercado Pago</p>
+    </div>
+  </section>
+
+  <!-- BUNDLE -->
+  <section class="bundle-section" id="bundle">
+    <div class="bundle-container">
+      <div class="bundle-header">
+        <span>// MIENTRAS ESTAS AQUI</span>
+        <h3>Maximiza tu transformacion</h3>
+      </div>
+
+      <div class="bundle-card">
+        <span class="bundle-badge">AHORRA $40.000</span>
+
+        <div class="bundle-products">
+          <div class="bundle-product">
+            <span class="bundle-product-check">✓</span>
+            <span class="bundle-product-name">Escribir Copy que si Vende</span>
+            <span class="bundle-product-price">$99.000</span>
+          </div>
+          <div class="bundle-product">
+            <span class="bundle-product-check">✓</span>
+            <span class="bundle-product-name">Transformacion del Villano Interior</span>
+            <span class="bundle-product-price">$70.000</span>
+          </div>
+        </div>
+
+        <div class="bundle-pricing">
+          <div class="bundle-original">$169.000</div>
+          <div class="bundle-final">$129.000</div>
+          <div class="bundle-savings">AHORRAS $40.000</div>
+        </div>
+
+        <a href="https://mpago.li/2koX85s" class="bundle-cta" target="_blank">
+          OBTENER BUNDLE COMPLETO
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-index">04 // FAQ</span>
+      <h2 class="section-title">Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>¿Necesito saber escribir bien?</h4>
+        <p>No. El copy que vende no es sobre escribir "bonito". Es sobre estructura y psicologia. Tienes plantillas listas.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Funciona para mi industria?</h4>
+        <p>Si vendes algo a humanos, funciona. Los principios de persuasion son universales.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Cuanto tiempo toma aprender?</h4>
+        <p>Puedes aplicar las plantillas hoy mismo. El sistema completo, 1-2 semanas a tu ritmo.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿El descuento es real?</h4>
+        <p>Si. El timer es real. Cuando expire, el precio sube. Sin trucos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-section">
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">villano.ai — decision</span>
+      </div>
+      <div class="terminal-body">
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command"> villano --options</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">[1] Seguir escribiendo copy que nadie lee</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output">[2] Intentar "mejorar" solo (spoiler: no funciona)</span>
+        </span>
+        <span class="terminal-line">
+          <span class="output highlight">[3] Desbloquear el sistema → conversion real</span>
+        </span>
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command"> select: <span class="cursor-blink">_</span></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="final-buttons">
+      <a href="empezar.html" class="btn-secondary">Ver otros programas</a>
+      <a href="https://mpago.li/2koX85s" class="btn-acquire" target="_blank">Copy que Vende — $79.000</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">VILLANO.AI</div>
+        <p class="footer-tagline">
+          Repositorio digital para la minoria. Herramientas para empresarios ciberneticos
+          que construyen desde las sombras.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Dominios</h4>
+          <ul>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="toolkits.html">Toolkits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sistema</h4>
+          <ul>
+            <li><a href="index.html#protocol">Protocolo</a></li>
+            <li><a href="#">Terminos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 VILLANO.AI — Conocimiento para la minoria</span>
+      <div class="payment-methods">
+        <span>VISA</span>
+        <span>MC</span>
+        <span>MPAGO</span>
+        <span>PSE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dondelukas.js"></script>
+  <script>
+    // Inicializar timer cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar CountdownTimer para esta página
+      new CountdownTimer({
+        storageKey: 'villano_copy_timer',
+        duration: 15 * 60 * 1000, // 15 minutos
+        originalPrice: '$99.000',
+        discountPrice: '$79.000'
+      });
+    });
+  </script>
+</body>
+
+</html>

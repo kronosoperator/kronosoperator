@@ -33,6 +33,7 @@
 
   /* accent */
   --green: #00ff41;
+  --green-glow: rgba(0, 255, 65, 0.15);
   --yellow: #ffff00;
   --red: #ff0040;
 
@@ -576,6 +577,37 @@ a.domain-card:hover {
 .artifact-id {
   font-size: 0.7rem;
   color: var(--gray-400);
+}
+
+.artifact-badge {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.5rem;
+  background: var(--green);
+  color: var(--void);
+  font-weight: 600;
+}
+
+.artifact.featured {
+  border-color: var(--green);
+  position: relative;
+}
+
+.artifact.featured::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--green), var(--cyan), var(--green));
+  background-size: 200% 100%;
+  animation: gradient-shift 2s linear infinite;
+}
+
+.artifact.featured:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 30px var(--green-glow);
 }
 
 .artifact-body {
@@ -1299,5 +1331,198 @@ a.domain-card:hover {
 
   .item-label {
     min-width: auto;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HERO PRODUCTS - NUEVA ESTRUCTURA
+   ═══════════════════════════════════════════════════════════════════════════ */
+.hero-products {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-product {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--void);
+  border: 2px solid var(--green);
+  min-width: 220px;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-out);
+  position: relative;
+}
+
+.hero-product:hover {
+  border-color: var(--cyan);
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px var(--green-glow);
+}
+
+.hero-product .product-tag {
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--green);
+  color: var(--void);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.hero-product .product-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.hero-product .product-desc {
+  font-size: 0.75rem;
+  color: var(--gray-300);
+  margin-bottom: 1rem;
+}
+
+.hero-product .product-price {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.highlight-warning {
+  color: var(--magenta);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PREMIUM GALLERY
+   ═══════════════════════════════════════════════════════════════════════════ */
+.premium-gallery {
+  background: linear-gradient(180deg, var(--void) 0%, var(--void-soft) 50%, var(--void) 100%);
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+}
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-desc {
+  font-size: 0.9rem;
+  color: var(--gray-300);
+  margin-top: 0.5rem;
+}
+
+.artifact.villain {
+  border-color: var(--magenta);
+}
+
+.artifact.villain::after {
+  background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--magenta));
+}
+
+.artifact.villain:hover {
+  box-shadow: 0 0 30px var(--magenta-glow);
+}
+
+.artifact-badge.core {
+  background: var(--magenta);
+}
+
+.price-note {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--gray-400);
+  margin-top: 0.25rem;
+}
+
+.premium-price {
+  font-size: 1.25rem !important;
+  color: var(--green) !important;
+}
+
+.btn-premium {
+  background: var(--green) !important;
+  color: var(--void) !important;
+  border-color: var(--green) !important;
+}
+
+.btn-premium:hover {
+  background: var(--white) !important;
+  box-shadow: 0 0 20px var(--green-glow) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CAPSULAS GRATUITAS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.capsulas-gallery {
+  background: var(--void-soft);
+}
+
+.capsulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.artifact.capsula {
+  border-color: var(--gray-500);
+  opacity: 0.9;
+}
+
+.artifact.capsula:hover {
+  border-color: var(--cyan);
+  opacity: 1;
+}
+
+.artifact-badge.free {
+  background: var(--cyan);
+  color: var(--void);
+}
+
+.price-free {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.btn-free {
+  background: transparent !important;
+  color: var(--cyan) !important;
+  border-color: var(--cyan) !important;
+}
+
+.btn-free:hover {
+  background: var(--cyan) !important;
+  color: var(--void) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE HERO PRODUCTS
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero-products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-product {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .premium-grid {
+    grid-template-columns: 1fr;
   }
 }

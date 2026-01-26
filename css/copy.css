@@ -1,0 +1,675 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   COPY.CSS — Estilos específicos para el curso de copywriting
+   Extiende dondelukas.css y empezar.css
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TIMER FLOTANTE
+   ═══════════════════════════════════════════════════════════════════════════ */
+.copy-timer-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, var(--void) 0%, #0a0a0a 100%);
+  border-bottom: 1px solid var(--green);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  transform: translateY(-100%);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.copy-timer-bar.visible {
+  transform: translateY(0);
+}
+
+.copy-timer-bar.expired {
+  border-color: var(--red);
+}
+
+.copy-timer-bar.expired .timer-label {
+  color: var(--red);
+}
+
+.timer-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--green);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.timer-display {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.timer-digit {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--void);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--green);
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.timer-separator {
+  font-size: 1.5rem;
+  color: var(--green);
+  animation: blink 1s step-end infinite;
+}
+
+.timer-price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.price-original {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+
+.price-discount {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--green-glow);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--green-glow), 0 0 30px var(--green-glow);
+  }
+}
+
+.timer-cta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--green);
+  color: var(--void);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-out);
+}
+
+.timer-cta:hover {
+  background: var(--white);
+  box-shadow: 0 0 20px var(--green-glow);
+}
+
+/* Ajuste del body cuando timer está visible */
+body.timer-active {
+  padding-top: 60px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HERO COPY - ESPECÍFICO
+   ═══════════════════════════════════════════════════════════════════════════ */
+.copy-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.copy-hero .hero-warning {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 0, 64, 0.1);
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   EJEMPLOS DE COPY (ANTES/DESPUÉS INLINE)
+   ═══════════════════════════════════════════════════════════════════════════ */
+.copy-examples {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.example-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .example-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.copy-example {
+  padding: 2rem;
+  background: var(--void);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  position: relative;
+}
+
+.copy-example::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.copy-bad {
+  border: 1px solid var(--red);
+  border-left: 3px solid var(--red);
+  color: var(--gray-300);
+}
+
+.copy-bad::before {
+  background: var(--red);
+  color: var(--void);
+}
+
+.copy-good {
+  border: 1px solid var(--green);
+  border-left: 3px solid var(--green);
+  color: var(--gray-100);
+}
+
+.copy-good::before {
+  background: var(--green);
+  color: var(--void);
+}
+
+.example-arrow {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--cyan);
+}
+
+@media (min-width: 768px) {
+  .example-container.with-arrow {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .example-arrow {
+    display: flex;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECCIÓN DE PROBLEMA
+   ═══════════════════════════════════════════════════════════════════════════ */
+.problem-section {
+  padding: 6rem 2rem;
+  background: var(--void-soft);
+}
+
+.problem-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.problem-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+}
+
+.stat-text {
+  font-size: 1.25rem;
+  color: var(--gray-100);
+}
+
+.problem-explanation {
+  padding: 2rem;
+  background: var(--void);
+  border-left: 3px solid var(--cyan);
+}
+
+.problem-explanation p {
+  font-size: 1rem;
+  color: var(--gray-200);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.problem-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BUNDLE/UPSELL SECTION
+   ═══════════════════════════════════════════════════════════════════════════ */
+.bundle-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.02) 0%, rgba(255, 0, 255, 0.02) 100%);
+  border-top: 1px solid var(--gray-500);
+  border-bottom: 1px solid var(--gray-500);
+}
+
+.bundle-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bundle-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.bundle-header span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+}
+
+.bundle-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-top: 0.5rem;
+}
+
+.bundle-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--void);
+  border: 2px solid var(--cyan);
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .bundle-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.bundle-badge {
+  position: absolute;
+  top: -0.75rem;
+  right: 1rem;
+  padding: 0.25rem 1rem;
+  background: var(--magenta);
+  color: var(--void);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.bundle-products {
+  flex: 1;
+}
+
+.bundle-product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gray-500);
+}
+
+.bundle-product:last-child {
+  border-bottom: none;
+}
+
+.bundle-product-check {
+  color: var(--green);
+  font-size: 1.25rem;
+}
+
+.bundle-product-name {
+  font-size: 0.9rem;
+  color: var(--gray-100);
+}
+
+.bundle-product-price {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--gray-400);
+}
+
+.bundle-pricing {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid var(--cyan);
+}
+
+.bundle-original {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+  margin-bottom: 0.25rem;
+}
+
+.bundle-final {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+
+.bundle-savings {
+  font-size: 0.75rem;
+  color: var(--green);
+  letter-spacing: 0.1em;
+}
+
+.bundle-cta {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--cyan);
+  color: var(--void);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+}
+
+.bundle-cta:hover {
+  background: var(--white);
+  box-shadow: 0 0 30px var(--cyan-glow);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CTA CON TIMER INTEGRADO
+   ═══════════════════════════════════════════════════════════════════════════ */
+.cta-with-timer {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  background: var(--void);
+  border: 2px solid var(--green);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-with-timer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--cyan), var(--green));
+  background-size: 200% 100%;
+  animation: gradient-shift 2s linear infinite;
+}
+
+.cta-timer-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid var(--green);
+}
+
+.cta-timer-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--green);
+  letter-spacing: 0.05em;
+}
+
+.cta-timer-digits {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.cta-prices {
+  margin-bottom: 2rem;
+}
+
+.cta-price-original {
+  font-size: 1.25rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+  margin-bottom: 0.25rem;
+}
+
+.cta-price-discount {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.cta-price-note {
+  font-size: 0.85rem;
+  color: var(--gray-300);
+  margin-top: 0.5rem;
+}
+
+.cta-btn-copy {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, var(--green) 0%, #00cc33 100%);
+  color: var(--void);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+}
+
+.cta-btn-copy:hover {
+  background: var(--white);
+  box-shadow: 0 0 40px var(--green-glow);
+}
+
+/* Estado expirado */
+.cta-with-timer.expired {
+  border-color: var(--magenta);
+}
+
+.cta-with-timer.expired::before {
+  background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--magenta));
+}
+
+.cta-with-timer.expired .cta-timer-inline {
+  background: rgba(255, 0, 255, 0.05);
+  border-color: var(--magenta);
+}
+
+.cta-with-timer.expired .cta-timer-label {
+  color: var(--magenta);
+}
+
+.cta-with-timer.expired .cta-price-discount {
+  color: var(--magenta);
+}
+
+.cta-with-timer.expired .cta-btn-copy {
+  background: linear-gradient(135deg, var(--magenta) 0%, var(--magenta-dim) 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CROSS-SELL CARD (para empezar.html)
+   ═══════════════════════════════════════════════════════════════════════════ */
+.cross-sell-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 65, 0.02) 0%, rgba(0, 255, 255, 0.02) 100%);
+}
+
+.cross-sell-card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--void);
+  border: 1px solid var(--green);
+  text-align: center;
+  position: relative;
+}
+
+.cross-sell-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 1rem;
+  background: var(--green);
+  color: var(--void);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.cross-sell-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cross-sell-card p {
+  font-size: 0.9rem;
+  color: var(--gray-200);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cross-sell-price {
+  margin-bottom: 1.5rem;
+}
+
+.cross-sell-price .price-amount {
+  font-size: 2rem;
+  color: var(--green);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE OVERRIDES
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .copy-timer-bar {
+    padding: 0.5rem;
+  }
+
+  .timer-content {
+    gap: 0.75rem;
+  }
+
+  .timer-label {
+    font-size: 0.65rem;
+  }
+
+  .timer-digit {
+    font-size: 1.1rem;
+    min-width: 2rem;
+    padding: 0.15rem 0.35rem;
+  }
+
+  .timer-separator {
+    font-size: 1.1rem;
+  }
+
+  .price-original {
+    font-size: 0.85rem;
+  }
+
+  .price-discount {
+    font-size: 1rem;
+  }
+
+  .timer-cta {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  body.timer-active {
+    padding-top: 80px;
+  }
+
+  .cta-price-discount {
+    font-size: 2.25rem;
+  }
+
+  .cta-with-timer {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-price {
+    display: none;
+  }
+
+  body.timer-active {
+    padding-top: 50px;
+  }
+}

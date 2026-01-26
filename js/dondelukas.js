@@ -222,10 +222,23 @@
             <button class="tx-method" data-method="btc">BTC</button>
             <button class="tx-method" data-method="eth">ETH</button>
           </div>
-          <p class="tx-note">Checkout próximamente. Contactar para transacciones manuales.</p>
+          <p class="tx-note">El conocimiento tiene precio. La ignorancia cuesta más.</p>
         </div>
       </div>
     `;
+
+    // Add pulse animation if not exists
+    if (!document.getElementById('tx-pulse-animation')) {
+      const style = document.createElement('style');
+      style.id = 'tx-pulse-animation';
+      style.textContent = `
+        @keyframes pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.05); }
+        }
+      `;
+      document.head.appendChild(style);
+    }
 
     // Add styles inline
     modal.style.cssText = `
@@ -324,6 +337,41 @@
       color: #606060;
       text-align: center;
     `;
+
+    // Payment method click handlers
+    modal.querySelectorAll('.tx-method').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const method = btn.getAttribute('data-method');
+
+        if (method === 'card') {
+          // Redirect to Mercado Pago
+          window.open('https://mpago.li/2koX85s', '_blank');
+        } else if (method === 'btc' || method === 'eth') {
+          // Show "pronto" animation
+          btn.style.position = 'relative';
+          btn.style.overflow = 'hidden';
+
+          // Create glow effect
+          btn.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.1)';
+          btn.style.borderColor = '#00ffff';
+          btn.style.color = '#00ffff';
+
+          // Change text to "PRONTO"
+          const originalText = btn.textContent;
+          btn.textContent = 'PRONTO';
+          btn.style.animation = 'pulse 0.5s ease-in-out';
+
+          // Reset after animation
+          setTimeout(() => {
+            btn.style.boxShadow = 'none';
+            btn.style.borderColor = '#404040';
+            btn.style.color = '#a0a0a0';
+            btn.textContent = originalText;
+            btn.style.animation = '';
+          }, 1500);
+        }
+      });
+    });
 
     document.body.appendChild(modal);
 
@@ -629,6 +677,172 @@
   // ═══════════════════════════════════════════════════════════════════════════
   // INITIALIZATION
   // ═══════════════════════════════════════════════════════════════════════════
+  // ═══════════════════════════════════════════════════════════════════════════
+  // COUNTDOWN TIMER (para páginas con ofertas temporales)
+  // ═══════════════════════════════════════════════════════════════════════════
+  class CountdownTimer {
+    constructor(options = {}) {
+      this.storageKey = options.storageKey || 'villano_timer';
+      this.duration = options.duration || 15 * 60 * 1000; // 15 min en ms
+      this.originalPrice = options.originalPrice || '$99.000';
+      this.discountPrice = options.discountPrice || '$79.000';
+      this.onTick = options.onTick || null;
+      this.onExpire = options.onExpire || null;
+      this.timerBarEl = options.timerBarEl || document.getElementById('copy-timer-bar');
+      this.minutesEl = options.minutesEl || document.getElementById('timer-minutes');
+      this.secondsEl = options.secondsEl || document.getElementById('timer-seconds');
+      this.priceDiscountEl = options.priceDiscountEl || document.querySelectorAll('.price-discount, .cta-price-discount');
+      this.priceOriginalEl = options.priceOriginalEl || document.querySelectorAll('.price-original, .cta-price-original');
+      this.ctaContainerEl = options.ctaContainerEl || document.querySelector('.cta-with-timer');
+
+      this.interval = null;
+      this.endTime = null;
+      this.expired = false;
+
+      this.init();
+    }
+
+    init() {
+      const stored = localStorage.getItem(this.storageKey);
+
+      if (stored) {
+        const data = JSON.parse(stored);
+        if (data.expired) {
+          this.expired = true;
+          this.showFullPrice();
+          return;
+        }
+        this.endTime = data.endTime;
+
+        // Verificar si ya expiró mientras estaba fuera
+        if (Date.now() >= this.endTime) {
+          this.expire();
+          return;
+        }
+      } else {
+        this.endTime = Date.now() + this.duration;
+        localStorage.setItem(this.storageKey, JSON.stringify({
+          endTime: this.endTime,
+          expired: false
+        }));
+      }
+
+      this.start();
+      this.showTimerBar();
+    }
+
+    start() {
+      this.interval = setInterval(() => this.tick(), 1000);
+      this.tick();
+    }
+
+    tick() {
+      const remaining = this.endTime - Date.now();
+
+      if (remaining <= 0) {
+        this.expire();
+        return;
+      }
+
+      const minutes = Math.floor(remaining / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+
+      // Actualizar UI
+      if (this.minutesEl) {
+        this.minutesEl.textContent = minutes.toString().padStart(2, '0');
+      }
+      if (this.secondsEl) {
+        this.secondsEl.textContent = seconds.toString().padStart(2, '0');
+      }
+
+      // Actualizar todos los elementos con timer inline
+      document.querySelectorAll('.cta-timer-digits').forEach(el => {
+        el.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      });
+
+      if (this.onTick) {
+        this.onTick(minutes, seconds, remaining);
+      }
+    }
+
+    expire() {
+      clearInterval(this.interval);
+      this.expired = true;
+
+      localStorage.setItem(this.storageKey, JSON.stringify({
+        endTime: this.endTime,
+        expired: true
+      }));
+
+      this.showFullPrice();
+
+      if (this.onExpire) {
+        this.onExpire();
+      }
+    }
+
+    showTimerBar() {
+      if (this.timerBarEl) {
+        document.body.classList.add('timer-active');
+        setTimeout(() => {
+          this.timerBarEl.classList.add('visible');
+        }, 500);
+      }
+    }
+
+    showFullPrice() {
+      // Actualizar barra de timer
+      if (this.timerBarEl) {
+        this.timerBarEl.classList.add('expired');
+        const label = this.timerBarEl.querySelector('.timer-label');
+        if (label) {
+          label.textContent = 'OFERTA EXPIRADA';
+        }
+        // Ocultar timer display
+        const timerDisplay = this.timerBarEl.querySelector('.timer-display');
+        if (timerDisplay) {
+          timerDisplay.style.display = 'none';
+        }
+      }
+
+      // Actualizar precios - mostrar precio original como actual
+      this.priceDiscountEl.forEach(el => {
+        el.textContent = this.originalPrice;
+        el.style.color = 'var(--magenta)';
+      });
+
+      // Ocultar precio tachado
+      this.priceOriginalEl.forEach(el => {
+        el.style.display = 'none';
+      });
+
+      // Actualizar CTA container
+      if (this.ctaContainerEl) {
+        this.ctaContainerEl.classList.add('expired');
+        const timerInline = this.ctaContainerEl.querySelector('.cta-timer-inline');
+        if (timerInline) {
+          timerInline.innerHTML = `
+            <span class="cta-timer-label">OFERTA EXPIRADA</span>
+          `;
+        }
+      }
+
+      // Actualizar todos los timer inline
+      document.querySelectorAll('.cta-timer-digits').forEach(el => {
+        el.textContent = '00:00';
+      });
+    }
+
+    // Método estático para resetear (útil para testing)
+    static reset(storageKey = 'villano_timer') {
+      localStorage.removeItem(storageKey);
+      location.reload();
+    }
+  }
+
+  // Exponer globalmente para uso en otras páginas
+  window.CountdownTimer = CountdownTimer;
+
   function init() {
     // Add animation styles
     addAnimationStyles();
@@ -653,12 +867,13 @@
     initGlitchOnScroll();
     initParallax();
 
-    // Initialize Casino/Marketing elements
-    initEntryModal();
+    // Initialize Marketing elements (modal removed - direct entry)
     initFloatingCTA();
+    showUrgencyBar();
+    startSocialProofToasts();
 
     console.log('%c VILLANO.AI ', 'background: #00ffff; color: #000; font-weight: bold; padding: 4px 8px;');
-    console.log('%c ¿Listo para apostar en ti mismo? ', 'color: #ff00ff;');
+    console.log('%c Herramientas para el hacker de dinero ', 'color: #ff00ff;');
   }
 
   // Run when DOM is ready
