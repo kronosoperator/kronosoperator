@@ -4,95 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pago Pendiente - Villano.ai</title>
-  <link rel="stylesheet" href="css/villano.css">
-  <link rel="stylesheet" href="css/oferta.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="css/luxury.css">
+  <link rel="stylesheet" href="css/sales.css">
   <style>
-    .pending-container {
+    .status-page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: var(--space-lg) var(--space-md);
       text-align: center;
     }
 
-    .pending-icon {
-      font-size: 5rem;
-      margin-bottom: 2rem;
-      animation: pulse 2s infinite;
+    .status-icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-md);
+      display: block;
+      animation: pulse 2s ease-in-out infinite;
     }
 
-    .pending-title {
-      font-size: 2rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      color: #fbbf24;
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
     }
 
-    .pending-message {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: var(--villain-text-dim);
+    .status-title {
+      font-family: var(--font-headline);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      color: var(--warning);
+      margin-bottom: var(--space-sm);
+    }
+
+    .status-message {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
       max-width: 600px;
-      line-height: 1.6;
+      margin-bottom: var(--space-lg);
     }
 
-    .pending-box {
-      background: var(--villain-gray);
-      padding: 2rem;
-      border-radius: var(--radius-xl);
-      border: 1px solid #fbbf24;
-      max-width: 600px;
-      margin-bottom: 2rem;
+    .status-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: var(--space-md);
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: var(--space-md);
+      text-align: left;
+    }
+
+    .status-box--warning {
+      border-color: var(--warning);
+    }
+
+    .status-box__title {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .status-box__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .status-box__list li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .status-box__list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: var(--warning);
+    }
+
+    .highlight {
+      color: var(--warning);
+      font-weight: 600;
+    }
+
+    .support-email {
+      font-family: var(--font-mono);
+      color: var(--accent);
     }
   </style>
 </head>
 <body>
-  <div class="pending-container">
-    <div class="pending-icon">⏳</div>
+  <div class="status-page">
+    <span class="status-icon">&#8987;</span>
 
-    <h1 class="pending-title">Tu pago está pendiente</h1>
+    <h1 class="status-title">Tu pago esta pendiente</h1>
 
-    <p class="pending-message">
-      Tu pago está siendo procesado. Esto puede tomar algunos minutos.
+    <p class="status-message">
+      Tu pago esta siendo procesado. Esto puede tomar algunos minutos.
     </p>
 
-    <div class="pending-box">
-      <h3 style="margin-bottom: 1rem; color: var(--villain-text);">¿Qué significa esto?</h3>
-      <p style="color: var(--villain-text-dim); line-height: 1.6; margin-bottom: 1rem;">
-        Algunos métodos de pago (como transferencias bancarias o pagos en efectivo)
-        requieren tiempo para ser confirmados.
+    <div class="status-box status-box--warning">
+      <h3 class="status-box__title">Que significa esto?</h3>
+      <p style="color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.7; margin-bottom: var(--space-sm);">
+        Algunos metodos de pago (como transferencias bancarias o pagos en efectivo) requieren tiempo para ser confirmados.
       </p>
-      <p style="color: var(--villain-text-dim); line-height: 1.6;">
-        <strong style="color: #fbbf24;">Te enviaremos un email</strong> en cuanto tu pago
-        sea confirmado con las instrucciones de acceso al material.
+      <p style="color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.7;">
+        <span class="highlight">Te enviaremos un email</span> en cuanto tu pago sea confirmado con las instrucciones de acceso al material.
       </p>
     </div>
 
-    <div class="pending-box">
-      <h3 style="margin-bottom: 1rem; color: var(--villain-text);">⏱️ Tiempo estimado:</h3>
-      <ul style="text-align: left; list-style: none; padding: 0; color: var(--villain-text-dim);">
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Tarjetas: 5-10 minutos
-        </li>
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Transferencias: 1-2 días hábiles
-        </li>
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Efectivo: Una vez realizado el pago en punto autorizado
-        </li>
+    <div class="status-box">
+      <h3 class="status-box__title">Tiempo estimado:</h3>
+      <ul class="status-box__list">
+        <li>Tarjetas: 5-10 minutos</li>
+        <li>Transferencias: 1-2 dias habiles</li>
+        <li>Efectivo: Una vez realizado el pago en punto autorizado</li>
       </ul>
     </div>
 
-    <p style="margin-top: 2rem; color: var(--villain-text-dim); font-size: 0.9rem;">
-      ¿Preguntas? Escríbenos a <strong style="color: #fbbf24;">soporte@villano.ai</strong>
+    <p style="margin-top: var(--space-md); color: var(--text-tertiary); font-size: var(--text-sm);">
+      Preguntas? Escribenos a <span class="support-email">soporte@villano.ai</span>
     </p>
   </div>
 </body>

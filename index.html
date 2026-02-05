@@ -3,458 +3,471 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VILLANO.AI — Repositorio digital para empresarios cibernéticos. Finanzas, Crypto, Toolkits. Herramientas para la minoría que construye desde las sombras.">
-  <meta name="theme-color" content="#000000">
-  <title>VILLANO.AI</title>
-  <link rel="stylesheet" href="css/dondelukas.css">
-  <link rel="stylesheet" href="css/casino.css">
+  <title>El Metodo Villano — Copywriting + AI Bots | Villano.ai</title>
+  <meta name="description" content="Aprende copywriting + automatizacion con bots de IA. Haz dinero escribiendo para marcas sin mostrar tu cara. $29 USD. Acceso inmediato.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="El Metodo Villano — Copywriting + AI Bots">
+  <meta property="og:description" content="Haz dinero escribiendo para marcas sin mostrar tu cara. Copywriting + bots de IA.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://villano.ai">
+  <link rel="stylesheet" href="css/luxury.css">
+  <link rel="stylesheet" href="css/sales.css">
 </head>
 <body>
 
-  <!-- FLOATING URGENCY BAR -->
-  <div class="urgency-bar" id="urgency-bar">
-    <div class="urgency-content">
-      <span class="urgency-icon pulse-glow">🔥</span>
-      <span class="urgency-text">
-        <strong id="visitors-count">23</strong> personas viendo esto ahora
-      </span>
-      <span class="urgency-divider">|</span>
-      <span class="urgency-text">
-        Última compra hace <strong id="last-purchase">3 min</strong>
-      </span>
-      <a href="empezar.html#transformacion" class="urgency-cta">
-        VER OFERTA EXCLUSIVA →
-      </a>
+  <!-- ============================================
+       1. FLOATING CTA BAR (sticky top)
+       ============================================ -->
+  <div class="floating-cta" id="floatingCta">
+    <div class="floating-cta__inner">
+      <a href="#hero" class="floating-cta__logo">VILLANO<span class="ai">.AI</span></a>
+      <div class="floating-cta__right">
+        <span class="floating-cta__price mono">$29 USD</span>
+        <a href="#precio" class="cta-btn checkout-btn">OBTENER ACCESO</a>
+      </div>
     </div>
   </div>
 
-  <!-- Matrix Rain Canvas -->
-  <canvas id="matrix-canvas"></canvas>
-
-  <!-- Grid Overlay -->
-  <div class="grid-overlay"></div>
-
-  <!-- Scanlines -->
-  <div class="scanlines"></div>
-
-  <!-- Custom Cursor -->
-  <div class="cursor" id="cursor"></div>
-
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="#" class="logo">VILLANO<span>.AI</span></a>
-    <ul class="nav-links">
-      <li><a href="#domains">Dominios</a></li>
-      <li><a href="#gallery">Arsenal</a></li>
-      <li><a href="empezar.html" class="nav-cta">INVERTIR EN MÍ →</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO - BRUTAL -->
+  <!-- ============================================
+       2. HERO SECTION (100vh)
+       ============================================ -->
   <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-badge animate-in">
-        <span class="badge-dot pulse-dot"></span>
-        <span>ARSENAL DIGITAL — v2026.01</span>
-      </div>
-      <h1 class="hero-title animate-in delay-1">
-        <span class="glitch" data-text="VILLANO">VILLANO</span><span class="text-gradient-hero">.AI</span>
-      </h1>
-      <p class="hero-subtitle animate-in delay-2">
-        Herramientas para el <strong>hacker de dinero</strong>. Este sitio vende armas cognitivas:
-        sistemas de persuasion, frameworks de conversion, y el mindset que separa a los que
-        facturan de los que solo consumen. <span class="highlight-warning">No es para todos. Es para ti.</span>
-      </p>
-      <div class="hero-products animate-in delay-3">
-        <a href="copy.html" class="hero-product">
-          <span class="product-tag">NUEVO</span>
-          <span class="product-name">Copy que Vende</span>
-          <span class="product-desc">Convierte palabras en dinero</span>
-          <span class="product-price">$79.000</span>
-        </a>
-        <a href="empezar.html#transformacion" class="hero-product">
-          <span class="product-tag">CORE</span>
-          <span class="product-name">Villano Interior</span>
-          <span class="product-desc">El mindset que necesitas</span>
-          <span class="product-price">$70.000</span>
-        </a>
-      </div>
-      <a href="#capsulas" class="hero-cta-secondary animate-in delay-4">
-        Ver capsulas gratuitas ↓
-      </a>
-    </div>
+    <span class="hero__label">VILLANO.AI &mdash; COPYWRITING + INTELIGENCIA ARTIFICIAL</span>
+    <h1 class="hero__headline">Somos descarados. Hacemos dinero por escribir un monton de letras en una computadora.</h1>
+    <p class="hero__subline">Bienvenidos al copywriting con bots.</p>
+    <a href="#precio" class="cta-btn cta-btn--large checkout-btn">QUIERO APRENDER &mdash; $29</a>
+    <p class="hero__detail">Acceso inmediato. PDF + Plantillas + Framework de bots.</p>
   </section>
 
-  <!-- VALUE PROPOSITION BAR -->
-  <section class="value-bar">
-    <div class="value-item">
-      <span class="value-icon">💰</span>
-      <span class="value-text">ROI promedio <strong>3-6 meses</strong></span>
-    </div>
-    <div class="value-item">
-      <span class="value-icon">⚡</span>
-      <span class="value-text">Acceso <strong>inmediato</strong></span>
-    </div>
-    <div class="value-item">
-      <span class="value-icon">♾️</span>
-      <span class="value-text">Acceso <strong>de por vida</strong></span>
-    </div>
-  </section>
-
-  <!-- DOMAINS -->
-  <section class="domains" id="domains">
-    <div class="section-header">
-      <span class="section-index">01 // Dominios</span>
-      <h2 class="section-title">Vectores de poder</h2>
-    </div>
-
-    <div class="domains-grid">
-      <a href="finanzas.html" class="domain-card">
-        <div class="domain-index">01</div>
-        <h3 class="domain-title">Finanzas</h3>
-        <p class="domain-desc">
-          Cash flow, inversión, estructura fiscal. Frameworks financieros para construir
-          sin pedir permiso. El dinero es código. Aprende a escribirlo.
-        </p>
-        <div class="domain-count"><span>4</span> módulos disponibles</div>
-      </a>
-
-      <a href="crypto.html" class="domain-card">
-        <div class="domain-index">02</div>
-        <h3 class="domain-title">Crypto</h3>
-        <p class="domain-desc">
-          DeFi, wallets, yield farming, seguridad on-chain. Crash courses para operar
-          en la economía paralela. Sin bancos. Sin intermediarios. Sin límites.
-        </p>
-        <div class="domain-count"><span>5</span> módulos disponibles</div>
-      </a>
-
-      <a href="toolkits.html" class="domain-card">
-        <div class="domain-index">03</div>
-        <h3 class="domain-title">Toolkits</h3>
-        <p class="domain-desc">
-          Listas curadas de apps, software y stacks tecnológicos listos para implementar.
-          Automatización, productividad, creación. Las herramientas del operador moderno.
-        </p>
-        <div class="domain-count"><span>6</span> kits disponibles</div>
-      </a>
-
-      <a href="empezar.html" class="domain-card featured">
-        <div class="domain-index">00</div>
-        <h3 class="domain-title">Por Dónde Empezar</h3>
-        <p class="domain-desc">
-          ¿Nuevo aquí? ¿Abrumado por el contenido? Esta guía te muestra el camino más
-          simple para implementar el conocimiento paso a paso. Sin parálisis por análisis.
-        </p>
-        <div class="domain-count"><span>Guía</span> + Programa Exclusivo</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- PRODUCTOS PREMIUM -->
-  <section class="gallery premium-gallery" id="gallery">
-    <div class="section-header">
-      <span class="section-index">02 // Arsenal de Pago</span>
-      <h2 class="section-title">Sistemas completos</h2>
-      <p class="section-desc">Las armas que generan dinero. Sin atajos. Sin excusas.</p>
-    </div>
-
-    <div class="gallery-grid premium-grid">
-
-      <!-- PRODUCTO 1: Copy que Vende -->
-      <article class="artifact featured">
-        <div class="artifact-header">
-          <span class="artifact-category toolkit">MARKETING</span>
-          <span class="artifact-badge">NUEVO</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Escribir Copy que si Vende</h3>
-          <p class="artifact-excerpt">
-            El arte de convertir palabras en dinero. Frameworks de copywriting,
-            psicologia de la persuasion, y templates listos para usar.
-            <strong>Tu texto = sus ventas.</strong>
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-fiat premium-price">$79.000 CLP</span>
-            <span class="price-note">con descuento activo</span>
-          </div>
-          <a href="copy.html" class="btn-acquire btn-premium">VER SISTEMA</a>
-        </div>
-      </article>
-
-      <!-- PRODUCTO 2: Villano Interior -->
-      <article class="artifact featured villain">
-        <div class="artifact-header">
-          <span class="artifact-category finance">MINDSET</span>
-          <span class="artifact-badge core">CORE</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Transformacion del Villano Interior</h3>
-          <p class="artifact-excerpt">
-            El programa de transformacion para quienes estan listos para confrontar
-            las ventajas de su lado "oscuro". No es maldad. Es poder.
-            <strong>Tu villano interior trabaja para ti.</strong>
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-fiat premium-price">$70.000 CLP</span>
-            <span class="price-note">acceso de por vida</span>
-          </div>
-          <a href="empezar.html#transformacion" class="btn-acquire btn-premium">VER PROGRAMA</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CAPSULAS GRATUITAS -->
-  <section class="gallery capsulas-gallery" id="capsulas">
-    <div class="section-header">
-      <span class="section-index">03 // Capsulas Gratuitas</span>
-      <h2 class="section-title">Conocimiento libre</h2>
-      <p class="section-desc">Valor sin costo. Porque el que no invierte en conocimiento, al menos deberia tenerlo gratis.</p>
-    </div>
-
-    <div class="gallery-grid capsulas-grid">
-
-      <!-- Capsula 001 - English Terms -->
-      <article class="artifact capsula">
-        <div class="artifact-header">
-          <span class="artifact-category toolkit">LENGUAJE</span>
-          <span class="artifact-badge free">GRATIS</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Money Words: Ingles que Paga</h3>
-          <p class="artifact-excerpt">
-            Crash course de terminos en ingles que generan dinero. Las palabras que abren puertas en negocios globales.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-free">GRATIS</span>
-          </div>
-          <a href="#" class="btn-acquire btn-free">ACCEDER</a>
-        </div>
-      </article>
-
-      <!-- Capsula 002 - Addictive Personalities -->
-      <article class="artifact capsula">
-        <div class="artifact-header">
-          <span class="artifact-category finance">PSICOLOGIA</span>
-          <span class="artifact-badge free">GRATIS</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Personalidad Adictiva = Negocio Sostenible</h3>
-          <p class="artifact-excerpt">
-            Como tu intensidad puede ser la llave para crear negocios sostenibles. Tu "defecto" es tu superpoder.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-free">GRATIS</span>
-          </div>
-          <a href="#" class="btn-acquire btn-free">ACCEDER</a>
-        </div>
-      </article>
-
-      <!-- Capsula 003 - Writing & Creativity -->
-      <article class="artifact capsula">
-        <div class="artifact-header">
-          <span class="artifact-category toolkit">CREATIVIDAD</span>
-          <span class="artifact-badge free">GRATIS</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Escribir para Pensar Mejor</h3>
-          <p class="artifact-excerpt">
-            La escritura como mecanismo de pensamiento. Claridad mental a traves de las palabras.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-free">GRATIS</span>
-          </div>
-          <a href="#" class="btn-acquire btn-free">ACCEDER</a>
-        </div>
-      </article>
-
-      <!-- Capsula 004 - Crypto for All Ages -->
-      <article class="artifact capsula">
-        <div class="artifact-header">
-          <span class="artifact-category crypto">CRYPTO</span>
-          <span class="artifact-badge free">GRATIS</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Crypto Sin Edad</h3>
-          <p class="artifact-excerpt">
-            Todo lo que necesitas saber sobre Crypto. Ni muy tecnico ni muy basico. El punto exacto.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-free">GRATIS</span>
-          </div>
-          <a href="#" class="btn-acquire btn-free">ACCEDER</a>
-        </div>
-      </article>
-
-      <!-- Capsula 005 - Physical Exercise as Mental -->
-      <article class="artifact capsula">
-        <div class="artifact-header">
-          <span class="artifact-category finance">BIENESTAR</span>
-          <span class="artifact-badge free">GRATIS</span>
-        </div>
-        <div class="artifact-body">
-          <h3 class="artifact-title">Ejercicio Fisico = Ejercicio Mental</h3>
-          <p class="artifact-excerpt">
-            La conexion entre movimiento y claridad cognitiva. Tu cuerpo como herramienta de productividad.
-          </p>
-        </div>
-        <div class="artifact-footer">
-          <div class="artifact-price">
-            <span class="price-free">GRATIS</span>
-          </div>
-          <a href="#" class="btn-acquire btn-free">ACCEDER</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- PROTOCOL -->
-  <section class="protocol" id="protocol">
-    <div class="section-header">
-      <span class="section-index">03 // Protocolo</span>
-      <h2 class="section-title">Proceso de adquisición</h2>
-    </div>
-
-    <div class="protocol-steps">
-      <div class="protocol-step">
-        <span class="step-number">PASO 01</span>
-        <h3 class="step-title">Seleccionar</h3>
-        <p class="step-desc">
-          Identifica el módulo que corresponde a tu siguiente nivel de operación.
-        </p>
+  <!-- ============================================
+       3. PROBLEM IDENTIFICATION
+       ============================================ -->
+  <section class="section" id="problema">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">La realidad</span>
+        <h2>No estas ganando dinero adicional en internet?</h2>
+        <p>La economia digital esta avanzando y la mayoria se esta quedando atras. No por falta de talento, sino por falta de un sistema que funcione sin necesidad de exponerte.</p>
       </div>
 
-      <div class="protocol-step">
-        <span class="step-number">PASO 02</span>
-        <h3 class="step-title">Ejecutar</h3>
-        <p class="step-desc">
-          Transacción instantánea. Fiat o crypto. Acceso inmediato al contenido.
-        </p>
-      </div>
-
-      <div class="protocol-step">
-        <span class="step-number">PASO 03</span>
-        <h3 class="step-title">Implementar</h3>
-        <p class="step-desc">
-          Cada módulo es accionable. Frameworks, plantillas, listas. Listo para usar.
-        </p>
+      <div class="pain-cards">
+        <div class="pain-card reveal">
+          <span class="pain-card__icon">01</span>
+          <p class="pain-card__text">Muestras tu cara en redes y no ves un peso. Horas creando contenido para likes que no pagan facturas.</p>
+        </div>
+        <div class="pain-card reveal">
+          <span class="pain-card__icon">02</span>
+          <p class="pain-card__text">Consumes cursos pero no ejecutas. Tienes mas teoria que resultados. El conocimiento sin accion es entretenimiento.</p>
+        </div>
+        <div class="pain-card reveal">
+          <span class="pain-card__icon">03</span>
+          <p class="pain-card__text">No sabes como monetizar lo que escribes. Escribes bien, pero no sabes convertir palabras en dinero.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TERMINAL -->
-  <section class="terminal-section">
-    <div class="terminal">
-      <div class="terminal-header">
-        <span class="terminal-dot red"></span>
-        <span class="terminal-dot yellow"></span>
-        <span class="terminal-dot green"></span>
-        <span class="terminal-title">villano.ai — sistema de métricas</span>
-      </div>
-      <div class="terminal-body">
-        <span class="terminal-line">
-          <span class="prompt">$</span>
-          <span class="command"> villano --status</span>
-        </span>
-        <span class="terminal-line">
-          <span class="output">Sistema activo. Build: <span class="highlight">2025.01.14</span></span>
-        </span>
-        <span class="terminal-line">
-          <span class="output">Módulos en arsenal: <span class="highlight">5</span></span>
-        </span>
-        <span class="terminal-line">
-          <span class="output">Operadores activos: <span class="highlight">1,247</span></span>
-        </span>
-        <span class="terminal-line">
-          <span class="output">Transacciones completadas: <span class="highlight">4,891</span></span>
-        </span>
-        <span class="terminal-line">
-          <span class="output">Jurisdicciones: <span class="highlight">47 países</span></span>
-        </span>
-        <span class="terminal-line">
-          <span class="prompt">$</span>
-          <span class="command"> _</span>
-        </span>
+  <div class="divider"></div>
+
+  <!-- ============================================
+       4. AGITATION / FEAR
+       ============================================ -->
+  <section class="section" id="agitacion">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <h2>No todos pueden hacer dinero por internet.</h2>
+        <p>La inteligencia artificial cambio las reglas del juego. No en el futuro &mdash; ahora. Los que entienden como escribir + automatizar con bots estan ganando mientras tu lees esto.</p>
+        <p>Hay una brecha creciendo entre los que usan AI como herramienta y los que la ignoran. Cada dia que pasa, esa brecha se hace mas grande.</p>
+
+        <div class="blockquote">
+          <p>Los que entienden como escribir para vender &mdash; no para informar &mdash; y usan bots para escalar, estan operando en otro nivel.</p>
+        </div>
+
+        <p>La ventana esta abierta, pero no por mucho tiempo. Cuando todo el mundo sepa usar estas herramientas, la ventaja desaparece.</p>
       </div>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
-  <section class="manifesto">
-    <div class="manifesto-content">
-      <span class="section-index">// Manifiesto</span>
-      <blockquote class="manifesto-text">
-        "No somos estudiantes. Somos operadores.<br>
-        No buscamos títulos. Buscamos resultados.<br>
-        Construimos imperios desde palacios digitales,<br>
-        lejos del sistema que nunca nos quiso."
-      </blockquote>
-      <span class="manifesto-author">— VILLANO.AI</span>
+  <!-- ============================================
+       5. EMAIL/PHONE CAPTURE
+       ============================================ -->
+  <section class="section section--alt" id="email">
+    <div class="container">
+      <div class="email-capture reveal">
+        <span class="overline">Acceso</span>
+        <h2>Recibe informacion sobre el metodo</h2>
+        <p class="text-muted">Ingresa tu email para mantenerte al tanto.</p>
+
+        <form class="email-capture__form" id="emailForm">
+          <input
+            type="email"
+            class="email-capture__input"
+            id="emailInput"
+            placeholder="tu@email.com"
+            required
+            autocomplete="email"
+          >
+          <button type="submit" class="cta-btn" id="emailSubmitBtn">ENVIAR</button>
+        </form>
+
+        <!-- Optional phone capture (shown after email) -->
+        <div class="phone-capture" id="phoneCapture" style="display: none; margin-top: var(--space-md);">
+          <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-xs);">Opcional: dejanos tu WhatsApp para info exclusiva</p>
+          <form class="email-capture__form" id="phoneForm">
+            <select class="email-capture__input" id="phoneCountry" style="max-width: 100px;">
+              <option value="+57">+57</option>
+              <option value="+52">+52</option>
+              <option value="+54">+54</option>
+              <option value="+56">+56</option>
+              <option value="+51">+51</option>
+              <option value="+593">+593</option>
+              <option value="+58">+58</option>
+              <option value="+34">+34</option>
+              <option value="+1">+1</option>
+            </select>
+            <input
+              type="tel"
+              class="email-capture__input"
+              id="phoneInput"
+              placeholder="300 123 4567"
+              autocomplete="tel"
+            >
+            <button type="submit" class="cta-btn" id="phoneSubmitBtn">GUARDAR</button>
+          </form>
+        </div>
+
+        <p class="email-capture__disclaimer">No spam. Solo informacion que vale dinero.</p>
+        <p class="email-capture__success" id="emailSuccess">Registrado correctamente.</p>
+        <p class="email-capture__error" id="emailError">Hubo un error. Intenta de nuevo.</p>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <div class="footer-logo">VILLANO.AI</div>
-        <p class="footer-tagline">
-          Repositorio digital para la minoría. Herramientas para empresarios cibernéticos
-          que construyen desde las sombras.
-        </p>
+  <!-- ============================================
+       6. SOLUTION INTRODUCTION
+       ============================================ -->
+  <section class="section" id="solucion">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">La solucion</span>
+        <h2>El Metodo Villano</h2>
+        <p>He creado esta pieza de software donde he registrado lo que aprendi para hacer dinero escribiendo + usando bots. Villano.ai contiene el registro y blueprint de mis primeros dolares haciendo copy.</p>
       </div>
 
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>Dominios</h4>
-          <ul>
-            <li><a href="finanzas.html">Finanzas</a></li>
-            <li><a href="crypto.html">Crypto</a></li>
-            <li><a href="toolkits.html">Toolkits</a></li>
-            <li><a href="empezar.html">Por Dónde Empezar</a></li>
+      <div class="pillars reveal">
+        <div class="pillar">
+          <span class="pillar__icon">&#9670;</span>
+          <h3 class="pillar__title">Inteligencia</h3>
+          <p class="pillar__desc">Copywriting que vende, no que informa. Escritura con intencion comercial.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__icon">&#9670;</span>
+          <h3 class="pillar__title">Estrategia</h3>
+          <p class="pillar__desc">Framework de bots de IA para escalar la produccion de copy a otro nivel.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__icon">&#9670;</span>
+          <h3 class="pillar__title">Ejecucion</h3>
+          <p class="pillar__desc">Plantillas listas para usar. Implementacion inmediata con resultados reales.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-top: var(--space-md);">
+        <p>Mi nombre es Ivan. No me interesan los grupos. He creado Villano.ai como un mecanismo que me permite compartir lo que he aprendido haciendo dinero con palabras y tecnologia.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================
+       7. WHAT'S INCLUDED (Value Stack)
+       ============================================ -->
+  <section class="section" id="contenido">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">Que incluye</span>
+        <h2>Todo lo que recibes</h2>
+      </div>
+
+      <div class="value-stack reveal">
+        <div class="value-item">
+          <span class="value-item__label">Modulo 01</span>
+          <h3 class="value-item__title">PDF Completo del Metodo</h3>
+          <p class="text-muted" style="font-size: var(--text-sm);">80+ paginas con el sistema completo de copywriting + bots.</p>
+          <span class="value-item__price">Valor: $47</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item__label">Modulo 02</span>
+          <h3 class="value-item__title">Framework de Bots para Copy</h3>
+          <p class="text-muted" style="font-size: var(--text-sm);">Prompts, flujos y configuraciones para automatizar tu produccion.</p>
+          <span class="value-item__price">Valor: $37</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item__label">Modulo 03</span>
+          <h3 class="value-item__title">Plantillas de Copy Listas</h3>
+          <p class="text-muted" style="font-size: var(--text-sm);">Templates probados que puedes usar hoy mismo para vender.</p>
+          <span class="value-item__price">Valor: $27</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item__label">Modulo 04</span>
+          <h3 class="value-item__title">Lista de Sitios para Vender Copy</h3>
+          <p class="text-muted" style="font-size: var(--text-sm);">Donde encontrar clientes y empezar a facturar.</p>
+          <span class="value-item__price">Valor: $19</span>
+        </div>
+        <div class="value-item value-item--bonus">
+          <span class="value-item__label">Bonus</span>
+          <h3 class="value-item__title">Guia de Implementacion Rapida (30 dias)</h3>
+          <p class="text-muted" style="font-size: var(--text-sm);">Plan de accion dia a dia para ir de cero a tus primeros ingresos con copy + bots.</p>
+          <span class="value-item__price">Valor: $17</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-top: var(--space-lg);">
+        <p class="mono text-subtle" style="font-size: var(--text-lg);">Valor total: <span style="text-decoration: line-through;">$147 USD</span></p>
+        <p class="mono" style="font-size: var(--text-3xl); color: var(--text-primary); font-weight: 700; margin-top: 0.5rem;">Hoy: $29 USD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. WHO THIS IS FOR / NOT FOR
+       ============================================ -->
+  <section class="section section--alt" id="para-quien">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">Claridad</span>
+        <h2>Esto es para ti?</h2>
+      </div>
+
+      <div class="for-grid reveal">
+        <div class="for-col for-col--yes">
+          <h4 class="for-col__heading">Para ti si:</h4>
+          <ul class="for-col__list">
+            <li>Te cansaste de mostrar tu rostro para hacer dinero por internet</li>
+            <li>Prefieres permanecer oculto y trabajar con tu intelecto</li>
+            <li>Entiendes que la era de AI cambio las reglas del juego</li>
+            <li>Buscas resultados en tiempo real, no teoria</li>
+            <li>Tu sangre hierve cuando piensas en ganar con tu escritura</li>
           </ul>
         </div>
-
-        <div class="footer-col">
-          <h4>Sistema</h4>
-          <ul>
-            <li><a href="#protocol">Protocolo</a></li>
-            <li><a href="#">Términos</a></li>
-            <li><a href="#">Contacto</a></li>
+        <div class="for-col for-col--no">
+          <h4 class="for-col__heading">No es para ti si:</h4>
+          <ul class="for-col__list">
+            <li>Buscas hacerte rico de la noche a la manana</li>
+            <li>No estas dispuesto a escribir</li>
+            <li>Prefieres grupos y comunidades (esto es individual)</li>
           </ul>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <span>© 2025 VILLANO.AI — Conocimiento para la minoría</span>
-      <div class="payment-methods">
-        <span>VISA</span>
-        <span>MC</span>
-        <span>MPAGO</span>
-        <span>PSE</span>
-        <span>BTC</span>
-        <span>ETH</span>
-        <span>USDT</span>
+  <!-- ============================================
+       9. TRANSFORMATION (Before/After)
+       ============================================ -->
+  <section class="section" id="transformacion">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">Transformacion</span>
+        <h2>Lo que cambia cuando aplicas el metodo</h2>
+      </div>
+
+      <div class="comparison reveal">
+        <div class="comparison__col comparison__col--before">
+          <h4 class="comparison__heading">Antes</h4>
+          <ul class="comparison__list">
+            <li>No sabes que es copywriting</li>
+            <li>Escribes para informar, no para vender</li>
+            <li>Tienes 0 clientes de escritura</li>
+            <li>Los bots de IA te dan miedo</li>
+            <li>Dependes de mostrar tu cara</li>
+          </ul>
+        </div>
+        <div class="comparison__col comparison__col--after">
+          <h4 class="comparison__heading">Despues</h4>
+          <ul class="comparison__list">
+            <li>Escribes copy que convierte y vende</li>
+            <li>Automatizas produccion con bots</li>
+            <li>Recibes pagos en tu cuenta</li>
+            <li>Trabajas desde cualquier lugar, solo</li>
+            <li>Operas sin mostrar tu identidad</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================
+       10. SOCIAL PROOF
+       ============================================ -->
+  <section class="section" id="prueba">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">Resultados</span>
+        <h2>Operadores activos</h2>
+      </div>
+
+      <div class="testimonials reveal">
+        <div class="testimonial">
+          <p class="testimonial__quote">"Nunca pense que podria ganar dinero solo escribiendo. El framework de bots me ahorra horas cada semana."</p>
+          <span class="testimonial__author">&mdash; Operador, Colombia</span>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__quote">"Lo mejor es que no necesito mostrar mi cara. Trabajo desde mi laptop y los clientes llegan por el copy."</p>
+          <span class="testimonial__author">&mdash; Operador, Mexico</span>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__quote">"Las plantillas me dieron mis primeros $500 en la primera semana. El metodo funciona si lo aplicas."</p>
+          <span class="testimonial__author">&mdash; Operador, Argentina</span>
+        </div>
+      </div>
+
+      <div class="stats-bar reveal" style="margin-top: var(--space-lg);">
+        <div class="stat">
+          <span class="stat__number">150+</span>
+          <span class="stat__label">Operadores activos</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">12</span>
+          <span class="stat__label">Paises</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">$29</span>
+          <span class="stat__label">Inversion unica</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       11. PRICE + MAIN CTA
+       ============================================ -->
+  <section class="section section--alt" id="precio">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="overline">Acceso completo</span>
+        <h2>Obten El Metodo Villano</h2>
+      </div>
+
+      <div class="price-box reveal">
+        <span class="price-box__label">Precio especial</span>
+        <div class="price-box__original">$147 USD</div>
+        <div class="price-box__current">$29 <span class="price-box__currency">USD</span></div>
+        <p class="price-box__note">Pago unico. Sin suscripciones.</p>
+
+        <ul class="price-box__features">
+          <li>PDF Completo del Metodo (80+ paginas)</li>
+          <li>Framework de Bots para Copy</li>
+          <li>Plantillas de Copy Listas para Usar</li>
+          <li>Lista de Sitios donde Vender Copy</li>
+          <li>BONUS: Guia de Implementacion Rapida (30 dias)</li>
+        </ul>
+
+        <button class="cta-btn cta-btn--large cta-btn--full checkout-btn" id="mainCheckoutBtn">OBTENER EL METODO &mdash; $29</button>
+
+        <p class="price-box__security">Pago seguro via MercadoPago. Acceso inmediato tras el pago.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       12. FAQ ACCORDION
+       ============================================ -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <div class="section__header reveal">
+        <span class="overline">Preguntas frecuentes</span>
+        <h2>Dudas comunes</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Necesito saber de tecnologia?
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. El metodo te guia paso a paso. Si sabes usar una computadora y navegar internet, puedes implementar todo. Los bots que usamos tienen interfaces simples y las instrucciones son claras.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Funciona si no se ingles?
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>El curso es 100% en espanol. Las plantillas, el framework de bots y todas las instrucciones estan en espanol. Puedes vender copy en espanol a clientes de toda Latinoamerica y Espana.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Que tan rapido vere resultados?
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Puedes aplicar las plantillas hoy mismo. Los primeros resultados dependen de tu ejecucion, pero el metodo esta disenado para que puedas empezar a generar ingresos en las primeras semanas si sigues la guia de implementacion.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como recibo el material?
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Inmediatamente despues del pago recibiras un email con el link de descarga de todo el material. Acceso instantaneo, sin esperas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Es legal usar bots para escribir copy?
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Si. Usar herramientas de IA para asistir en la creacion de contenido es completamente legal. Las empresas mas grandes del mundo lo hacen. Lo importante es entregar resultados de calidad a tus clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       13. FINAL CTA (Urgency Close)
+       ============================================ -->
+  <section class="section section--alt" id="cierre">
+    <div class="container container--narrow" style="text-align: center;">
+      <div class="reveal">
+        <span class="overline">Ultima oportunidad</span>
+        <h2>Cada minuto que pasa alguien mas esta usando estas herramientas.</h2>
+        <p>Haz tu entrada a finanzas digitales en modo solitario. Sin grupos. Sin mostrar tu cara. Solo tu, tu escritura y los bots.</p>
+        <div style="margin-top: var(--space-lg);">
+          <a href="#precio" class="cta-btn cta-btn--large checkout-btn">OBTENER EL METODO &mdash; $29</a>
+        </div>
+        <p class="hero__detail" style="margin-top: var(--space-sm);">Acceso inmediato. Pago unico. Sin riesgo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       14. FOOTER (Minimal)
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="site-footer__brand">VILLANO<span class="ai">.AI</span> &copy; 2026</div>
+    <p class="site-footer__credit">Creado por Ivan Robayo</p>
+    <a href="https://youtube.com/@villanoai" class="site-footer__link" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <p class="site-footer__legal">Este producto es un material educativo digital. Los resultados individuales pueden variar segun la dedicacion y ejecucion de cada persona. No garantizamos ingresos especificos.</p>
   </footer>
 
-  <script src="js/dondelukas.js"></script>
+  <!-- Scripts -->
+  <script src="js/supabase.js"></script>
+  <script src="js/sales.js"></script>
+  <script src="js/checkout.js"></script>
+
 </body>
 </html>

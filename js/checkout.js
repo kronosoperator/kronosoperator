@@ -1,93 +1,61 @@
 /**
- * Villano.ai - Mercado Pago Checkout Integration
+ * Villano.ai - Checkout Integration
+ * El Metodo Villano - $29 USD
+ * Uses external MercadoPago link
  */
+
+// CONFIGURE: Replace with your actual MercadoPago payment link
+const MERCADOPAGO_LINK = 'https://mpago.la/YOUR_LINK_HERE';
 
 class VillanoCheckout {
   constructor() {
-    this.checkoutBtns = document.querySelectorAll('.checkout-btn, #checkoutBtn');
+    this.product = {
+      name: 'El Metodo Villano',
+      price: 29,
+      currency: 'USD'
+    };
     this.init();
   }
 
   init() {
-    // Add click handlers to all checkout buttons
-    this.checkoutBtns.forEach(btn => {
-      btn.addEventListener('click', () => this.handleCheckout());
+    // Handle all checkout buttons
+    document.querySelectorAll('.checkout-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        // Only intercept buttons, not anchor links to sections
+        if (btn.tagName === 'A' && btn.getAttribute('href')?.startsWith('#')) {
+          return; // Let anchor links work normally
+        }
+
+        e.preventDefault();
+        this.handleCheckout();
+      });
     });
-  }
 
-  async handleCheckout() {
-    // Disable buttons
-    this.checkoutBtns.forEach(btn => {
-      btn.disabled = true;
-      btn.textContent = 'Procesando...';
-    });
-
-    try {
-      // Create preference and redirect to Mercado Pago
-      await this.createPreference();
-    } catch (error) {
-      console.error('Error en checkout:', error);
-      alert('Hubo un error al procesar tu solicitud. Por favor intenta de nuevo.');
-
-      // Re-enable buttons
-      this.checkoutBtns.forEach(btn => {
-        btn.disabled = false;
-        btn.textContent = '💳 PAGAR CON MERCADO PAGO';
+    // Specifically bind the main checkout button
+    const mainBtn = document.getElementById('mainCheckoutBtn');
+    if (mainBtn) {
+      mainBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.handleCheckout();
       });
     }
   }
 
-  async createPreference() {
-    /**
-     * IMPORTANTE: Este endpoint necesita estar configurado en tu backend.
-     * El backend debe crear una preferencia de Mercado Pago y devolver el init_point.
-     *
-     * Ejemplo de respuesta esperada:
-     * {
-     *   "init_point": "https://www.mercadopago.com/checkout/v1/redirect?pref_id=..."
-     * }
-     */
-
-    // Por ahora, esto es un placeholder que muestra cómo debe funcionar
-    const response = await fetch('/api/create-preference', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        product: 'manual-del-villano',
-        price: 147,
-        currency: 'USD'
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error('Error creating preference');
+  handleCheckout() {
+    // Track checkout initiation
+    if (window.SupabaseClient) {
+      window.SupabaseClient.trackEvent('checkout_initiated', {
+        product: this.product.name,
+        price: this.product.price
+      });
     }
 
-    const data = await response.json();
-
-    // Redirect to Mercado Pago checkout
-    window.location.href = data.init_point;
+    // Open MercadoPago link in new window/tab
+    window.open(MERCADOPAGO_LINK, '_blank', 'noopener,noreferrer');
   }
 }
 
 // Initialize checkout when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Check if we're on the offer page
-  if (document.querySelector('.offer-page')) {
-    window.villanoCheckout = new VillanoCheckout();
-  }
+  window.villanoCheckout = new VillanoCheckout();
 });
-
-/**
- * NOTA PARA IMPLEMENTACIÓN:
- *
- * Para que Mercado Pago funcione, necesitas:
- *
- * 1. Crear una cuenta de vendedor en Mercado Pago
- * 2. Obtener tus credenciales (Access Token)
- * 3. Crear un backend que maneje las preferencias de pago
- *
- * Ver el archivo api/mercadopago.js para el código del backend
- */

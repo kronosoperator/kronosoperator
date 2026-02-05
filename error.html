@@ -4,109 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Error en el Pago - Villano.ai</title>
-  <link rel="stylesheet" href="css/villano.css">
-  <link rel="stylesheet" href="css/oferta.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="css/luxury.css">
+  <link rel="stylesheet" href="css/sales.css">
   <style>
-    .error-container {
+    .status-page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: var(--space-lg) var(--space-md);
       text-align: center;
     }
 
-    .error-icon {
-      font-size: 5rem;
-      margin-bottom: 2rem;
+    .status-icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-md);
+      display: block;
     }
 
-    .error-title {
-      font-size: 2rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      color: var(--villain-red);
+    .status-title {
+      font-family: var(--font-headline);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      color: var(--error);
+      margin-bottom: var(--space-sm);
     }
 
-    .error-message {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: var(--villain-text-dim);
+    .status-message {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
       max-width: 600px;
-      line-height: 1.6;
+      margin-bottom: var(--space-lg);
     }
 
-    .error-box {
-      background: var(--villain-gray);
-      padding: 2rem;
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--villain-red);
-      max-width: 600px;
-      margin-bottom: 2rem;
+    .status-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: var(--space-md);
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: var(--space-md);
+      text-align: left;
     }
 
-    .retry-btn {
-      background: var(--villain-red);
-      color: var(--villain-text);
-      border: none;
-      border-radius: var(--radius-lg);
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
+    .status-box--error {
+      border-color: var(--error);
     }
 
-    .retry-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-red);
+    .status-box__title {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .status-box__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .status-box__list li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .status-box__list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: var(--text-tertiary);
+    }
+
+    .support-email {
+      font-family: var(--font-mono);
+      color: var(--accent);
     }
   </style>
 </head>
 <body>
-  <div class="error-container">
-    <div class="error-icon">❌</div>
+  <div class="status-page">
+    <span class="status-icon">&#10007;</span>
 
-    <h1 class="error-title">Hubo un problema con tu pago</h1>
+    <h1 class="status-title">Hubo un problema con tu pago</h1>
 
-    <p class="error-message">
+    <p class="status-message">
       Tu pago no pudo ser procesado. Esto puede suceder por varios motivos.
     </p>
 
-    <div class="error-box">
-      <h3 style="margin-bottom: 1rem; color: var(--villain-text);">Posibles causas:</h3>
-      <ul style="text-align: left; list-style: none; padding: 0; color: var(--villain-text-dim);">
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Fondos insuficientes en tu tarjeta
-        </li>
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Tu banco rechazó la transacción
-        </li>
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Datos de pago incorrectos
-        </li>
-        <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-          <span style="position: absolute; left: 0;">•</span>
-          Límite de compra excedido
-        </li>
+    <div class="status-box status-box--error">
+      <h3 class="status-box__title">Posibles causas:</h3>
+      <ul class="status-box__list">
+        <li>Fondos insuficientes en tu tarjeta</li>
+        <li>Tu banco rechazo la transaccion</li>
+        <li>Datos de pago incorrectos</li>
+        <li>Limite de compra excedido</li>
       </ul>
     </div>
 
-    <a href="oferta.html" class="retry-btn">
-      🔄 Intentar de nuevo
-    </a>
+    <a href="index.html#precio" class="cta-btn cta-btn--large">Intentar de nuevo</a>
 
-    <p style="margin-top: 2rem; color: var(--villain-text-dim); font-size: 0.9rem;">
-      ¿Necesitas ayuda? Escríbenos a <strong style="color: var(--villain-red);">soporte@villano.ai</strong>
+    <p style="margin-top: var(--space-md); color: var(--text-tertiary); font-size: var(--text-sm);">
+      Necesitas ayuda? Escribenos a <span class="support-email">soporte@villano.ai</span>
     </p>
   </div>
 </body>
