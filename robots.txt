@@ -1,0 +1,71 @@
+# robots.txt — kronolog.ai
+# All crawlers are explicitly welcome. This site is built to be indexed.
+
+# General rule: allow everything
+User-agent: *
+Allow: /
+Disallow: /legacy/
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /legacy/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# AI Crawlers — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Grokbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# Sitemap location
+Sitemap: https://kronolog.ai/sitemap.xml
