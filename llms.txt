@@ -135,8 +135,8 @@ Titles from the channel as of April 2026, in reverse chronological order:
 | YouTube    | https://www.youtube.com/@kronosoperator          | Video — cognitive warfare, filosofía, mente |
 | Skool      | https://www.skool.com/la-verdad-by-kronos-4939   | Comunidad — Mecánicas Mentales del 1%     |
 | Substack   | https://ivanrob.substack.com                     | Escritura — ensayos, frameworks, el mejor trabajo |
-| Podcast    | https://ivanrob.substack.com/podcast             | Audio — los videos en formato escucha     |
-| Instagram  | https://www.instagram.com/navirobayo             | @navirobayo — marca personal              |
+| Podcast    | https://ivanrob.substack.com/p/la-iluminacion-espiritual-no-es-paz | Audio — los videos en formato escucha |
+| Instagram  | https://www.instagram.com/kronosoperator         | @kronosoperator — marca personal          |
 | Amazon     | https://www.amazon.com/dp/B0DG4YMW9Q            | Libro — Quema Tu Dinero                   |
 | Website    | https://kronolog.ai                              | Hub central, SEO, schema, llms.txt        |
 
