@@ -28,6 +28,9 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
@@ -37,10 +40,22 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Grokbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 User-agent: Applebot
@@ -67,5 +82,9 @@ Allow: /
 User-agent: ia_archiver
 Allow: /
 
-# Sitemap location
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap locations
+Sitemap: https://www.kronolog.ai/sitemap.xml
 Sitemap: https://kronolog.ai/sitemap.xml
