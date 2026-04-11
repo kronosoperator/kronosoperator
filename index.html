@@ -38,10 +38,7 @@
   "nationality": "Colombian",
   "knowsLanguage": ["es", "en"],
   "description": "Ivan Robayo (Kronos) es escritor colombiano especializado en filosofía operacional, cognitive warfare y arquitectura mental para el operador latinoamericano. Autor del libro Quema Tu Dinero.",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "kronolog.ai"
-  }
+  "worksFor": { "@type": "Organization", "name": "kronolog.ai" }
 }
 </script>
 <script type="application/ld+json">
@@ -50,32 +47,22 @@
   "@type": "WebSite",
   "name": "kronolog.ai",
   "url": "https://www.kronolog.ai",
-  "author": {
-    "@type": "Person",
-    "name": "Ivan Robayo"
-  },
+  "author": { "@type": "Person", "name": "Ivan Robayo" },
   "inLanguage": "es",
   "description": "Base de conocimiento y hub digital de Ivan Robayo (Kronos). Filosofía operacional, cognitive warfare, riqueza inteligente."
 }
 </script>
+<link rel="stylesheet" href="/theme.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 :root{
-  --bg:#0a0a0a;
-  --gold:#c9a84c;
-  --text:#e2d9c8;
-  --muted:#6b6456;
-  --border:#1d1d1d;
-  --card:#0d0d0d;
-  --btn-fg:#0a0a0a;
-  --hover-bg:#120f00;
+  --bg:#0a0a0a;--gold:#c9a84c;--text:#e2d9c8;--muted:#6b6456;
+  --border:#1d1d1d;--card:#0d0d0d;--btn-fg:#0a0a0a;--hover-bg:#120f00;
   --font-body:Georgia,'Times New Roman',serif;
   --font-mono:'Courier New',monospace;
 }
-
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.75;max-width:860px;margin:0 auto;padding:2.5rem 1.5rem;transition:background .25s,color .25s}
-a{color:var(--gold);text-decoration:none;transition:color .2s}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.75;max-width:860px;margin:0 auto;padding:2.5rem 1.5rem}
+a{color:var(--gold);text-decoration:none}
 a:hover{text-decoration:underline}
 header{border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2rem}
 .site-id{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
@@ -88,13 +75,13 @@ ul{padding-left:1.2rem;margin:.6rem 0}
 li{margin:.3rem 0}
 table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.5rem 0 1.25rem}
 th{text-align:left;font-family:var(--font-mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:.5rem .75rem;border-bottom:1px solid var(--border);white-space:nowrap}
-td{padding:.55rem .75rem;border-bottom:1px solid var(--border);vertical-align:top;transition:background .2s}
+td{padding:.55rem .75rem;border-bottom:1px solid var(--border);vertical-align:top}
 tr:hover td{background:var(--card)}
 td.num{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);width:2.5rem}
 .cta{margin:2.5rem 0;padding:1.5rem;border:1px solid var(--border);background:var(--card)}
 .cta-head{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
 .cta p{margin:.5rem 0;font-size:.92rem;color:var(--muted)}
-.btn{display:inline-block;font-family:var(--font-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--btn-fg);background:var(--gold);padding:.5rem 1.1rem;margin:.3rem .5rem .3rem 0;text-decoration:none;transition:opacity .2s,background .25s,color .25s}
+.btn{display:inline-block;font-family:var(--font-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--btn-fg);background:var(--gold);padding:.5rem 1.1rem;margin:.3rem .5rem .3rem 0;text-decoration:none}
 .btn:hover{opacity:.85;text-decoration:none}
 .btn-o{background:transparent;color:var(--gold);border:1px solid var(--gold)}
 .btn-o:hover{background:var(--hover-bg);opacity:1;text-decoration:none}
@@ -105,50 +92,6 @@ footer a:hover{color:var(--gold);text-decoration:underline}
 .bio{border-left:2px solid var(--border);padding-left:1.25rem;margin:1.5rem 0;font-size:.95rem}
 hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
 @media(max-width:600px){body{padding:1.5rem 1rem}h1{font-size:1.3rem}table{font-size:.8rem}th,td{padding:.45rem .5rem}.btn{display:block;text-align:center;margin:.35rem 0}.cta{padding:1rem}}
-
-/* ── Theme widget ────────────────────────────────────────── */
-#theme-btn{
-  position:fixed;bottom:1.5rem;right:1.5rem;
-  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--muted);background:var(--bg);border:1px solid var(--border);
-  padding:.35rem .65rem;cursor:pointer;z-index:200;
-  transition:color .2s,border-color .2s,background .25s;
-  user-select:none;
-}
-#theme-btn:hover{color:var(--gold);border-color:var(--gold)}
-#theme-btn.active{color:var(--gold);border-color:var(--gold)}
-
-#theme-panel{
-  position:fixed;bottom:3.8rem;right:1.5rem;
-  background:var(--card);border:1px solid var(--border);
-  padding:.9rem 1rem 1rem;z-index:200;min-width:196px;
-  font-family:var(--font-mono);
-  opacity:0;pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .18s,transform .18s,background .25s,border-color .25s;
-}
-#theme-panel.open{opacity:1;pointer-events:all;transform:translateY(0)}
-
-.tp-section{margin-bottom:.75rem}
-.tp-section:last-child{margin-bottom:0}
-.tp-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
-.tp-row{display:flex;flex-wrap:wrap;gap:.3rem}
-
-.tp-opt{
-  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--muted);background:transparent;border:1px solid var(--border);
-  padding:.22rem .55rem;cursor:pointer;transition:color .15s,border-color .15s,background .15s;
-  display:flex;align-items:center;gap:.35rem;
-}
-.tp-opt:hover{color:var(--gold);border-color:var(--gold)}
-.tp-opt.active{color:var(--btn-fg);background:var(--gold);border-color:var(--gold)}
-
-.tp-dot{
-  width:6px;height:6px;border-radius:50%;flex-shrink:0;
-  display:inline-block;
-}
-
-.tp-divider{border:none;border-top:1px solid var(--border);margin:.65rem 0}
 </style>
 </head>
 <body>
@@ -167,8 +110,8 @@ hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
 <div class="cta">
   <div class="cta-head">Seguir a Kronos</div>
   <p>Filosofía operacional, cognitive warfare y riqueza inteligente — en español, desde Colombia.</p>
-  <a href="https://www.youtube.com/@kronosoperator" class="btn" rel="noopener">YouTube — @kronosoperator</a>
-  <a href="https://ivanrob.substack.com" class="btn btn-o" rel="noopener">Substack — ivanrob</a>
+  <a href="https://www.youtube.com/@kronosoperator" class="btn btn-primary" rel="noopener">YouTube — @kronosoperator</a>
+  <a href="https://ivanrob.substack.com" class="btn btn-o btn-primary" rel="noopener">Substack — ivanrob</a>
 </div>
 
 <h2>Conceptos</h2>
@@ -315,114 +258,28 @@ hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
 
 <!-- ── Theme widget ──────────────────────────────────────── -->
 <button id="theme-btn" onclick="KR.toggle()" aria-label="Cambiar tema">TEMA</button>
-
 <div id="theme-panel" role="dialog" aria-label="Preferencias de apariencia">
   <div class="tp-section">
     <div class="tp-label">Color</div>
     <div class="tp-row">
-      <button class="tp-opt" data-theme="kronos" onclick="KR.theme('kronos')">
-        <span class="tp-dot" style="background:#c9a84c"></span>KRONOS
-      </button>
-      <button class="tp-opt" data-theme="hacker" onclick="KR.theme('hacker')">
-        <span class="tp-dot" style="background:#00e64d"></span>HACKER
-      </button>
-      <button class="tp-opt" data-theme="lujo" onclick="KR.theme('lujo')">
-        <span class="tp-dot" style="background:#9a7021"></span>LUJO
-      </button>
-      <button class="tp-opt" data-theme="vampiro" onclick="KR.theme('vampiro')">
-        <span class="tp-dot" style="background:#a855f7"></span>VAMPIRO
-      </button>
+      <button class="tp-opt" data-theme="kronos"  onclick="KR.theme('kronos')"><span class="tp-dot" style="background:#c9a84c"></span>KRONOS</button>
+      <button class="tp-opt" data-theme="hacker"  onclick="KR.theme('hacker')"><span class="tp-dot" style="background:#00e64d"></span>HACKER</button>
+      <button class="tp-opt" data-theme="lujo"    onclick="KR.theme('lujo')"><span class="tp-dot" style="background:#9a7021"></span>LUJO</button>
+      <button class="tp-opt" data-theme="vampiro" onclick="KR.theme('vampiro')"><span class="tp-dot" style="background:#a855f7"></span>VAMPIRO</button>
     </div>
   </div>
   <hr class="tp-divider">
   <div class="tp-section">
     <div class="tp-label">Tipo</div>
     <div class="tp-row">
-      <button class="tp-opt" data-font="georgia" onclick="KR.font('georgia')">GEORGIA</button>
-      <button class="tp-opt" data-font="mono"    onclick="KR.font('mono')">MONO</button>
+      <button class="tp-opt" data-font="georgia"  onclick="KR.font('georgia')">GEORGIA</button>
+      <button class="tp-opt" data-font="mono"     onclick="KR.font('mono')">MONO</button>
       <button class="tp-opt" data-font="garamond" onclick="KR.font('garamond')">GARAMOND</button>
       <button class="tp-opt" data-font="grotesk"  onclick="KR.font('grotesk')">GROTESK</button>
     </div>
   </div>
 </div>
-
-<script>
-(function(){
-  var THEMES = {
-    kronos:  { '--bg':'#0a0a0a','--gold':'#c9a84c','--text':'#e2d9c8','--muted':'#6b6456','--border':'#1d1d1d','--card':'#0d0d0d','--btn-fg':'#0a0a0a','--hover-bg':'#120f00' },
-    hacker:  { '--bg':'#010a01','--gold':'#00e64d','--text':'#7de87d','--muted':'#2d6b2d','--border':'#0b220b','--card':'#020e02','--btn-fg':'#010a01','--hover-bg':'#020e02' },
-    lujo:    { '--bg':'#f7f2e7','--gold':'#9a7021','--text':'#1a1208','--muted':'#7a6840','--border':'#ddd5b8','--card':'#f0ead5','--btn-fg':'#f7f2e7','--hover-bg':'#ede5c8' },
-    vampiro: { '--bg':'#07000f','--gold':'#a855f7','--text':'#e8d4f4','--muted':'#6b4590','--border':'#1a0830','--card':'#0a0018','--btn-fg':'#07000f','--hover-bg':'#0d0020' }
-  };
-
-  var FONTS = {
-    georgia:  { body:"Georgia,'Times New Roman',serif",       mono:"'Courier New',monospace" },
-    mono:     { body:"'Courier New','Lucida Console',monospace", mono:"'Courier New',monospace" },
-    garamond: { body:"'EB Garamond',Garamond,Palatino,serif", mono:"'Courier New',monospace",
-                gf:"EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" },
-    grotesk:  { body:"'DM Sans',system-ui,-apple-system,sans-serif", mono:"'DM Mono','Courier New',monospace",
-                gf:"DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@400&display=swap" }
-  };
-
-  var loaded = {};
-
-  function css(key, val){
-    document.documentElement.style.setProperty(key, val);
-  }
-
-  function applyTheme(name){
-    var t = THEMES[name]; if(!t) return;
-    Object.keys(t).forEach(function(k){ css(k, t[k]); });
-    document.querySelectorAll('.tp-opt[data-theme]').forEach(function(el){
-      el.classList.toggle('active', el.dataset.theme === name);
-    });
-    try{ localStorage.setItem('kr-theme', name); }catch(e){}
-  }
-
-  function loadFont(spec){
-    if(loaded[spec]) return;
-    loaded[spec] = true;
-    var l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = 'https://fonts.googleapis.com/css2?family=' + spec;
-    document.head.appendChild(l);
-  }
-
-  function applyFont(name){
-    var f = FONTS[name]; if(!f) return;
-    if(f.gf) loadFont(f.gf);
-    css('--font-body', f.body);
-    css('--font-mono', f.mono);
-    document.querySelectorAll('.tp-opt[data-font]').forEach(function(el){
-      el.classList.toggle('active', el.dataset.font === name);
-    });
-    try{ localStorage.setItem('kr-font', name); }catch(e){}
-  }
-
-  function toggle(){
-    var panel = document.getElementById('theme-panel');
-    var btn   = document.getElementById('theme-btn');
-    var open  = panel.classList.toggle('open');
-    btn.classList.toggle('active', open);
-  }
-
-  // Close on outside click
-  document.addEventListener('click', function(e){
-    var panel = document.getElementById('theme-panel');
-    var btn   = document.getElementById('theme-btn');
-    if(panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn){
-      panel.classList.remove('open');
-      btn.classList.remove('active');
-    }
-  });
-
-  // Init from localStorage or defaults
-  applyTheme(function(){ try{ return localStorage.getItem('kr-theme'); }catch(e){} return null; }() || 'kronos');
-  applyFont( function(){ try{ return localStorage.getItem('kr-font');  }catch(e){} return null; }() || 'georgia');
-
-  window.KR = { theme: applyTheme, font: applyFont, toggle: toggle };
-})();
-</script>
+<script src="/theme.js"></script>
 
 </body>
 </html>

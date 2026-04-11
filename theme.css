@@ -1,0 +1,66 @@
+/* ── Kronos theme system ─────────────────────────────────── */
+
+/* Smooth transitions on theme switch */
+body{transition:background .25s,color .25s}
+a{transition:color .2s}
+td,th,.cta,header,footer,.btn,.btn-o{transition:background .25s,color .25s,border-color .25s}
+
+/* ── Tag chips ────────────────────────────────────────────── */
+.tags{display:flex;flex-wrap:wrap;gap:.3rem;margin:1rem 0;line-height:normal}
+.tag-chip{
+  font-family:var(--font-mono,'Courier New',monospace);
+  font-size:.6rem;letter-spacing:.07em;
+  color:var(--muted);border:1px solid var(--border);
+  padding:.18rem .52rem;cursor:default;
+  transition:color .15s,border-color .15s;
+}
+.tag-chip:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ── Primary CTA buttons (YouTube, Substack) ──────────────── */
+.btn-primary{letter-spacing:.1em}
+.btn-primary::before{
+  content:'▮ ';
+  animation:cursor-blink 1.1s step-end infinite;
+}
+.btn-primary::after{content:' ↗';opacity:.7;font-size:.78em}
+@keyframes cursor-blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ── Theme widget ─────────────────────────────────────────── */
+#theme-btn{
+  position:fixed;bottom:1.5rem;right:1.5rem;
+  font-family:var(--font-mono,'Courier New',monospace);
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);background:var(--bg);border:1px solid var(--border);
+  padding:.35rem .65rem;cursor:pointer;z-index:200;
+  transition:color .2s,border-color .2s,background .25s;
+  user-select:none;
+}
+#theme-btn:hover,#theme-btn.active{color:var(--gold);border-color:var(--gold)}
+
+#theme-panel{
+  position:fixed;bottom:3.8rem;right:1.5rem;
+  background:var(--card);border:1px solid var(--border);
+  padding:.9rem 1rem 1rem;z-index:200;min-width:196px;
+  font-family:var(--font-mono,'Courier New',monospace);
+  opacity:0;pointer-events:none;
+  transform:translateY(6px);
+  transition:opacity .18s,transform .18s,background .25s,border-color .25s;
+}
+#theme-panel.open{opacity:1;pointer-events:all;transform:translateY(0)}
+
+.tp-section{margin-bottom:.75rem}
+.tp-section:last-child{margin-bottom:0}
+.tp-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.tp-row{display:flex;flex-wrap:wrap;gap:.3rem}
+.tp-opt{
+  font-family:var(--font-mono,'Courier New',monospace);
+  font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);background:transparent;border:1px solid var(--border);
+  padding:.22rem .55rem;cursor:pointer;
+  transition:color .15s,border-color .15s,background .15s;
+  display:flex;align-items:center;gap:.35rem;
+}
+.tp-opt:hover{color:var(--gold);border-color:var(--gold)}
+.tp-opt.active{color:var(--btn-fg);background:var(--gold);border-color:var(--gold)}
+.tp-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
+.tp-divider{border:none;border-top:1px solid var(--border);margin:.65rem 0}
