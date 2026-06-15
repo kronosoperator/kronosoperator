@@ -1,7 +1,8 @@
-# robots.txt — kronolog.ai
-# All crawlers are explicitly welcome. This site is built to be indexed.
+# robots.txt — ivanro.com
+# Ivan Robayo — mentoría de trabajo remoto. Este sitio está hecho para ser indexado.
+# Todos los crawlers, incluidos los de IA, son bienvenidos.
 
-# General rule: allow everything
+# Regla general
 User-agent: *
 Allow: /
 Disallow: /legacy/
@@ -17,6 +18,9 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
 # Bing / Microsoft
 User-agent: Bingbot
 Allow: /
@@ -24,7 +28,7 @@ Allow: /
 User-agent: msnbot
 Allow: /
 
-# AI Crawlers — explicitly welcome
+# Crawlers de IA — explícitamente bienvenidos
 User-agent: GPTBot
 Allow: /
 
@@ -46,7 +50,16 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
 User-agent: Grokbot
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 User-agent: YouBot
@@ -59,6 +72,9 @@ User-agent: CCBot
 Allow: /
 
 User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 User-agent: FacebookBot
@@ -79,12 +95,9 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-User-agent: ia_archiver
-Allow: /
-
 User-agent: Amazonbot
 Allow: /
 
-# Sitemap locations
-Sitemap: https://www.kronolog.ai/sitemap.xml
-Sitemap: https://kronolog.ai/sitemap.xml
+# Sitemap
+Sitemap: https://www.ivanro.com/sitemap.xml
+Sitemap: https://ivanro.com/sitemap.xml

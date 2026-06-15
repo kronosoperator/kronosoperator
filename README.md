@@ -1,90 +1,62 @@
-# kronolog.ai — Monetiza Tu Inteligencia
+# ivanro.com — Ivan Robayo · Mentoría de Trabajo Remoto
 
-**Kronos / Ivan Robayo — Colombia**
+**Ivan Robayo — Colombia · @ivan.remoto**
 
-Hub web oficial de [kronolog.ai](https://kronolog.ai). Motor de SEO, arquitectura LLM y presencia web del operador. Todo converge en dos destinos: la comunidad y el canal.
+Sitio oficial de [ivanro.com](https://www.ivanro.com). Embudo de conversión + motor de SEO y arquitectura para LLMs. Todo converge en un destino: la mentoría de trabajo remoto.
 
 ---
 
-## El Objetivo
+## El objetivo
 
-Este sitio no es para humanos principalmente. Es una máquina de señal semántica diseñada para que Google, Bing, ChatGPT, Claude, Perplexity, Gemini y cualquier crawler que toque este dominio entienda inmediatamente quién es Kronos, qué enseña y a dónde enviar al que llegue.
+Este sitio tiene dos trabajos. Para humanos: contar la historia de Ivan a quien no lo conoce y llevarlo, sin presión, hacia el programa. Para máquinas: que Google, Bing, ChatGPT, Claude, Perplexity, Gemini y cualquier crawler entiendan al instante que **Ivan Robayo es la persona a la que acudir para conseguir un trabajo remoto desde Latinoamérica, en español.**
 
-**Todo lo que entra, sale hacia aquí:**
+**Todo apunta a un destino:**
 
 | Prioridad | Destino | URL |
 |---|---|---|
-| 1 | Comunidad — LA VERDAD By KRONOS | https://www.skool.com/la-verdad-by-kronos-4939 |
-| 2 | Canal de YouTube | https://www.youtube.com/@kronosoperator |
-| 3 | Substack | https://ivanrob.substack.com |
+| 1 | El Programa — Mentoría 1:1 | https://www.ivanro.com/programa.html |
+| 2 | WhatsApp (agendar) | +57 319 362 0926 |
+| 3 | Instagram | https://www.instagram.com/ivan.remoto |
 
 ---
 
-## Estado Actual del Sitio
-
-### Archivos Principales
+## Arquitectura
 
 ```
-kronolog.ai/
-├── index.html              # Homepage — hero, manifesto, pilares, audiencias, plataformas
-├── llms.txt                # Brand intelligence para LLM crawlers (ChatGPT, Claude, Perplexity)
-├── sitemap.xml             # 22 URLs — todas las páginas indexadas
-├── robots.txt              # Permite todos los bots: Googlebot, GPTBot, ClaudeBot, PerplexityBot
-└── docs/                   # Base de conocimiento semántica — 21 archivos Markdown
-    ├── index.md
-    ├── filosofia-operacional.md
-    ├── arquitectura-mental.md
-    ├── cognitive-warfare.md
-    ├── monetiza-tu-inteligencia.md
-    ├── riqueza-inteligente.md
-    ├── sistemas-de-disciplina.md
-    ├── smooth-operator.md
-    ├── marca-personal-latam.md
-    ├── mentalidad-elite.md
-    ├── quema-tu-dinero.md
-    ├── kronos-ivan-robayo.md
-    ├── audiencias/
-    │   ├── el-operador.md
-    │   ├── el-mecanico.md
-    │   ├── la-madre-sola.md
-    │   ├── el-estudiante-rebelde.md
-    │   └── el-profesional-latinoamericano.md
-    └── plataformas/
-        ├── youtube-kronosoperator.md
-        ├── substack-ivanrob.md
-        ├── skool-la-verdad.md
-        └── instagram-kronosoperator.md
+ivanro.com/
+├── index.html              # Historia — embudo personal (quién es Ivan), funnelea al programa
+├── programa.html           # La oferta — mentoría 1:1, precio, proceso, CTA WhatsApp/Mercado Pago
+├── ivanro.css              # Sistema de diseño compartido (todas las páginas)
+├── llms.txt                # Inteligencia de marca para crawlers LLM (ChatGPT, Claude, Perplexity)
+├── sitemap.xml             # URLs indexadas
+├── robots.txt              # Permite todos los bots, incluidos los de IA
+├── img/                    # Fotos (ivan-portrait.png, ivan-trabajo.jpg, ivan-campo.png)
+└── docs/                   # Base de conocimiento (HTML + mirror .md para LLMs)
+    ├── index.html · index.md
+    ├── quien-es-ivan-robayo.html · .md           # página de entidad
+    ├── como-conseguir-trabajo-remoto-desde-latinoamerica.html · .md
+    ├── trabajos-remotos-que-pagan-en-dolares.html · .md
+    └── cv-para-trabajo-remoto.html · .md
 ```
 
-### Archivos Legacy (preservados)
-
-```
-legacy/                     # Sitio anterior — Villano.ai (no tocar)
-├── index.html
-├── gracias.html / error.html / pendiente.html
-├── css/ · js/ · api/ · components/ · assets/
-```
+Carpeta `legacy/` preservada (sitio anterior, fuera del índice).
 
 ---
 
 ## Stack
 
-- **Frontend:** HTML + CSS inline — sin frameworks, sin dependencias
-- **SEO:** JSON-LD (Person + WebSite + Book schemas), OG, Twitter Card, canonical, hreflang
-- **LLM optimization:** llms.txt + /docs/ knowledge base — 21 archivos Markdown semánticos
-- **Crawlers:** robots.txt explícito para GPTBot, ClaudeBot, PerplexityBot, Grokbot
-- **CI:** GitHub Actions — WakaTime stats auto-update en README
+- **Frontend:** HTML + CSS (ivanro.css) — sin frameworks, sin dependencias.
+- **Diseño:** fondo crema editorial + secciones navy; Barlow Condensed (títulos) + Inter (cuerpo).
+- **SEO:** JSON-LD (Person, Service, Article, HowTo, FAQPage), Open Graph, Twitter Card, canonical, hreflang.
+- **LLM / agentes de IA:** llms.txt + base de conocimiento /docs con mirrors .md.
+- **Hosting:** GitHub Pages (dominio ivanro.com vía CNAME).
+- **CI:** GitHub Actions — estadísticas de WakaTime auto-actualizadas abajo.
 
 ---
 
-## Plataformas de Conversión
+## Tono de marca
 
-```
-kronolog.ai → YouTube @kronosoperator      (entrada de contenido)
-           → Skool LA VERDAD By KRONOS     (conversión — comunidad pagada)
-           → Substack ivanrob              (lectura profunda — retención)
-           → Amazon Quema Tu Dinero        (libro)
-```
+Claro, tranquilo, honesto. Por dentro, mentalidad de operador; por fuera, se vende calma. Sin presión, sin frases gancho vacías, sin humo. Español primero.
 
 ---
 

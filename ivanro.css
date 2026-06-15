@@ -276,6 +276,37 @@ strong{color:var(--text)}
 .final-sub{max-width:520px;margin:0 auto 2.75rem;color:rgba(255,255,255,.5);font-size:.92rem;line-height:1.75}
 .final-sub strong{color:rgba(255,255,255,.88)}
 
+/* DOC / ARTICLE PAGES (knowledge base) */
+.doc{max-width:760px;margin:0 auto;padding:2.75rem 1.5rem 1rem}
+.doc .crumb{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.doc .crumb a{color:var(--muted)}
+.doc .crumb a:hover{color:var(--navy)}
+.doc h1{font-family:var(--font-head);font-weight:900;font-size:clamp(2rem,6vw,3rem);line-height:1.03;text-transform:uppercase;letter-spacing:.01em;margin-bottom:.6rem}
+.doc .lede{font-size:1.08rem;color:#3a352f;margin:.6rem 0 1rem;line-height:1.7}
+.doc .byline{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-bottom:1.25rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem}
+.doc h2{font-family:var(--font-head);font-weight:900;font-size:1.55rem;text-transform:uppercase;letter-spacing:.02em;margin:2.1rem 0 .6rem;line-height:1.05}
+.doc h2 .hash{color:var(--gold);margin-right:.2rem}
+.doc h3{font-weight:600;font-size:1.05rem;color:var(--navy);margin:1.35rem 0 .35rem}
+.doc p{margin:.7rem 0;color:#3a352f}
+.doc ul,.doc ol{padding-left:1.25rem;margin:.7rem 0;color:#3a352f}
+.doc li{margin:.4rem 0}
+.doc strong{color:var(--text)}
+.doc blockquote{border-left:3px solid var(--purple);background:#fff;padding:1rem 1.25rem;margin:1.25rem 0;font-style:italic;color:#52493d}
+.doc table{width:100%;border-collapse:collapse;font-size:.9rem;margin:1rem 0}
+.doc th{text-align:left;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:.55rem .7rem;border-bottom:1px solid var(--border)}
+.doc td{padding:.55rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+.doc-cta{background:var(--navy);padding:1.6rem 1.5rem;margin:2rem 0;border-left:3px solid var(--gold)}
+.doc-cta .dc-lbl{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.doc-cta p{color:rgba(255,255,255,.72);margin:.3rem 0 1rem;font-size:.95rem}
+.doc-cta .btn-gold,.doc-cta .btn-ghost{margin-top:.25rem}
+.faq{margin-top:.5rem}
+.faq dt{font-weight:600;color:var(--navy);margin-top:1.15rem}
+.faq dd{margin:.3rem 0 0;color:#3a352f}
+.related{margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--border)}
+.related .rel-lbl{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.related a{display:block;color:var(--navy);font-weight:500;padding:.3rem 0;border-bottom:1px solid var(--border)}
+.related a:hover{color:var(--gold)}
+
 /* FOOTER */
 footer{
   background:#070c17;
