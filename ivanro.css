@@ -17,7 +17,8 @@
   --border:#e5ddd6;
   --font-head:'Barlow Condensed',sans-serif;
   --font-body:'Inter',system-ui,-apple-system,sans-serif;
-  --font-mono:'Courier New',monospace;
+  /* Unified type: labels, nav, buttons all use the condensed display face (no more monospace) */
+  --font-mono:'Barlow Condensed',sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7}
@@ -31,15 +32,15 @@ nav{
   padding:.7rem 1.5rem;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
-.nav-brand{font-family:var(--font-mono);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.nav-brand{font-family:var(--font-head);font-weight:700;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.78)}
 .nav-brand span{color:var(--gold)}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
-.nav-link{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .2s}
+.nav-link{font-family:var(--font-head);font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.72);transition:color .2s}
 .nav-link:hover{color:#fff}
 .nav-cta{
   background:var(--green);color:#fff;
-  font-family:var(--font-mono);font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.42rem 1rem;white-space:nowrap;transition:background .2s;
+  font-family:var(--font-head);font-weight:700;font-size:.84rem;letter-spacing:.09em;text-transform:uppercase;
+  padding:.42rem 1.05rem;white-space:nowrap;transition:background .2s;
 }
 .nav-cta:hover{background:var(--green-dark)}
 .nav-cta.gold{background:var(--gold);color:#0f1629;font-weight:700}
@@ -52,8 +53,8 @@ nav{
   text-align:center;
 }
 .hero-eyebrow{
-  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(255,255,255,.35);margin-bottom:2rem;
+  font-family:var(--font-head);font-weight:700;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.72);margin-bottom:2rem;
 }
 .hero-headline{
   font-family:var(--font-head);font-weight:900;
@@ -90,28 +91,28 @@ nav{
 .btn-wa{
   display:inline-flex;align-items:center;gap:.5rem;
   background:var(--green);color:#fff;
-  font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.8rem 1.6rem;font-weight:600;transition:background .2s;
+  font-family:var(--font-head);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.75rem 1.6rem;font-weight:700;transition:background .2s;
 }
 .btn-wa:hover{background:var(--green-dark)}
 .btn-gold{
   display:inline-flex;align-items:center;gap:.5rem;
   background:var(--gold);color:#0f1629;
-  font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.8rem 1.6rem;font-weight:700;transition:opacity .2s;
+  font-family:var(--font-head);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.75rem 1.6rem;font-weight:700;transition:opacity .2s;
 }
 .btn-gold:hover{opacity:.88}
 .btn-ghost{
   display:inline-flex;align-items:center;gap:.5rem;
   background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);
-  font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.8rem 1.6rem;font-weight:600;transition:border-color .2s,background .2s;
+  font-family:var(--font-head);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.75rem 1.6rem;font-weight:700;transition:border-color .2s,background .2s;
 }
 .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
 .hero-trust{
   margin-top:2.5rem;
-  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(255,255,255,.25);
+  font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);
 }
 
 /* SECTION LABEL */
@@ -204,6 +205,12 @@ strong{color:var(--text)}
   background:linear-gradient(150deg,#e9e3db,#d6cdc1);
 }
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-tag{
+  position:absolute;top:.85rem;left:.85rem;z-index:2;
+  font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:.3rem .75rem;background:var(--navy);color:rgba(255,255,255,.85);
+}
+.photo-tag.now{background:var(--gold);color:var(--navy)}
 .photo .ph{display:none}
 .photo.noimg .ph{
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;
@@ -243,8 +250,8 @@ strong{color:var(--text)}
   font-size:clamp(3rem,10vw,5.5rem);color:var(--gold);line-height:1;
 }
 .price-sub{
-  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(255,255,255,.38);margin-left:.5rem;
+  font-family:var(--font-head);font-weight:700;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.62);margin-left:.5rem;
 }
 .price-list{list-style:none;margin:1.25rem 0 0}
 .price-list li{
@@ -257,15 +264,15 @@ strong{color:var(--text)}
 .price-btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
 .contact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
 .contact-card{border:1px solid rgba(255,255,255,.12);padding:1rem}
-.contact-lbl{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.4rem}
-.contact-card a{font-family:var(--font-mono);font-size:.8rem;color:#fff;display:block;transition:color .2s}
+.contact-lbl{font-family:var(--font-head);font-weight:700;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.4rem}
+.contact-card a{font-family:var(--font-head);font-weight:700;font-size:.98rem;letter-spacing:.04em;color:#fff;display:block;transition:color .2s}
 .contact-card a:hover{color:var(--gold)}
 
 /* FINAL CTA */
 .final{background:var(--navy);text-align:center;padding:4.5rem 1.5rem 4rem;border-top:1px solid rgba(255,255,255,.06)}
 .final-eye{
-  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(255,255,255,.28);margin-bottom:1.75rem;
+  font-family:var(--font-head);font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);margin-bottom:1.75rem;
 }
 .final-hl{
   font-family:var(--font-head);font-weight:900;
@@ -311,16 +318,16 @@ strong{color:var(--text)}
 footer{
   background:#070c17;
   padding:1.6rem 1.5rem;
-  font-family:var(--font-mono);font-size:.63rem;letter-spacing:.09em;text-transform:uppercase;
-  color:rgba(255,255,255,.22);
+  font-family:var(--font-head);font-weight:700;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);
 }
 .foot-inner{
   max-width:880px;margin:0 auto;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;
 }
 .foot-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-.foot-links a{color:rgba(255,255,255,.22);transition:color .2s}
-.foot-links a:hover{color:rgba(255,255,255,.6)}
+.foot-links a{color:rgba(255,255,255,.45);transition:color .2s}
+.foot-links a:hover{color:var(--gold)}
 
 /* RESPONSIVE */
 @media(max-width:640px){
