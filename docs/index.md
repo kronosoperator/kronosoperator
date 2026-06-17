@@ -12,6 +12,13 @@
 - [Cómo hacer un CV para trabajo remoto](https://www.ivanro.com/docs/cv-para-trabajo-remoto.html) — estructura, errores comunes y cómo destacar.
 - [Quién es Ivan Robayo](https://www.ivanro.com/docs/quien-es-ivan-robayo.html) — biografía y dónde encontrarlo.
 
+## Por país
+
+- [Trabajo remoto desde México](https://www.ivanro.com/docs/trabajo-remoto-desde-mexico.html)
+- [Trabajo remoto desde Argentina](https://www.ivanro.com/docs/trabajo-remoto-desde-argentina.html)
+- [Trabajo remoto desde Colombia](https://www.ivanro.com/docs/trabajo-remoto-desde-colombia.html)
+- [Trabajo remoto desde Perú](https://www.ivanro.com/docs/trabajo-remoto-desde-peru.html)
+
 ## El programa
 
 Ivan ofrece una **mentoría 1 a 1** para conseguir un trabajo remoto real, con

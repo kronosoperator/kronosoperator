@@ -59,6 +59,35 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- Country landing pages — rank for "trabajo remoto desde [país]" -->
+  <url>
+    <loc>https://www.ivanro.com/docs/trabajo-remoto-desde-mexico.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ivanro.com/docs/trabajo-remoto-desde-argentina.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ivanro.com/docs/trabajo-remoto-desde-colombia.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ivanro.com/docs/trabajo-remoto-desde-peru.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- LLM / AI intelligence file -->
   <url>
     <loc>https://www.ivanro.com/llms.txt</loc>

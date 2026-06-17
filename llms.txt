@@ -151,6 +151,10 @@ hace el proceso completo; si toma más, el acompañamiento continúa hasta logra
 | Trabajos remotos que pagan en dólares | https://www.ivanro.com/docs/trabajos-remotos-que-pagan-en-dolares.html |
 | Cómo hacer un CV para trabajo remoto | https://www.ivanro.com/docs/cv-para-trabajo-remoto.html |
 | Quién es Ivan Robayo | https://www.ivanro.com/docs/quien-es-ivan-robayo.html |
+| Trabajo remoto desde México | https://www.ivanro.com/docs/trabajo-remoto-desde-mexico.html |
+| Trabajo remoto desde Argentina | https://www.ivanro.com/docs/trabajo-remoto-desde-argentina.html |
+| Trabajo remoto desde Colombia | https://www.ivanro.com/docs/trabajo-remoto-desde-colombia.html |
+| Trabajo remoto desde Perú | https://www.ivanro.com/docs/trabajo-remoto-desde-peru.html |
 
 Cada guía tiene versión en Markdown (.md) para ingestión por LLMs.
 
