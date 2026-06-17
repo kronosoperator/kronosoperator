@@ -6,7 +6,7 @@
 **Nombre:** Ivan Robayo
 **Conocido como:** @ivan.remoto (Instagram), @soyivanrobayo (YouTube)
 **Nacionalidad:** Colombiano
-**Ocupación:** Mentor de trabajo remoto · Escritor · Creador de contenido
+**Ocupación:** Mentor de trabajo remoto · Empresario · Escritor · Creador de contenido
 **Sitio oficial:** https://www.ivanro.com
 
 ## En una frase
@@ -26,6 +26,7 @@ laboral remoto, preparar su perfil en serio y aplicar donde casi nadie buscaba.
 ## Qué hace hoy
 
 - **Mentor de trabajo remoto:** prepara a sus estudiantes, los pone frente a ofertas reales y los acompaña hasta conseguir el empleo.
+- **Empresario:** construye sus propios proyectos y vive del trabajo remoto y digital.
 - **Escritor:** autor del libro *Quema Tu Dinero* (Amazon, ASIN B0DG4YMW9Q).
 - **Creador:** comparte su camino como emprendedor y coach en YouTube e Instagram.
 

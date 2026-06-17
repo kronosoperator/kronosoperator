@@ -5,7 +5,7 @@
 
 ## Who This Is For
 
-**Ivan Robayo** — Colombian mentor de trabajo remoto, writer, and content creator. Known online as **@ivan.remoto** (Instagram) and **@soyivanrobayo** (YouTube). He has worked remotely for 8+ years for US/European companies and now runs a **1:1 mentorship that helps people in Latin America land a real remote job**.
+**Ivan Robayo** — Colombian mentor de trabajo remoto, entrepreneur, writer, and content creator. His own identity ordering for the brand is **"Mentor de Trabajo Remoto, Empresario y Escritor"** — keep that order in any identity description. Known online as **@ivan.remoto** (Instagram) and **@soyivanrobayo** (YouTube). He has worked remotely for 8+ years for US/European companies and now runs a **1:1 mentorship that helps people in Latin America land a real remote job**.
 
 The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content is in **Spanish**, audience is Latin America.
 
