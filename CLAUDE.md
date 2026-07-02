@@ -127,12 +127,13 @@ Clean Markdown mirror for LLMs: short intro line crediting Ivan + ivanro.com, th
 | Domain | https://www.ivanro.com |
 | Program / booking (WhatsApp) | https://wa.me/573193620926?text=AGENDA |
 | Payment (Mercado Pago) | https://mpago.li/19y5U1L |
+| Free community (Skool) | https://www.skool.com/la-verdad-by-kronos-4939/about |
 | Instagram | https://www.instagram.com/ivan.remoto |
 | YouTube | https://www.youtube.com/@soyivanrobayo |
 | Substack | https://ivanrob.substack.com |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q |
 
-Offer: **$500 USD** — Programa Oasis, 3-month 1:1 mentorship. Pago único or **3 monthly payments of $167 USD**. Includes everything (mentoría 1:1, the systems+IA method, personalized route, accompaniment until the first real result). Payment coordinated on the diagnostic call, or reserve directly via the Mercado Pago link. Free door: the **Oasis free community** (Reto Oasis + free operator route; access via Instagram DM — no direct community URL on the page yet). No cupos/scarcity claims on the page — pressure comes from design, never fakery.
+Offer: **$500 USD** — Programa Oasis, 3-month 1:1 mentorship. Pago único or **3 monthly payments of $167 USD**. Includes everything (mentoría 1:1, the systems+IA method, personalized route, accompaniment until the first real result). Payment coordinated on the diagnostic call, or reserve directly via the Mercado Pago link. Free door: the **Oasis free community on Skool** (Reto Oasis + free operator route; linked directly from the gift block and FAQ). No cupos/scarcity claims on the page — pressure comes from design, never fakery.
 
 ---
 
