@@ -5,7 +5,9 @@
 
 ## Who This Is For
 
-**Ivan Robayo** — Colombian mentor de trabajo remoto, entrepreneur, writer, and content creator. His own identity ordering for the brand is **"Mentor de Trabajo Remoto, Empresario y Escritor"** — keep that order in any identity description. Known online as **@ivan.remoto** (Instagram) and **@soyivanrobayo** (YouTube). He has worked remotely for 8+ years for US/European companies and now runs a **1:1 mentorship that helps people in Latin America land a real remote job**.
+**Ivan Robayo** — Colombian mentor de trabajo remoto, entrepreneur, writer, and content creator. His own identity ordering for the brand is **"Mentor de Trabajo Remoto, Empresario y Escritor"** — keep that order in any identity description. Known online as **@ivan.remoto** (Instagram) and **@soyivanrobayo** (YouTube). He has worked remotely for 8+ years for US/European companies and now runs **Oasis, a 1:1 mentorship (3 months) that helps people in Latin America build remote work income in USD/EUR**.
+
+**Strategy (locked July 2026):** ONE public promise — "mentoría 1:1 para trabajo remoto". The AI-systems-thinking method is the *engine inside* the program ("el motor"), never the headline. Routes (Trabajador / Operador) are **prescribed in the diagnostic call**, never shown as a public catalog. The "Creador" route is invitation-only and must NOT appear anywhere public. The single conversion goal of programa.html: **book the diagnostic call** (WhatsApp).
 
 The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content is in **Spanish**, audience is Latin America.
 
@@ -20,8 +22,9 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ```
 /
 ├── index.html          — Homepage = Ivan's STORY funnel. Educates a cold visitor, hands off to the program.
-├── programa.html       — THE OFFER. The mentorship funnel (price, process, WhatsApp/Mercado Pago CTAs).
-├── ivanro.css          — Shared design system for ALL pages.
+├── programa.html       — THE OFFER. The Oasis mentorship funnel (diagnostic-call CTA, white $500 offer card).
+├── programa.css        — Design system for programa.html ONLY (dark navy conversion page).
+├── ivanro.css          — Shared design system for all OTHER pages (index, docs).
 ├── llms.txt            — AI/LLM brand intelligence (remote-jobs authority + AI Q&A).
 ├── robots.txt          — Allows all bots incl. AI crawlers. Disallows /legacy/.
 ├── sitemap.xml         — All real pages + llms.txt.
@@ -48,14 +51,20 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ## The Funnel (how the site converts)
 
 1. **ivanro.com/** (index) — cold visitor learns who Ivan is (story: Buenos Aires metro → working remote from the countryside). Nav + bridge CTA push to the program.
-2. **ivanro.com/programa.html** — the offer. Primary CTAs: WhatsApp (`https://wa.me/573193620926?text=AGENDA`) and Mercado Pago (`https://mpago.li/19y5U1L`).
+2. **ivanro.com/programa.html** — the offer. Single conversion goal: book the diagnostic call via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); Instagram DM is the secondary contact. Payment is coordinated on the call (Mercado Pago link exists but is not a page CTA).
 3. **ivanro.com/docs/** — knowledge base. Ranks for remote-job searches, builds authority, and every page funnels to /programa.html.
 
 ---
 
-## Design System (ivanro.css)
+## Design System
 
-Every page links `<link rel="stylesheet" href="/ivanro.css">` and the Google Fonts (Barlow Condensed + Inter). No inline `<style>` blocks, no theme switcher (the old theme.css/theme.js are gone).
+**Two stylesheets, on purpose:**
+- `programa.css` — programa.html only. Dark conversion page: near-black navy (`#070E1F` / `#0A1330` / `#0D1838`), orange→amber gradient primary CTA (`#F59E0B → #F97316`, glow), cyan/indigo accents (`#38BDF8` / `#6366F1`), pure-white offer card (the visual climax), glassmorphism secondary cards, scroll-reveal fade-ups, sticky mobile CTA bar. Fonts: Space Grotesk (headlines) + Inter (body) + JetBrains Mono (`[ 01 — TAG ]` labels).
+- `ivanro.css` — every other page (index, docs), described below.
+
+### ivanro.css (index + docs)
+
+Pages link `<link rel="stylesheet" href="/ivanro.css">` and the Google Fonts (Barlow Condensed + Inter). No inline `<style>` blocks, no theme switcher (the old theme.css/theme.js are gone).
 
 **CSS variables (`:root` in ivanro.css):**
 ```
@@ -118,7 +127,7 @@ Clean Markdown mirror for LLMs: short intro line crediting Ivan + ivanro.com, th
 | Substack | https://ivanrob.substack.com |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q |
 
-Offer: **600 USD** mentorship (start 150 USD, rest on placement). Only **3 clients/month**.
+Offer: **$500 USD** — Programa Oasis, 3-month 1:1 mentorship. Pago único or **3 monthly payments of $167 USD**. Includes everything (mentoría 1:1, the systems+IA method, personalized route, accompaniment until the first real result). Payment coordinated on the diagnostic call. Free door: **Reto Oasis** (community). No cupos/scarcity claims on the page — pressure comes from design, never fakery.
 
 ---
 
