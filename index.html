@@ -57,186 +57,177 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/ivanro.css">
+  <link rel="stylesheet" href="/oasis.css">
 </head>
 
 <body>
 
   <!-- NAV -->
   <nav>
-    <a href="/" class="nav-brand">Ivan Robayo · <span>@ivan.remoto</span></a>
+    <a href="/" class="nav-brand">Ivan Robayo<span> · @ivan.remoto</span></a>
     <div class="nav-right">
       <a href="#historia" class="nav-link">Mi Historia</a>
-      <a href="/programa.html" class="nav-cta gold">El Programa →</a>
+      <a href="/programa.html" class="btn-primary sm">El Programa →</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <div class="hero">
+  <header class="hero">
     <div class="hero-portrait">
       <img src="img/ivan-portrait.png" alt="Ivan Robayo"
-        onerror="this.style.display='none';this.parentElement.classList.add('noimg')">
-      <div class="ph">[ Foto ]<br>img/ivan-portrait.jpg</div>
+        onerror="this.parentElement.style.display='none'">
     </div>
-    <div class="hero-eyebrow">Ivan Robayo · Mentor · Empresario · Escritor</div>
-    <h1 class="hero-headline">
-      <span class="line1">Atrapado en el metro</span>
-      <span class="line2">a las 7 a.m.</span>
-      <span class="line3">Hoy trabajo desde el campo.</span>
-    </h1>
-    <p class="hero-sub">
-      Soy Ivan. Hace más de <strong>8 años trabajo remoto</strong> desde donde yo quiera, para empresas de Estados
-      Unidos y Europa. No fue suerte, mucho menos palanca. Fue <strong>tomar acción</strong>. Esta es mi historia, te
-      ayudo a hacer lo mismo.
-    </p>
+    <span class="tag">[ Ivan Robayo · Mentor · Empresario · Escritor ]</span>
+    <h1>Atrapado en el metro a las 7 a.m. Hoy trabajo <span class="grad">desde el campo</span>.</h1>
+    <p class="hero-sub">Soy Ivan. Hace más de <strong>8 años trabajo remoto</strong> desde donde yo quiera, para empresas de Estados Unidos y Europa. No fue suerte, mucho menos palanca. Fue <strong>tomar acción</strong>. Esta es mi historia — te ayudo a hacer lo mismo.</p>
     <div class="btn-group">
-      <a href="#historia" class="btn-gold">Conoce mi historia ↓</a>
-      <a href="/programa.html" class="btn-wa">Ver el programa →</a>
+      <a href="#historia" class="btn-primary">Conoce mi historia ↓</a>
+      <a href="/programa.html" class="btn-ghost">Ver el programa →</a>
     </div>
-  </div>
+    <div class="momentum" aria-hidden="true">
+      <div class="momentum-labels"><span class="start">[ El metro ]</span><span class="end">[ El campo ]</span></div>
+      <div class="track">
+        <div class="track-fill"><span class="track-marker"></span></div>
+        <span class="track-finish"></span>
+      </div>
+    </div>
+  </header>
 
-  <!-- DE DÓNDE VENGO — el ANTES -->
-  <div class="sec" id="historia">
-    <h2 class="title"><span class="hash">#</span>Antes: la jaula equivocada.</h2>
-    <div class="split">
-      <div class="split-text">
-        <p>Este soy yo en el metro de Buenos Aires a las 7 de la mañana. Salía cuando
-          estaba oscuro, volvía cuando ya estaba oscuro otra vez. Dormía mal. Y me repetía que <strong>"así era la
-            vida"</strong>.</p>
-        <p>Con el tiempo entendí que no era la vida, era el lugar equivocado. Cambiaba mis horas por un sueldo que
-          apenas alcanzaba, en un sitio que nunca iba a pagar lo que valía mi tiempo. Le pasa a muchas personas en
-          Latinoamérica: se esfuerzan de más, pero en el lugar incorrecto.</p>
+  <!-- 01 · ANTES -->
+  <section class="sec mist" id="historia">
+    <div class="sec-inner reveal">
+      <span class="tag">[ 01 — Antes ]</span>
+      <h2>La jaula equivocada.</h2>
+      <div class="split">
+        <div class="split-text">
+          <p>Este soy yo en el metro de Buenos Aires a las 7 de la mañana. Salía cuando estaba oscuro, volvía cuando ya estaba oscuro otra vez. Dormía mal. Y me repetía que <strong>"así era la vida"</strong>.</p>
+          <p>Con el tiempo entendí que no era la vida, era el lugar equivocado. Cambiaba mis horas por un sueldo que apenas alcanzaba, en un sitio que nunca iba a pagar lo que valía mi tiempo. Le pasa a muchas personas en Latinoamérica: se esfuerzan de más, pero en el lugar incorrecto.</p>
+        </div>
+        <div class="split-media">
+          <figure class="photo">
+            <span class="photo-tag">Antes</span>
+            <img src="img/ivan-trabajo.jpg" alt="Ivan Robayo en el metro de Buenos Aires, antes de trabajar remoto"
+              onerror="this.style.display='none';this.parentElement.classList.add('noimg')">
+            <figcaption class="ph">[ Foto ]<br>img/ivan-trabajo.jpg</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="split-media">
-        <figure class="photo">
-          <span class="photo-tag">Antes</span>
-          <img src="img/ivan-trabajo.jpg" alt="Ivan Robayo en el metro de Buenos Aires, antes de trabajar remoto"
-            onerror="this.style.display='none';this.parentElement.classList.add('noimg')">
-          <figcaption class="ph">[ Foto ]<br>img/ivan-trabajo.jpg<br><span style="opacity:.7">el metro, antes</span>
-          </figcaption>
-        </figure>
+      <div class="quote">
+        <blockquote>"El problema nunca fue mi esfuerzo. Era el lugar donde lo estaba gastando."</blockquote>
+        <div class="quote-foot">// Ivan Robayo</div>
       </div>
     </div>
-    <div class="quote">
-      <blockquote>"El problema nunca fue mi esfuerzo. Era el lugar donde lo estaba gastando."</blockquote>
-      <div class="quote-foot">// Ivan Robayo</div>
-    </div>
-  </div>
+  </section>
 
-  <!-- LO QUE CAMBIÓ — el giro -->
-  <div class="sec">
-    <h2 class="title"><span class="hash">#</span>Un día tomé otra decisión.</h2>
-    <p>La salida no fue suerte ni un contacto que me abrió la puerta. Fue entender cómo funciona <strong>el mercado
-        laboral remoto</strong>: empresas de afuera contratan talento en Latinoamérica para trabajar desde casa, ganando
-      en otra moneda.</p>
-    <p>Preparé mi perfil en serio, aprendí a presentarme y empecé a aplicar donde nadie de mi círculo sabía que existía.
-      Funcionó. Desde entonces, llevo <strong>más de 8 años trabajando remoto</strong> para compañías de Estados Unidos
-      y Europa.</p>
-    <p>Hoy vivo en el campo, con mis perros, y elijo mis horarios. No es un sueño inalcanzable. Debes tener decisión y
-      un
-      método.</p>
-  </div>
+  <!-- 02 · EL GIRO -->
+  <section class="sec">
+    <div class="sec-inner reveal">
+      <span class="tag">[ 02 — El giro ]</span>
+      <h2>Un día tomé otra decisión.</h2>
+      <p>La salida no fue suerte ni un contacto que me abrió la puerta. Fue entender cómo funciona <strong>el mercado laboral remoto</strong>: empresas de afuera contratan talento en Latinoamérica para trabajar desde casa, ganando en otra moneda.</p>
+      <p>Preparé mi perfil en serio, aprendí a presentarme y empecé a aplicar donde nadie de mi círculo sabía que existía. Funcionó. Desde entonces, llevo <strong>más de 8 años trabajando remoto</strong> para compañías de Estados Unidos y Europa.</p>
+      <p>Hoy vivo en el campo, con mis perros, y elijo mis horarios. No es un sueño inalcanzable. Debes tener decisión y un método.</p>
+    </div>
+  </section>
 
-  <!-- QUIÉN SOY HOY — el AHORA -->
-  <div class="sec">
-    <h2 class="title"><span class="hash">#</span>Hoy: trabajo desde el campo.</h2>
-    <div class="split rev">
-      <div class="split-media">
-        <figure class="photo">
-          <span class="photo-tag now">Hoy</span>
-          <img src="img/ivan-campo.png" alt="Ivan Robayo hoy, en el campo en Colombia con su perro"
-            onerror="this.style.display='none';this.parentElement.classList.add('noimg')">
-          <figcaption class="ph">[ Foto ]<br>img/ivan-campo.png<br><span style="opacity:.7">en el campo, hoy</span>
-          </figcaption>
-        </figure>
+  <!-- 03 · HOY -->
+  <section class="sec mist">
+    <div class="sec-inner reveal">
+      <span class="tag">[ 03 — Hoy ]</span>
+      <h2>Trabajo desde el campo.</h2>
+      <div class="split rev">
+        <div class="split-media">
+          <figure class="photo">
+            <span class="photo-tag now">Hoy</span>
+            <img src="img/ivan-campo.png" alt="Ivan Robayo hoy, en el campo en Colombia con su perro"
+              onerror="this.style.display='none';this.parentElement.classList.add('noimg')">
+            <figcaption class="ph">[ Foto ]<br>img/ivan-campo.png</figcaption>
+          </figure>
+        </div>
+        <div class="split-text">
+          <p>Soy colombiano y vivo lo que enseño: libertad de tiempo, trabajo con sentido y decisiones por encima de excusas. Lo que hago se reparte en cuatro frentes, pero todos nacen de la misma idea.</p>
+        </div>
       </div>
-      <div class="split-text">
-        <p>Soy colombiano y vivo lo que enseño: libertad de tiempo, trabajo con sentido y decisiones por encima de
-          excusas. Lo que hago se reparte en cuatro frentes, pero todos nacen de la misma idea.</p>
-      </div>
-    </div>
-    <div class="four-grid">
-      <div class="feat">
-        <div class="feat-lbl">Mentor</div>
-        <p>Acompaño 1 a 1 a personas de toda Latinoamérica a conseguir su primer trabajo remoto real, con <strong>esta
-            mentoría</strong>.</p>
-      </div>
-      <div class="feat">
-        <div class="feat-lbl">Escritor</div>
-        <p>Autor de <strong>Quema Tu Dinero</strong>. Escribo sobre dinero, autonomía y la mentalidad de quien decide en
-          vez de esperar.</p>
-      </div>
-      <div class="feat">
-        <div class="feat-lbl">YouTuber</div>
-        <p>Comparto mi día a día como emprendedor y coach: negocios, espiritualidad y la vida que elegí.</p>
-      </div>
-      <div class="feat">
-        <div class="feat-lbl">Operador</div>
-        <p>No vendo una vida que no tengo. Trabajo remoto desde el campo desde hace más de 8 años. Lo enseño porque lo
-          vivo.</p>
+      <div class="four-grid">
+        <div class="card">
+          <div class="feat-lbl">Mentor</div>
+          <p>Acompaño 1 a 1 a personas de toda Latinoamérica a construir su ingreso con trabajo remoto, con <strong>esta mentoría</strong>.</p>
+        </div>
+        <div class="card">
+          <div class="feat-lbl">Escritor</div>
+          <p>Autor de <strong>Quema Tu Dinero</strong>. Escribo sobre dinero, autonomía y la mentalidad de quien decide en vez de esperar.</p>
+        </div>
+        <div class="card">
+          <div class="feat-lbl">YouTuber</div>
+          <p>Comparto mi día a día como emprendedor y coach: negocios, espiritualidad y la vida que elegí.</p>
+        </div>
+        <div class="card">
+          <div class="feat-lbl">Operador</div>
+          <p>No vendo una vida que no tengo. Trabajo remoto desde el campo desde hace más de 8 años. Lo enseño porque lo vivo.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 04 · EN QUÉ CREO -->
-  <div class="dark-sec">
-    <div class="dark-inner">
-      <h2 class="title"><span class="hash">#</span>Decisiones, no promesas.</h2>
-      <p>No es posible hacerse rico de la noche a la mañana. Pero con el conocimiento correcto se hace mil veces más
-        sencillo. Solo necesitas: <strong>entender cómo funciona el mercado remoto, prepararte bien y caminar
-          adelante.</strong></p>
-      <p>Tu vida no cambia el día que pagas algo. Cambia el día que <strong>decides</strong>. Yo solo te muestro el mapa
-        y te acompaño en el terreno para que llegues más rápido y sin perderte.</p>
-      <div class="quote" style="background:rgba(255,255,255,.04)">
+  <section class="sec">
+    <div class="sec-inner reveal">
+      <span class="tag">[ 04 — En qué creo ]</span>
+      <h2>Decisiones, no promesas.</h2>
+      <p>No es posible hacerse rico de la noche a la mañana. Pero con el conocimiento correcto se hace mil veces más sencillo. Solo necesitas: <strong>entender cómo funciona el mercado remoto, prepararte bien y caminar adelante.</strong></p>
+      <p>Tu vida no cambia el día que pagas algo. Cambia el día que <strong>decides</strong>. Yo solo te muestro el mapa y te acompaño en el terreno para que llegues más rápido y sin perderte.</p>
+      <div class="quote">
         <blockquote>"Te vendo el mapa. La estrategia. Ah, y te acompaño en todo el proceso."</blockquote>
         <div class="quote-foot">// La aventura empieza cuando decides invertir en tu vida.</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 05 · DÓNDE ENCONTRARME -->
-  <div class="sec">
-    <h2 class="title"><span class="hash">#</span>Conóceme sin prisa.</h2>
-    <p>No tienes que confiar en una página web. Mira lo que publico, cómo pienso y cómo trabajo. Decide con calma si
-      quieres que te acompañe.</p>
-    <div class="find-grid">
-      <a class="find-card" href="https://www.youtube.com/@soyivanrobayo" rel="noopener" target="_blank">
-        <div class="fc-plat">YouTube</div>
-        <div class="fc-handle">@soyivanrobayo</div>
-        <div class="fc-desc">Mi diario emprendedor: coaching, espiritualidad y la vida que construí.</div>
-      </a>
-      <a class="find-card" href="https://www.instagram.com/ivan.remoto" rel="noopener" target="_blank">
-        <div class="fc-plat">Instagram</div>
-        <div class="fc-handle">@ivan.remoto</div>
-        <div class="fc-desc">El día a día y mentorías reales, documentadas en público.</div>
-      </a>
-      <a class="find-card" href="https://ivanrob.substack.com" rel="noopener" target="_blank">
-        <div class="fc-plat">Substack</div>
-        <div class="fc-handle">ivanrob.substack.com</div>
-        <div class="fc-desc">Mi diario personal: espiritualidad y negocios desde el desierto. </div>
-      </a>
-      <a class="find-card" href="https://www.amazon.com/dp/B0DG4YMW9Q" rel="noopener" target="_blank">
-        <div class="fc-plat">Libro</div>
-        <div class="fc-handle">Quema Tu Dinero</div>
-        <div class="fc-desc">Mi libro sobre dinero y la trampa del esfuerzo mal puesto.</div>
-      </a>
+  <section class="sec mist">
+    <div class="sec-inner reveal">
+      <span class="tag">[ 05 — Conóceme sin prisa ]</span>
+      <h2>No confíes en una página web.</h2>
+      <p>Mira lo que publico, cómo pienso y cómo trabajo. Decide con calma si quieres que te acompañe.</p>
+      <div class="find-grid">
+        <a class="find-card" href="https://www.youtube.com/@soyivanrobayo" rel="noopener" target="_blank">
+          <div class="fc-plat">YouTube</div>
+          <div class="fc-handle">@soyivanrobayo</div>
+          <div class="fc-desc">Mi diario emprendedor: coaching, espiritualidad y la vida que construí.</div>
+        </a>
+        <a class="find-card" href="https://www.instagram.com/ivan.remoto" rel="noopener" target="_blank">
+          <div class="fc-plat">Instagram</div>
+          <div class="fc-handle">@ivan.remoto</div>
+          <div class="fc-desc">El día a día y mentorías reales, documentadas en público.</div>
+        </a>
+        <a class="find-card" href="https://ivanrob.substack.com" rel="noopener" target="_blank">
+          <div class="fc-plat">Substack</div>
+          <div class="fc-handle">ivanrob.substack.com</div>
+          <div class="fc-desc">Mi diario personal: espiritualidad y negocios desde el desierto.</div>
+        </a>
+        <a class="find-card" href="https://www.amazon.com/dp/B0DG4YMW9Q" rel="noopener" target="_blank">
+          <div class="fc-plat">Libro</div>
+          <div class="fc-handle">Quema Tu Dinero</div>
+          <div class="fc-desc">Mi libro sobre dinero y la trampa del esfuerzo mal puesto.</div>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- 06 · BRIDGE TO PROGRAM -->
-  <div class="final">
-    <div class="final-eye">Mentoría 1:1 · Trabajo Remoto · @ivan.remoto</div>
-    <div class="final-hl">Cuando quieras, <span>te acompaño.</span></div>
-    <p class="final-sub">Ya sabes quién soy y de dónde vengo. Si quieres conseguir un trabajo remoto real, te muestro el
-      camino. Paso a paso y con resultados tangibles.</p>
-    <div class="btn-group">
-      <a href="/programa.html" class="btn-gold">Ver el programa →</a>
-      <a href="https://wa.me/573193620926?text=AGENDA" class="btn-ghost" rel="noopener" target="_blank">Escribir por
-        WhatsApp</a>
+  <section class="final white">
+    <div class="reveal">
+      <span class="tag">[ Mentoría 1:1 · Trabajo Remoto · @ivan.remoto ]</span>
+      <div class="final-hl">Cuando quieras, <span class="grad">te acompaño.</span></div>
+      <p class="final-sub">Ya sabes quién soy y de dónde vengo. Si quieres construir tu ingreso con trabajo remoto, te muestro el camino. Paso a paso y con resultados tangibles.</p>
+      <div class="btn-group">
+        <a href="/programa.html" class="btn-primary">Ver el programa →</a>
+        <a href="https://wa.me/573193620926?text=AGENDA" class="btn-ghost" rel="noopener" target="_blank">Escribir por WhatsApp</a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -251,6 +242,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="/programa.html" class="btn-primary">Ver el programa →</a>
+  </div>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in') }); return }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target) }
+        });
+      }, { threshold: .12 });
+      els.forEach(function (e) { io.observe(e) });
+    })();
+  </script>
 
 </body>
 

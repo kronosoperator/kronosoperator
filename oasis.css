@@ -1,9 +1,9 @@
 /* ============================================================
-   programa.css — Oasis offer page (programa.html ONLY)
-   Implements the OASIS Brand & Style Guide:
+   oasis.css — the OASIS Brand & Style Guide, shared by
+   index.html + programa.html:
    light base (white/mist), ink text, azure + spring accents,
    signature gradient used sparingly, momentum-track motif.
-   Never dark backgrounds. Other pages use ivanro.css.
+   Never dark backgrounds. Docs pages still use ivanro.css.
    ============================================================ */
 
 :root{
@@ -307,12 +307,49 @@ nav{
 .faq-q{font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1.02rem;margin-bottom:.4rem;letter-spacing:-.01em}
 .faq-item p{font-size:.93rem;margin:0}
 
+/* ---------- Story components (index) ---------- */
+.hero-portrait{
+  width:120px;height:120px;border-radius:50%;overflow:hidden;
+  margin:0 auto 1.5rem;
+  border:4px solid #fff;outline:1px solid var(--line);
+  box-shadow:0 10px 30px rgba(10,37,64,.15);
+}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.split{display:grid;grid-template-columns:3fr 2fr;gap:2rem;align-items:center;margin-top:1.5rem}
+.split.rev{grid-template-columns:2fr 3fr}
+.photo{
+  margin:0;position:relative;
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:.6rem;box-shadow:var(--shadow-card);
+}
+.photo img{width:100%;border-radius:12px;display:block}
+.photo-tag{
+  position:absolute;top:1.1rem;left:1.1rem;z-index:2;
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--azure);color:#fff;padding:.25rem .6rem;border-radius:6px;
+}
+.photo-tag.now{background:var(--spring)}
+.photo .ph{display:none;font-family:var(--font-mono);font-size:.75rem;color:var(--ink-soft);text-align:center;padding:2.5rem 1rem}
+.photo.noimg .ph{display:block}
+.find-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem}
+.find-card{
+  display:block;
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:1.4rem 1.5rem;box-shadow:var(--shadow-card);
+  transition:transform .2s,border-color .2s;
+}
+.find-card:hover{transform:translateY(-3px);border-color:#B9CCE9}
+.fc-plat{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--azure);margin-bottom:.4rem}
+.fc-handle{font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1.05rem;letter-spacing:-.01em}
+.fc-desc{font-size:.9rem;color:var(--ink-soft);margin-top:.4rem}
+
 /* ---------- Final CTA ---------- */
 .final{
   text-align:center;
   padding:clamp(4rem,10vh,6.5rem) clamp(1.25rem,4vw,3rem);
   background:var(--mist);
 }
+.final.white{background:#fff}
 .final-hl{
   font-family:var(--font-display);font-weight:800;
   font-size:clamp(1.8rem,4.5vw,2.7rem);
@@ -362,7 +399,8 @@ footer{
   body{font-size:17px}
   .nav-link{display:none}
   .nav-brand span{display:none}
-  .two-col,.four-grid{grid-template-columns:1fr}
+  .two-col,.four-grid,.find-grid{grid-template-columns:1fr}
+  .split,.split.rev{grid-template-columns:1fr}
   .step{flex-direction:column;gap:.5rem}
   .sticky-cta{display:block}
   .hero{padding-top:3rem}
