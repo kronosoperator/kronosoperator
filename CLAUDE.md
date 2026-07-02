@@ -22,8 +22,8 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ```
 /
 ├── index.html          — Homepage = Ivan's STORY funnel. Educates a cold visitor, hands off to the program.
-├── programa.html       — THE OFFER. The Oasis mentorship funnel (diagnostic-call CTA, white $500 offer card).
-├── programa.css        — Design system for programa.html ONLY (dark navy conversion page).
+├── programa.html       — THE OFFER. The Oasis mentorship funnel (diagnostic-call CTA, $500 offer card).
+├── programa.css        — Oasis brand system for programa.html ONLY (light: ink/azure/spring).
 ├── ivanro.css          — Shared design system for all OTHER pages (index, docs).
 ├── llms.txt            — AI/LLM brand intelligence (remote-jobs authority + AI Q&A).
 ├── robots.txt          — Allows all bots incl. AI crawlers. Disallows /legacy/.
@@ -59,8 +59,13 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ## Design System
 
 **Two stylesheets, on purpose:**
-- `programa.css` — programa.html only. Dark conversion page: near-black navy (`#070E1F` / `#0A1330` / `#0D1838`), orange→amber gradient primary CTA (`#F59E0B → #F97316`, glow), cyan/indigo accents (`#38BDF8` / `#6366F1`), pure-white offer card (the visual climax), glassmorphism secondary cards, scroll-reveal fade-ups, sticky mobile CTA bar. Fonts: Space Grotesk (headlines) + Inter (body) + JetBrains Mono (`[ 01 — TAG ]` labels).
-- `ivanro.css` — every other page (index, docs), described below.
+- `programa.css` — programa.html only. Implements the **OASIS Brand & Style Guide** (authoritative for anything Oasis-branded):
+  - Colors: Ink `#0A2540` (text) · Ink-soft `#3A5573` · Azure `#0E5AE6` (accents, links, primary CTA) · Spring `#12C26A` (momentum/success) · Ice `#EAF2FE` · Mist `#F4F8FC` · White base. Signature gradient azure→spring (100deg) for key words + momentum track ONLY. **Light base always — never dark backgrounds. No pastels/rose/pink.**
+  - Type: Sora 700/800 display (tracking -0.02em) · Plus Jakarta Sans body · JetBrains Mono for eyebrows/tags (uppercase, wide spacing).
+  - Motif: the **momentum track** — horizontal bar filling blue→green, marker advancing to a solid-green finish node. Use for any journey/path.
+  - Layout: whitespace, ~1080px max, white cards `1px #DCE7F5` border ~18px radius soft shadow, section order eyebrow→headline→lead, alternate white/mist backgrounds.
+  - Tone: confident, empowering; momentum from support, never urgency.
+- `ivanro.css` — every other page (index, docs), described below. Migrating the rest of the site to the Oasis guide is a likely future phase.
 
 ### ivanro.css (index + docs)
 
