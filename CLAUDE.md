@@ -7,7 +7,7 @@
 
 **Ivan Robayo** — Colombian mentor de trabajo remoto, entrepreneur, writer, and content creator. His own identity ordering for the brand is **"Mentor de Trabajo Remoto, Empresario y Escritor"** — keep that order in any identity description. Known online as **@ivan.remoto** (Instagram) and **@soyivanrobayo** (YouTube). He has worked remotely for 8+ years for US/European companies and now runs **Oasis, a 1:1 mentorship (3 months) that helps people in Latin America build remote work income in USD/EUR**.
 
-**Strategy (locked July 2026):** ONE public promise — "mentoría 1:1 para trabajo remoto". The AI-systems-thinking method is the *engine inside* the program ("el motor"), never the headline. Routes (Trabajador / Operador) are **prescribed in the diagnostic call**, never shown as a public catalog. The "Creador" route is invitation-only and must NOT appear anywhere public. The single conversion goal of programa.html: **book the diagnostic call** (WhatsApp).
+**Strategy (July 2026 — evolves; Ivan's latest word always overrides this file):** ONE public promise — "mentoría 1:1 para trabajo remoto" / "de salario local a ingreso internacional". The AI-systems-thinking method is the *engine inside* the program ("el motor"), never the headline. programa.html is the **educational landing for warm Instagram-automation leads**: it teaches the bottlenecks, the method, and the month-by-month structure of the Trabajador program. The Operador route lives FREE inside the community (the "gift" block; creator growth may be mentioned there for the proficient) — it is not sold on the page. Conversion goal: **book the diagnostic call** (WhatsApp), with the Mercado Pago link as the "separa tu lugar" direct option. Never remove existing conversion elements (payment links, CTAs) without asking Ivan.
 
 The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content is in **Spanish**, audience is Latin America.
 
@@ -51,7 +51,7 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ## The Funnel (how the site converts)
 
 1. **ivanro.com/** (index) — cold visitor learns who Ivan is (story: Buenos Aires metro → working remote from the countryside). Nav + bridge CTA push to the program.
-2. **ivanro.com/programa.html** — the offer. Single conversion goal: book the diagnostic call via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); Instagram DM is the secondary contact. Payment is coordinated on the call (Mercado Pago link exists but is not a page CTA).
+2. **ivanro.com/programa.html** — the offer + educational landing (shared via Instagram automation). Primary CTA: book the diagnostic call via WhatsApp (`https://wa.me/573193620926?text=AGENDA`). Secondary in the offer card: "Separa tu lugar →" via Mercado Pago (`https://mpago.li/19y5U1L`). Instagram DM is the community/contact channel.
 3. **ivanro.com/docs/** — knowledge base. Ranks for remote-job searches, builds authority, and every page funnels to /programa.html.
 
 ---
@@ -132,7 +132,7 @@ Clean Markdown mirror for LLMs: short intro line crediting Ivan + ivanro.com, th
 | Substack | https://ivanrob.substack.com |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q |
 
-Offer: **$500 USD** — Programa Oasis, 3-month 1:1 mentorship. Pago único or **3 monthly payments of $167 USD**. Includes everything (mentoría 1:1, the systems+IA method, personalized route, accompaniment until the first real result). Payment coordinated on the diagnostic call. Free door: **Reto Oasis** (community). No cupos/scarcity claims on the page — pressure comes from design, never fakery.
+Offer: **$500 USD** — Programa Oasis, 3-month 1:1 mentorship. Pago único or **3 monthly payments of $167 USD**. Includes everything (mentoría 1:1, the systems+IA method, personalized route, accompaniment until the first real result). Payment coordinated on the diagnostic call, or reserve directly via the Mercado Pago link. Free door: the **Oasis free community** (Reto Oasis + free operator route; access via Instagram DM — no direct community URL on the page yet). No cupos/scarcity claims on the page — pressure comes from design, never fakery.
 
 ---
 
