@@ -51,7 +51,7 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ## The Funnel (how the site converts)
 
 1. **ivanro.com/** (index) — cold visitor learns who Ivan is (story: Buenos Aires metro → working remote from the countryside). Nav + bridge CTA push to the program.
-2. **ivanro.com/programa.html** — the offer page (shared via Instagram automation). Single CTA everywhere: **"Agenda tu llamada de diagnóstico"** via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); the call is free and filters/evaluates. Instagram DM is the secondary contact in the offer card. (No payment link on the page since the $3.000 rebump — the old $500 Mercado Pago link is outdated.)
+2. **ivanro.com/programa.html** — the offer page (shared via Instagram automation). Primary CTA everywhere: **"Agenda tu llamada de diagnóstico"** via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); the call is free and filters/evaluates. Secondary in the offer card: "Separa tu lugar →" via Mercado Pago (`https://mpago.li/19y5U1L` — Ivan re-priced it on the backend for the $3.000 offer, 2026-07-06).
 3. **ivanro.com/docs/** — knowledge base. Ranks for remote-job searches, builds authority, and every page funnels to /programa.html.
 
 ---
@@ -133,7 +133,7 @@ Clean Markdown mirror for LLMs: short intro line crediting Ivan + ivanro.com, th
 | Substack | https://ivanrob.substack.com |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q |
 
-Offer (since 2026-07-06): **$3.000 USD** — Oasis Mentorías Inteligentes, 90-day 1:1 mentorship. Pago completo, or plan: **$1.200 entrada + 2 cuotas de $900** (entrada before session 1, sin excepciones). Promise: first remote income within 90 days; program continues past session 12 until the result arrives. ⚠️ The old $500 Mercado Pago link (`https://mpago.li/19y5U1L`) was **removed from the page** because its amount no longer matches — ask Ivan for a new payment link before re-adding one. Free path: Instagram @ivan.remoto + **Oasis community on Skool** (courses, resources, contests to win a 1:1 session) + Substack. No cupos/scarcity claims — direct copy yes, fakery no.
+Offer (since 2026-07-06): **$3.000 USD** — Oasis Mentorías Inteligentes, 90-day 1:1 mentorship. Pago completo, or plan: **$1.200 entrada + 2 cuotas de $900** (entrada before session 1, sin excepciones). Promise: first remote income within 90 days; program continues past session 12 until the result arrives. Payment: Mercado Pago link (`https://mpago.li/19y5U1L`, re-priced by Ivan for this offer) as the "Separa tu lugar →" secondary CTA, or coordinated on the call. Authority story anchor year: **2018** (lost/in chaos, call center, no useful degree → Netherlands remote job, $800→$3.000+/mo — consistent with "8 años remoto"). Free path: Instagram @ivan.remoto + **Oasis community on Skool** (courses, resources, contests to win a 1:1 session) + Substack. No cupos/scarcity claims — direct copy yes, fakery no.
 
 ---
 
