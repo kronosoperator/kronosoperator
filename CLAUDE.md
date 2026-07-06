@@ -7,7 +7,7 @@
 
 **Ivan Robayo** — Colombian mentor de trabajo remoto, entrepreneur, writer, and content creator. His own identity ordering for the brand is **"Mentor de Trabajo Remoto, Empresario y Escritor"** — keep that order in any identity description. Known online as **@ivan.remoto** (Instagram) and **@soyivanrobayo** (YouTube). He has worked remotely for 8+ years for US/European companies and now runs **Oasis, a 1:1 mentorship (3 months) that helps people in Latin America build remote work income in USD/EUR**.
 
-**Strategy (July 2026 — evolves; Ivan's latest word always overrides this file):** ONE public promise — "mentoría 1:1 para trabajo remoto" / "de salario local a ingreso internacional". The AI-systems-thinking method is the *engine inside* the program ("el motor"), never the headline. programa.html is the **educational landing for warm Instagram-automation leads**: it teaches the bottlenecks, the method, and the month-by-month structure of the Trabajador program. The Operador route lives FREE inside the community (the "gift" block; creator growth may be mentioned there for the proficient) — it is not sold on the page. Conversion goal: **book the diagnostic call** (WhatsApp), with the Mercado Pago link as the "separa tu lugar" direct option. Never remove existing conversion elements (payment links, CTAs) without asking Ivan.
+**Strategy (rebumped 2026-07-06 — evolves; Ivan's latest word always overrides this file):** the program is **Oasis Mentorías Inteligentes — 90 días**. Promise: **tu primer ingreso remoto en 90 días** (dinero de origen remoto en la cuenta); the program doesn't end at session 12 if the result hasn't arrived. Format: 12 weekly 1:1 sessions (2h max), 3 phases (mentalidad ganadora → habilidades y prueba real → despliegue). The **three routes are public** on the page again (Empleo Remoto / Operador / Creador) — chosen together, all ending in remote money. Tone: **direct and confrontational is allowed and wanted** (esclavo del caos / esclavo de la jaula, "el filtro", "no acepto a todos") — grab attention to help, not to abuse; still no fake scarcity/counters/invented testimonials. Conversion goal: **book the diagnostic call** (WhatsApp; the call is free and doubles as Ivan evaluating the applicant). Never remove existing conversion elements (payment links, CTAs) without asking Ivan.
 
 The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content is in **Spanish**, audience is Latin America.
 
@@ -51,7 +51,7 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 ## The Funnel (how the site converts)
 
 1. **ivanro.com/** (index) — cold visitor learns who Ivan is (story: Buenos Aires metro → working remote from the countryside). Nav + bridge CTA push to the program.
-2. **ivanro.com/programa.html** — the offer + educational landing (shared via Instagram automation). Primary CTA: book the diagnostic call via WhatsApp (`https://wa.me/573193620926?text=AGENDA`). Secondary in the offer card: "Separa tu lugar →" via Mercado Pago (`https://mpago.li/19y5U1L`). Instagram DM is the community/contact channel.
+2. **ivanro.com/programa.html** — the offer page (shared via Instagram automation). Single CTA everywhere: **"Agenda tu llamada de diagnóstico"** via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); the call is free and filters/evaluates. Instagram DM is the secondary contact in the offer card. (No payment link on the page since the $3.000 rebump — the old $500 Mercado Pago link is outdated.)
 3. **ivanro.com/docs/** — knowledge base. Ranks for remote-job searches, builds authority, and every page funnels to /programa.html.
 
 ---
@@ -133,7 +133,7 @@ Clean Markdown mirror for LLMs: short intro line crediting Ivan + ivanro.com, th
 | Substack | https://ivanrob.substack.com |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q |
 
-Offer: **$500 USD** — Programa Oasis, 3-month 1:1 mentorship. Pago único or **3 monthly payments of $167 USD**. Includes everything (mentoría 1:1, the systems+IA method, personalized route, accompaniment until the first real result). Payment coordinated on the diagnostic call, or reserve directly via the Mercado Pago link. Free door: the **Oasis free community on Skool** (Reto Oasis + free operator route; linked directly from the gift block and FAQ). No cupos/scarcity claims on the page — pressure comes from design, never fakery.
+Offer (since 2026-07-06): **$3.000 USD** — Oasis Mentorías Inteligentes, 90-day 1:1 mentorship. Pago completo, or plan: **$1.200 entrada + 2 cuotas de $900** (entrada before session 1, sin excepciones). Promise: first remote income within 90 days; program continues past session 12 until the result arrives. ⚠️ The old $500 Mercado Pago link (`https://mpago.li/19y5U1L`) was **removed from the page** because its amount no longer matches — ask Ivan for a new payment link before re-adding one. Free path: Instagram @ivan.remoto + **Oasis community on Skool** (courses, resources, contests to win a 1:1 session) + Substack. No cupos/scarcity claims — direct copy yes, fakery no.
 
 ---
 

@@ -235,6 +235,14 @@ nav{
 .step-t{font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1.05rem;margin-bottom:.35rem;letter-spacing:-.01em}
 .step p{font-size:.95rem;margin:0}
 
+/* ---------- Route / filter lists ---------- */
+.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+.dash-list{list-style:none;margin:1rem 0 0;display:flex;flex-direction:column;gap:.6rem}
+.dash-list li{display:flex;gap:.6rem;font-size:.95rem;color:var(--ink-soft);line-height:1.5}
+.dash-list li::before{content:"—";font-weight:700;flex-shrink:0}
+.dash-list.yes li::before{color:var(--spring)}
+.dash-list.no li::before{color:var(--ink-soft)}
+
 /* ---------- Qué incluye grid ---------- */
 .four-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem}
 .feat-lbl{font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1.02rem;margin-bottom:.5rem;letter-spacing:-.01em}
@@ -399,7 +407,7 @@ footer{
   body{font-size:17px}
   .nav-link{display:none}
   .nav-brand span{display:none}
-  .two-col,.four-grid,.find-grid{grid-template-columns:1fr}
+  .two-col,.four-grid,.find-grid,.three-grid{grid-template-columns:1fr}
   .split,.split.rev{grid-template-columns:1fr}
   .step{flex-direction:column;gap:.5rem}
   .sticky-cta{display:block}
