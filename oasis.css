@@ -280,6 +280,40 @@ nav{
 .step-t{font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1.05rem;margin-bottom:.35rem;letter-spacing:-.01em}
 .step p{font-size:.95rem;margin:0}
 
+/* ---------- Route showcase (the gold) ---------- */
+.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+.route-card{
+  position:relative;
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:1.9rem 1.5rem 1.6rem;
+  box-shadow:var(--shadow-card);
+  overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.route-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(100deg,var(--azure),var(--spring),var(--azure));
+  background-size:220% 100%;
+  animation:grad-move 5s linear infinite;
+}
+.route-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(14,90,230,.16)}
+.route-emoji{font-size:2.8rem;line-height:1;margin-bottom:.9rem}
+.route-name{font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--ink);letter-spacing:-.01em;margin-bottom:.2rem}
+.route-sub{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--azure);margin-bottom:.85rem}
+.route-card p{font-size:.93rem;color:var(--ink-soft);margin:0 0 .5rem}
+.route-card .dash-list li{font-size:.9rem}
+.route-fit{font-size:.88rem;color:var(--ink);font-weight:600;margin-top:.9rem}
+.bonus-banner{
+  position:relative;margin-top:2rem;
+  border-radius:18px;padding:1.5rem 1.75rem;
+  background:linear-gradient(#fff,#fff) padding-box,linear-gradient(100deg,var(--azure),var(--spring)) border-box;
+  border:2px solid transparent;
+  box-shadow:0 14px 40px rgba(14,90,230,.12);
+  display:flex;gap:1.1rem;align-items:center;
+}
+.bonus-banner .route-emoji{margin:0;font-size:2.3rem;flex-shrink:0}
+.bonus-banner p{margin:0;font-family:var(--font-display);font-weight:700;font-size:1.08rem;color:var(--ink);line-height:1.45}
+
 /* ---------- Route / filter lists ---------- */
 .three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
 .dash-list{list-style:none;margin:1rem 0 0;display:flex;flex-direction:column;gap:.6rem}
@@ -455,7 +489,8 @@ footer{
   body{font-size:17px}
   .nav-link{display:none}
   .nav-brand span{display:none}
-  .two-col,.four-grid,.find-grid,.three-grid{grid-template-columns:1fr}
+  .two-col,.four-grid,.find-grid,.three-grid,.route-grid{grid-template-columns:1fr}
+  .bonus-banner{flex-direction:column;text-align:center}
   .split,.split.rev{grid-template-columns:1fr}
   .step{flex-direction:column;gap:.5rem}
   .sticky-cta{display:block}
