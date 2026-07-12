@@ -363,6 +363,7 @@ nav{
   line-height:1;color:var(--ink);letter-spacing:-.03em;
 }
 .offer-price small{font-size:.35em;font-weight:700;color:var(--ink-soft);letter-spacing:0}
+.offer-price s{font-size:.45em;font-weight:700;color:var(--ink-soft);letter-spacing:0;margin-right:.35rem;opacity:.7}
 .offer-claim{
   font-family:var(--font-display);font-weight:700;
   font-size:1.1rem;color:var(--ink);margin-top:.6rem;letter-spacing:-.01em;

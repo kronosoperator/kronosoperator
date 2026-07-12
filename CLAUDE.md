@@ -21,8 +21,8 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 
 ```
 /
-├── index.html          — Homepage = Ivan's STORY funnel. Educates a cold visitor, hands off to the program.
-├── programa.html       — THE OFFER. The Oasis mentorship funnel (diagnostic-call CTA, $500 offer card).
+├── index.html          — THE FRONT DOOR: minimalist $7 low-ticket landing (Oasis Remoto on Skool). Pure copy + emojis.
+├── programa.html       — THE PREMIUM OFFER. The 90-day mentorship funnel (diagnostic-call CTA, $1.000 offer card).
 ├── oasis.css           — Oasis brand system (light: ink/azure/spring). Used by index.html + programa.html.
 ├── ivanro.css          — Legacy design system, docs/ pages only (migration to oasis.css pending).
 ├── llms.txt            — AI/LLM brand intelligence (remote-jobs authority + AI Q&A).
@@ -50,8 +50,8 @@ The site at **ivanro.com** is his conversion funnel + SEO/LLM backbone. Content 
 
 ## The Funnel (how the site converts)
 
-1. **ivanro.com/** (index) — cold visitor learns who Ivan is (story: Buenos Aires metro → working remote from the countryside). Nav + bridge CTA push to the program.
-2. **ivanro.com/programa.html** — the offer page (shared via Instagram automation). Primary CTA everywhere: **"Agenda tu llamada de diagnóstico"** via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); the call is free and filters/evaluates. Secondary in the offer card: "Separa tu lugar →" via Mercado Pago (`https://mpago.li/19y5U1L` — Ivan re-priced it on the backend for the $3.000 offer, 2026-07-06).
+1. **ivanro.com/** (index) — the LOW-TICKET OFFER landing: "Sé dueño de tu tiempo" / low effort high return. Sells Oasis Remoto on Skool for **$7 USD (antes $27, honest strikethrough — real price drop)**: remote-job route + operator path + Ivan's AI/productivity systems. Primary CTA everywhere: the Skool link. Includes Ivan's burn-out story (empresas desde los 24 → burnout → low effort high return) and a bridge to the premium mentorship (/programa.html).
+2. **ivanro.com/programa.html** — the offer page (shared via Instagram automation). Primary CTA everywhere: **"Agenda tu llamada de diagnóstico"** via WhatsApp (`https://wa.me/573193620926?text=AGENDA`); the call is free and filters/evaluates. Secondary in the offer card: "Separa tu lugar →" via Mercado Pago (`https://mpago.li/19y5U1L` — Ivan re-prices it on the backend; current offer $1.000).
 3. **ivanro.com/docs/** — knowledge base. Ranks for remote-job searches, builds authority, and every page funnels to /programa.html.
 
 ---
@@ -134,7 +134,7 @@ Clean Markdown mirror for LLMs: short intro line crediting Ivan + ivanro.com, th
 | Substack | https://ivanrob.substack.com |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q |
 
-Offer (since 2026-07-06): **$3.000 USD** — Oasis Mentorías Inteligentes, 90-day 1:1 mentorship. Pago completo, or plan: **$1.200 entrada + 2 cuotas de $900** (entrada before session 1, sin excepciones). Promise: first remote income within 90 days; program continues past session 12 until the result arrives. Payment: Mercado Pago link (`https://mpago.li/19y5U1L`, re-priced by Ivan for this offer) as the "Separa tu lugar →" secondary CTA, or coordinated on the call. Authority story anchor year: **2018** (lost/in chaos, call center, no useful degree → Netherlands remote job, $800→$3.000+/mo — consistent with "8 años remoto"). Free path: **Oasis Remoto** (the Skool community — Ivan's documented systems + monthly contests to win a 1:1 session) + Instagram @ivan.remoto + Substack. No cupos/scarcity claims — direct copy yes, fakery no.
+Offers (since 2026-07-12): LOW-TICKET — **$7 USD** (antes $27) Oasis Remoto on Skool, all courses/guides/systems, sold on index.html. PREMIUM — **$1.000 USD** 90-day 1:1 mentorship (pago completo, or plan: **$400 entrada + 2 cuotas de $300**; entrada before session 1), sold on programa.html. Promise: first remote income within 90 days; program continues past session 12 until the result arrives. Payment: Mercado Pago link (`https://mpago.li/19y5U1L`, re-priced by Ivan for this offer) as the "Separa tu lugar →" secondary CTA, or coordinated on the call. Authority story anchor year: **2018** (lost/in chaos, call center, no useful degree → Netherlands remote job, $800→$3.000+/mo — consistent with "8 años remoto"). Free path: **Oasis Remoto** (the Skool community — Ivan's documented systems + monthly contests to win a 1:1 session) + Instagram @ivan.remoto + Substack. No cupos/scarcity claims — direct copy yes, fakery no.
 
 ---
 
