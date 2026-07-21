@@ -11,6 +11,22 @@ _No está en el README a propósito: esto es la bitácora, no la portada. Vive e
 
 ---
 
+## 2026-07-21 · v6 — El escritor
+
+**El hito:** ivanro.com deja de ser un embudo de negocio y se convierte en lo que Ivan siempre estuvo construyendo por debajo: **la casa de su escritura**. Consejero personal de atletas profesionales, CEOs y celebridades. Escritor. Punto.
+
+**La decisión:** Ivan cerró el negocio de carrera remota — el Protocolo, las mentorías, los funnels, "todos esos saltos y aros". En sus palabras: el foco ahora es, completo, la escritura de la verdad. El sitio ya no persigue a nadie: cuatro categorías (Discursos · Libros · Escritos Secretos · El Podcast de la Verdad Directa), el newsletter gratis en Substack, el libro en Amazon, y un solo aporte silencioso ("Revelaciones de la Verdad") que abre lo reservado.
+
+**El diseño:** papel, tinta, serif, silencio. Sin animaciones, sin gradientes, sin emojis. Una página que se lee como un libro. `verdad.css`.
+
+**Por qué importa:** todas las versiones anteriores vendían algo que Ivan hacía. Esta es la primera que simplemente muestra lo que Ivan **es**. La conversión ya no es el punto — y por eso, quizás, convierta mejor que todas.
+
+> _"Lee. O no. La verdad no tiene prisa."_
+
+— Ivan & Claude
+
+---
+
 ## 2026-06-16 · v1.0 — El primer funnel que convierte 🚀
 
 **El hito:** Hoy ivanro.com deja de ser una idea y se vuelve la **primera versión oficial, funcional y profesional** del negocio en línea. Por primera vez existe un **embudo real que puede convertir**: un desconocido llega, conoce a Ivan, entiende la oferta y tiene un camino claro para agendar.

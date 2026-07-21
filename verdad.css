@@ -1,0 +1,144 @@
+/* ============================================================
+   verdad.css — Ivan Robayo, consejero personal & escritor.
+   A writer's page: paper, ink, serif, silence.
+   No animations, no gradients, no pressure.
+   ============================================================ */
+
+:root{
+  --paper:#FBFAF7;
+  --ink:#191713;
+  --soft:#6E675D;
+  --line:#E7E2D8;
+  --accent:#8A6D3B;
+  --serif-display:'Cormorant Garamond',serif;
+  --serif-body:'Newsreader',serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif-body);
+  font-size:19px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;transition:text-decoration-color .2s,color .2s}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+em{font-style:italic}
+strong{font-weight:600}
+
+.wrap{max-width:660px;margin:0 auto;padding:0 1.4rem}
+
+/* ---------- Masthead ---------- */
+.masthead{padding:4rem 0 1rem;text-align:center}
+.masthead-name{
+  font-family:var(--serif-body);
+  font-size:.85rem;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+.masthead-role{
+  font-family:var(--serif-body);
+  font-style:italic;
+  font-size:1rem;
+  color:var(--soft);
+  margin-top:.5rem;
+}
+
+/* ---------- Hero ---------- */
+.hero{padding:3rem 0 3.5rem;text-align:center}
+.hero h1{
+  font-family:var(--serif-display);
+  font-weight:600;
+  font-size:clamp(2.4rem,7vw,3.6rem);
+  line-height:1.15;
+  letter-spacing:-.01em;
+}
+.hero p{
+  margin:1.75rem auto 0;
+  max-width:560px;
+  color:var(--soft);
+  font-size:1.05rem;
+}
+
+/* ---------- Rule ---------- */
+.rule{border:none;border-top:1px solid var(--line);margin:0}
+
+/* ---------- Entries (categories) ---------- */
+.entry{border-top:1px solid var(--line);padding:2.4rem 0}
+.entry-n{
+  font-size:.75rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--soft);
+  display:block;
+  margin-bottom:.6rem;
+}
+.entry h2{
+  font-family:var(--serif-display);
+  font-weight:600;
+  font-size:1.9rem;
+  line-height:1.2;
+  margin-bottom:.6rem;
+}
+.entry p{color:var(--soft);margin-bottom:.9rem}
+.entry .go{
+  font-style:italic;
+  font-size:1rem;
+}
+
+/* ---------- Pledge (the quiet door) ---------- */
+.pledge{
+  border:1px solid var(--line);
+  padding:2rem 1.75rem;
+  margin:3rem 0;
+  text-align:center;
+  background:#fff;
+}
+.pledge h3{
+  font-family:var(--serif-display);
+  font-weight:600;
+  font-size:1.6rem;
+  margin-bottom:.6rem;
+}
+.pledge p{color:var(--soft);font-size:1rem;margin-bottom:1.4rem}
+.btn-quiet{
+  display:inline-block;
+  border:1px solid var(--ink);
+  padding:.65rem 1.6rem;
+  text-decoration:none;
+  font-size:1rem;
+  transition:background .2s,color .2s;
+}
+.btn-quiet:hover{background:var(--ink);color:var(--paper);text-decoration:none}
+
+/* ---------- About ---------- */
+.about p{color:var(--ink)}
+.about p + p{margin-top:1rem}
+.about .muted{color:var(--soft);font-size:1rem}
+
+/* ---------- Close ---------- */
+.close{padding:4rem 0;text-align:center}
+.close p{
+  font-family:var(--serif-display);
+  font-size:1.5rem;
+  font-style:italic;
+  color:var(--ink);
+}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;text-align:center}
+footer .foot-links{display:flex;justify-content:center;gap:1.75rem;flex-wrap:wrap;font-size:.95rem}
+footer .foot-note{margin-top:1rem;font-size:.85rem;color:var(--soft)}
+
+/* ---------- Mobile ---------- */
+@media (max-width:600px){
+  body{font-size:18px}
+  .masthead{padding-top:3rem}
+  .hero{padding:2.25rem 0 2.75rem}
+}
