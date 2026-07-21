@@ -10,7 +10,7 @@
 **Identity (v6, 2026-07-21 — evolves; Ivan's latest word always overrides this file):** ivanro.com is a **writer's site** — "purely a blog for a writer." Think Osho / Kapil Gupta: serene, direct, zero pressure. Ivan's words: "we're not gonna force anything... if people want to access the paid content, they will find a way." Never describe him publicly as the Buddha/guru — that's private context, not copy. The remote-career business is **closed**: ⚠️ no Protocolo Remoto, no Skool, no mentorship funnels, no WhatsApp booking, no Oasis, no Kronos. Do not reintroduce any of them.
 
 **The site's structure (all Spanish):**
-- **Four categories (decided):** I. **Discursos** (open writing → free on the Substack newsletter) · II. **Libros** (Quema Tu Dinero on Amazon; more books coming — this is their home) · III. **Escritos Secretos** (reserved writing, behind the aporte) · IV. **El Podcast de la Verdad Directa** (exclusive, same aporte).
+- **Sections:** I. **Discursos** (the home feed → free on the Substack newsletter) · II. **Libros** (Quema Tu Dinero on Amazon; more coming) · III. **Escritos Secretos** (reserved; each text needs its own aporte, apply via navirobayo@gmail.com) · **Revelaciones de la Verdad** (the aporte page, "para el individuo de élite") · **Acerca de**. ⚠️ The podcast was removed (2026-07-21) — do not re-add it anywhere. Category-page close line (Ivan's): "Ivan Robayo es un consejero personal de CEOs, Atletas Profesionales, Celebridades al rededor del mundo."
 - **The quiet door:** "Revelaciones de la Verdad" — a single aporte via the Mercado Pago link that opens Escritos Secretos + the podcast. (Club name was Ivan's musing, applied to the pledge — he may rename it.)
 - **Sobre mí & Contacto:** short bio; contact = reply to any newsletter email; YouTube for face/voice.
 - **Allowed external destinations, complete list:** Substack, Amazon, Mercado Pago (aporte), YouTube. **No Instagram for now** (Ivan will decide later). No other links.
@@ -25,11 +25,12 @@
 /
 ├── index.html          — HOME = the FEED of writings (newest on top). Sticky .topnav with the categories.
 │                         To publish: copy the PLANTILLA comment block in the file, paste as first <article>.
-├── libros.html         — Category page: books (Quema Tu Dinero → Amazon; more coming).
-├── secretos.html       — Category page: Escritos Secretos (aporte door).
-├── podcast.html        — Category page: El Podcast de la Verdad Directa (aporte door).
-├── revelaciones.html   — The aporte page (Revelaciones de la Verdad → Mercado Pago).
-├── sobre.html          — Sobre Mí · Contacto (newsletter reply + YouTube).
+├── libros.html         — Category page: books (Quema Tu Dinero → Amazon). Ivan's copy: "Para quienes aún están buscando".
+├── secretos.html       — Escritos Secretos: each secret writing needs its OWN aporte; "el precio de cada uno de los
+│                         textos es en millones"; apply via navirobayo@gmail.com (Ivan published his email himself).
+├── revelaciones.html   — The aporte page. Ivan's h1: "Para el individuo de élite."
+├── sobre.html          — Acerca de · contacto (newsletter reply + YouTube). Nav label is "Acerca de", NOT "Sobre Mí".
+│                         (podcast.html DELETED by Ivan 2026-07-21 — the podcast is no longer a thing; never re-add.)
 ├── verdad.css          — The design system: paper #FBFAF7, ink, Cormorant Garamond + Newsreader, no animations.
 │                         Shared chrome on every page: .masthead → .topnav (sticky) → content → .close → footer.
 ├── programa.html       — REDIRECT STUB → / (noindex). Old program URL kept so shared links don't 404. Do not rebuild.

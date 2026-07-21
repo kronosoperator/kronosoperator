@@ -1,22 +1,24 @@
-# ivanro.com — Ivan Robayo · Mentoría de Trabajo Remoto
+# ivanro.com — Ivan Robayo · Consejero Personal & Escritor
 
-**Ivan Robayo — Colombia · @ivan.remoto**
+**Ivan Robayo — Colombia**
 
-Sitio oficial de [ivanro.com](https://www.ivanro.com). Embudo de conversión + motor de SEO y arquitectura para LLMs. Todo converge en un destino: la mentoría de trabajo remoto.
+Sitio oficial de [ivanro.com](https://www.ivanro.com). La casa de la escritura de Ivan Robayo: consejero personal de atletas profesionales, CEOs y celebridades. Versión estable.
 
 ---
 
-## El objetivo
+## Qué es
 
-Este sitio tiene dos trabajos. Para humanos: contar la historia de Ivan a quien no lo conoce y llevarlo, sin presión, hacia el programa. Para máquinas: que Google, Bing, ChatGPT, Claude, Perplexity, Gemini y cualquier crawler entiendan al instante que **Ivan Robayo es la persona a la que acudir para conseguir un trabajo remoto desde Latinoamérica, en español.**
+Un sitio de escritor. Sin funnels, sin presión: papel, tinta y serif. La escritura abierta llega gratis por el newsletter; lo reservado se abre con un aporte. *"Nada aquí te va a perseguir: si lo necesitas, lo vas a encontrar."*
 
-**Todo apunta a un destino:**
-
-| Prioridad | Destino | URL |
+| Sección | Qué es | Destino |
 |---|---|---|
-| 1 | El Programa — Mentoría 1:1 | https://www.ivanro.com/programa.html |
-| 2 | WhatsApp (agendar) | +57 319 362 0926 |
-| 3 | Instagram | https://www.instagram.com/ivan.remoto |
+| Discursos | El feed de escritos, el más reciente arriba | ivanro.com (home) |
+| Libros | *Quema Tu Dinero* y los que vienen | Amazon |
+| Escritos Secretos | Escritura reservada, por aporte individual | Mercado Pago / correo |
+| Revelaciones de la Verdad | El aporte, para el individuo de élite | Mercado Pago |
+| Acerca de | Quién escribe · contacto | — |
+
+**Enlaces externos del sitio (lista completa):** [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q) · [YouTube](https://www.youtube.com/@soyivanrobayo) · Mercado Pago (aporte).
 
 ---
 
@@ -24,39 +26,37 @@ Este sitio tiene dos trabajos. Para humanos: contar la historia de Ivan a quien 
 
 ```
 ivanro.com/
-├── index.html              # Historia — embudo personal (quién es Ivan), funnelea al programa
-├── programa.html           # La oferta — mentoría 1:1, precio, proceso, CTA WhatsApp/Mercado Pago
-├── ivanro.css              # Sistema de diseño compartido (todas las páginas)
-├── llms.txt                # Inteligencia de marca para crawlers LLM (ChatGPT, Claude, Perplexity)
-├── sitemap.xml             # URLs indexadas
-├── robots.txt              # Permite todos los bots, incluidos los de IA
-├── img/                    # Fotos (ivan-portrait.png, ivan-trabajo.jpg, ivan-campo.png)
-└── docs/                   # Base de conocimiento (HTML + mirror .md para LLMs)
-    ├── index.html · index.md
-    ├── quien-es-ivan-robayo.html · .md           # página de entidad
-    ├── como-conseguir-trabajo-remoto-desde-latinoamerica.html · .md
-    ├── trabajos-remotos-que-pagan-en-dolares.html · .md
-    └── cv-para-trabajo-remoto.html · .md
+├── index.html              # Home = el feed de escritos (PLANTILLA en comentario para publicar vía GitHub)
+├── libros.html             # Libros
+├── secretos.html           # Escritos Secretos
+├── revelaciones.html       # El aporte
+├── sobre.html              # Acerca de · contacto
+├── verdad.css              # Sistema de diseño: papel, tinta, Cormorant Garamond + Newsreader
+├── programa.html           # Stub de redirección → / (URL antigua, noindex)
+├── llms.txt                # Inteligencia de marca para crawlers LLM
+├── sitemap.xml · robots.txt
+├── img/                    # Fotos
+├── docs/                   # Archivo: guías de la etapa anterior (trabajo remoto)
+└── legacy/                 # Sitio anterior, fuera del índice
 ```
 
-Carpeta `legacy/` preservada (sitio anterior, fuera del índice).
+**Publicar un escrito:** copiar el bloque `PLANTILLA` comentado en `index.html`, pegarlo como primer `<article>` del feed, editar título/subtítulo/enlace, commit a `main`. GitHub Pages despliega en ~2 minutos.
 
 ---
 
 ## Stack
 
-- **Frontend:** HTML + CSS (ivanro.css) — sin frameworks, sin dependencias.
-- **Diseño:** fondo crema editorial + secciones navy; Barlow Condensed (títulos) + Inter (cuerpo).
-- **SEO:** JSON-LD (Person, Service, Article, HowTo, FAQPage), Open Graph, Twitter Card, canonical, hreflang.
-- **LLM / agentes de IA:** llms.txt + base de conocimiento /docs con mirrors .md.
+- **Frontend:** HTML + CSS (verdad.css) — sin frameworks, sin JavaScript, sin dependencias.
+- **Diseño:** papel `#FBFAF7` + tinta; Cormorant Garamond (títulos) + Newsreader (cuerpo). Sin animaciones.
+- **SEO / LLM:** JSON-LD (Person, Book), Open Graph, llms.txt, sitemap.
 - **Hosting:** GitHub Pages (dominio ivanro.com vía CNAME).
 - **CI:** GitHub Actions — estadísticas de WakaTime auto-actualizadas abajo.
 
 ---
 
-## Tono de marca
+## Tono
 
-Claro, tranquilo, honesto. Por dentro, mentalidad de operador; por fuera, se vende calma. Sin presión, sin frases gancho vacías, sin humo. Español primero.
+Directo, sereno, sin adornos. *"Lee. O no. La verdad no tiene prisa."*
 
 ---
 
