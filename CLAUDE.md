@@ -11,8 +11,8 @@
 
 **The site's structure (all Spanish):**
 - **Sections:** I. **Discursos** (the home feed → free on the Substack newsletter) · II. **Libros** (Quema Tu Dinero on Amazon; more coming) · III. **Escritos Secretos** (reserved; each text needs its own aporte, apply via navirobayo@gmail.com) · **Revelaciones de la Verdad** (the aporte page, "para el individuo de élite") · **Acerca de**. ⚠️ The podcast was removed (2026-07-21) — do not re-add it anywhere. Category-page close line (Ivan's): "Ivan Robayo es un consejero personal de CEOs, Atletas Profesionales, Celebridades al rededor del mundo."
-- **The quiet door:** "Revelaciones de la Verdad" — a single aporte via the Mercado Pago link that opens Escritos Secretos + the podcast. (Club name was Ivan's musing, applied to the pledge — he may rename it.)
-- **Sobre mí & Contacto:** short bio; contact = reply to any newsletter email; YouTube for face/voice.
+- **The quiet door:** "Revelaciones de la Verdad" — the aporte via the Mercado Pago link. Escritos Secretos additionally require an individual aporte per text (apply via navirobayo@gmail.com).
+- **Acerca de:** short bio; contact = reply to any newsletter email; YouTube for face/voice.
 - **Allowed external destinations, complete list:** Substack, Amazon, Mercado Pago (aporte), YouTube. **No Instagram for now** (Ivan will decide later). No other links.
 
 **Brand tone:** Direct, serene, aphoristic. No hype, no emojis, no scarcity, no persuasion mechanics. "La verdad no tiene prisa." The page never chases the reader.
@@ -56,7 +56,7 @@
 
 ## How the Site Works (no funnel)
 
-1. **ivanro.com/** — the writer's page. Reader lands, reads, and chooses: newsletter (free), book (Amazon), or the aporte (Mercado Pago → Escritos Secretos + Podcast). Nothing pushes. The pledge box is the only "offer" and it's framed as a door, not a pitch.
+1. **ivanro.com/** — the writer's page. Reader lands, reads, and chooses: newsletter (free), book (Amazon), or the aporte (Mercado Pago → Revelaciones; Escritos Secretos per-text via email). Nothing pushes. The pledge box is the only "offer" and it's framed as a door, not a pitch.
 2. **Substack (ivanrob.substack.com)** — where ALL the writing lives. The site always refers people to the newsletter for the free layer.
 3. **docs/** — archive guides from the remote-career era. They still rank; their old CTAs point to /programa.html which now redirects home. Cleaning them up (or removing them) is pending Ivan's decision — ask before deleting.
 
