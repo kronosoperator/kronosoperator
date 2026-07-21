@@ -12,6 +12,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ivanro.com/"/>
   </url>
 
+  <!-- Category pages -->
+  <url>
+    <loc>https://www.ivanro.com/libros.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ivanro.com/secretos.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ivanro.com/podcast.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ivanro.com/revelaciones.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ivanro.com/sobre.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
   <!-- Entity / author page — targets "quién es ivan robayo" -->
   <url>
     <loc>https://www.ivanro.com/docs/quien-es-ivan-robayo.html</loc>

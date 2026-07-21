@@ -23,8 +23,15 @@
 
 ```
 /
-├── index.html          — THE SITE: the writer's page (masthead, hero, 4 categories, pledge, about, close).
+├── index.html          — HOME = the FEED of writings (newest on top). Sticky .topnav with the categories.
+│                         To publish: copy the PLANTILLA comment block in the file, paste as first <article>.
+├── libros.html         — Category page: books (Quema Tu Dinero → Amazon; more coming).
+├── secretos.html       — Category page: Escritos Secretos (aporte door).
+├── podcast.html        — Category page: El Podcast de la Verdad Directa (aporte door).
+├── revelaciones.html   — The aporte page (Revelaciones de la Verdad → Mercado Pago).
+├── sobre.html          — Sobre Mí · Contacto (newsletter reply + YouTube).
 ├── verdad.css          — The design system: paper #FBFAF7, ink, Cormorant Garamond + Newsreader, no animations.
+│                         Shared chrome on every page: .masthead → .topnav (sticky) → content → .close → footer.
 ├── programa.html       — REDIRECT STUB → / (noindex). Old program URL kept so shared links don't 404. Do not rebuild.
 ├── oasis.css           — UNUSED legacy stylesheet from the previous business. Safe to ignore.
 ├── ivanro.css          — Legacy design system, docs/ pages only.
