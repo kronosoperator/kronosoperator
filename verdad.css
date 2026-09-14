@@ -100,7 +100,9 @@ strong{font-weight:600}
   border:1px solid var(--line);background:#F1EDE4;
   display:flex;align-items:center;justify-content:center;
   color:var(--soft);font-size:1.3rem;
+  overflow:hidden;
 }
+.book-cover img{width:100%;height:100%;object-fit:cover;display:block}
 .book-info h2{font-family:var(--serif-display);font-weight:600;font-size:1.9rem;margin-bottom:.5rem}
 .book-info p{color:var(--soft);margin-bottom:.9rem}
 
