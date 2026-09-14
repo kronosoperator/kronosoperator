@@ -10,9 +10,11 @@
 **Identity (v6, 2026-07-21 — evolves; Ivan's latest word always overrides this file):** ivanro.com is a **writer's site** — "purely a blog for a writer." Think Osho / Kapil Gupta: serene, direct, zero pressure. Ivan's words: "we're not gonna force anything... if people want to access the paid content, they will find a way." Never describe him publicly as the Buddha/guru — that's private context, not copy. The remote-career business is **closed**: ⚠️ no Protocolo Remoto, no Skool, no mentorship funnels, no WhatsApp booking, no Oasis, no Kronos. Do not reintroduce any of them.
 
 **The site's structure (all Spanish):**
-- **Sections:** I. **Discursos** (the home feed → free on the Substack newsletter) · II. **Libros** (Quema Tu Dinero on Amazon; more coming) · III. **Escritos Secretos** (reserved; each text needs its own aporte, apply via navirobayo@gmail.com) · **Revelaciones de la Verdad** (the aporte page, "para el individuo de élite") · **Acerca de**. ⚠️ The podcast was removed (2026-07-21) — do not re-add it anywhere. Category-page close line (Ivan's): "Ivan Robayo es un consejero personal de CEOs, Atletas Profesionales, Celebridades al rededor del mundo."
-- **The quiet door:** "Revelaciones de la Verdad" — the aporte via the Mercado Pago link. Escritos Secretos additionally require an individual aporte per text (apply via navirobayo@gmail.com).
-- **Acerca de:** short bio; contact = reply to any newsletter email; YouTube for face/voice.
+- **Sections:** I. **Discursos** (the home feed → free on the Substack newsletter; currently EMPTY on purpose — see below) · II. **Libros** (Quema Tu Dinero on Amazon; more coming) · III. **Escritos Secretos** (writings about **consciousness and truth** — "escritos sobre la conciencia y la verdad"; reserved, each text needs its own aporte, apply via navirobayo@gmail.com) · **Revelaciones de la Verdad** (the aporte page, "para el individuo de élite," now framed around business/high-performance competition) · **Acerca de**. ⚠️ The podcast was removed (2026-07-21) — do not re-add it anywhere. Category-page close line (Ivan's): "Ivan Robayo es un consejero personal de CEOs, Atletas Profesionales, Celebridades al rededor del mundo."
+- **Home feed is hidden (2026-09-13):** Ivan liked the 10 placeholder posts but wants them off the live page "for now." They are commented out in `index.html` between `<!-- OCULTOS -->` / `FIN OCULTOS -->` markers — preserved, not deleted. Restore by removing those two comment markers; leave the feed empty otherwise until Ivan publishes real posts via the PLANTILLA block.
+- **YouTube is now sci-fi writing** (Ivan's personal shift, 2026-09-13) — reflected in llms.txt; not yet surfaced as on-page copy unless Ivan asks.
+- **The quiet door:** "Revelaciones de la Verdad" — the aporte via Mercado Pago. Escritos Secretos additionally require an individual aporte per text (apply via navirobayo@gmail.com). Ivan edits these prices/links directly on GitHub — **always re-read the live file before touching it**, don't trust this doc's cached link.
+- **Acerca de:** short bio; contact = navirobayo@gmail.com directly (Ivan simplified this page 2026-09-13, dropped the "reply to newsletter" framing); YouTube for face/voice.
 - **Allowed external destinations, complete list:** Substack, Amazon, Mercado Pago (aporte), YouTube. **No Instagram for now** (Ivan will decide later). No other links.
 
 **Brand tone:** Direct, serene, aphoristic. No hype, no emojis, no scarcity, no persuasion mechanics. "La verdad no tiene prisa." The page never chases the reader.
@@ -90,7 +92,7 @@
 | Domain | https://www.ivanro.com | live |
 | Newsletter (Discursos) | https://ivanrob.substack.com | linked |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q | linked |
-| Aporte (Mercado Pago) | https://mpago.li/19y5U1L | linked — Ivan re-prices on the backend |
+| Aporte — Revelaciones de la Verdad | https://mpago.li/1KSqk5q | linked on revelaciones.html + secretos.html (updated 2026-09-13; old `19y5U1L` link is stale — verify against the live file, Ivan changes these directly) |
 | YouTube | https://www.youtube.com/@soyivanrobayo | linked |
 | Instagram | https://www.instagram.com/ivan.remoto | exists, NOT linked (Ivan deciding) |
 | Skool (old community) | https://www.skool.com/la-verdad-by-kronos-4939/about | retired from site |
