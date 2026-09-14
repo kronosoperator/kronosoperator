@@ -14,8 +14,9 @@ Un sitio de escritor. Sin funnels, sin presión: papel, tinta y serif. La escrit
 |---|---|---|
 | Discursos | El feed de escritos, el más reciente arriba | ivanro.com (home) |
 | Libros | *Quema Tu Dinero* y los que vienen | Amazon |
-| Escritos Secretos | Escritura reservada, por aporte individual | Mercado Pago / correo |
-| Revelaciones de la Verdad | El aporte, para el individuo de élite | Mercado Pago |
+| Historias | Ficción, un video de YouTube embebido por entrada | ivanro.com |
+| Escritos Secretos | Escritura reservada, por aporte individual | Correo |
+| Revelaciones de la Verdad | El aporte | Mercado Pago |
 | Acerca de | Quién escribe · contacto | — |
 
 **Enlaces externos del sitio (lista completa):** [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q) · [YouTube](https://www.youtube.com/@espiritualidadivan) · Mercado Pago (aporte).
@@ -28,6 +29,7 @@ Un sitio de escritor. Sin funnels, sin presión: papel, tinta y serif. La escrit
 ivanro.com/
 ├── index.html              # Home = el feed de escritos (PLANTILLA en comentario para publicar vía GitHub)
 ├── libros.html             # Libros
+├── historias.html          # Historias — ficción en video (YouTube embebido)
 ├── secretos.html           # Escritos Secretos
 ├── revelaciones.html       # El aporte
 ├── sobre.html              # Acerca de · contacto
