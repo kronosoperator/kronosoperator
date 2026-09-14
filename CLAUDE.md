@@ -5,7 +5,7 @@
 
 ## Who This Is For
 
-**Ivan Robayo** — Colombian **personal advisor to pro athletes, CEOs and celebrities, and writer**. Author of *Quema Tu Dinero*. Handles: **@ivan.remoto** (Instagram — currently NOT linked on the site, by Ivan's decision) and **@soyivanrobayo** (YouTube).
+**Ivan Robayo** — Colombian **personal advisor to pro athletes, CEOs and celebrities, and writer**. Author of *Quema Tu Dinero*. Handles: **@ivan.remoto** (Instagram — currently NOT linked on the site, by Ivan's decision) and **@espiritualidadivan** (YouTube).
 
 **Identity (v6, 2026-07-21 — evolves; Ivan's latest word always overrides this file):** ivanro.com is a **writer's site** — "purely a blog for a writer." Think Osho / Kapil Gupta: serene, direct, zero pressure. Ivan's words: "we're not gonna force anything... if people want to access the paid content, they will find a way." Never describe him publicly as the Buddha/guru — that's private context, not copy. The remote-career business is **closed**: ⚠️ no Protocolo Remoto, no Skool, no mentorship funnels, no WhatsApp booking, no Oasis, no Kronos. Do not reintroduce any of them.
 
@@ -93,7 +93,7 @@
 | Newsletter (Discursos) | https://ivanrob.substack.com | linked |
 | Book (Quema Tu Dinero) | https://www.amazon.com/dp/B0DG4YMW9Q | linked |
 | Aporte — Revelaciones de la Verdad | https://mpago.li/1KSqk5q | linked on revelaciones.html + secretos.html (updated 2026-09-13; old `19y5U1L` link is stale — verify against the live file, Ivan changes these directly) |
-| YouTube | https://www.youtube.com/@soyivanrobayo | linked |
+| YouTube | https://www.youtube.com/@espiritualidadivan | linked |
 | Instagram | https://www.instagram.com/ivan.remoto | exists, NOT linked (Ivan deciding) |
 | Skool (old community) | https://www.skool.com/la-verdad-by-kronos-4939/about | retired from site |
 | WhatsApp | https://wa.me/573193620926 | retired from site |

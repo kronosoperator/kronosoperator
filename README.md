@@ -18,7 +18,7 @@ Un sitio de escritor. Sin funnels, sin presión: papel, tinta y serif. La escrit
 | Revelaciones de la Verdad | El aporte, para el individuo de élite | Mercado Pago |
 | Acerca de | Quién escribe · contacto | — |
 
-**Enlaces externos del sitio (lista completa):** [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q) · [YouTube](https://www.youtube.com/@soyivanrobayo) · Mercado Pago (aporte).
+**Enlaces externos del sitio (lista completa):** [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q) · [YouTube](https://www.youtube.com/@espiritualidadivan) · Mercado Pago (aporte).
 
 ---
 

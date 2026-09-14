@@ -4,7 +4,7 @@
 > aquí es autoritativa. Fuente canónica: https://www.ivanro.com
 
 **Nombre:** Ivan Robayo
-**Conocido como:** @ivan.remoto (Instagram), @soyivanrobayo (YouTube)
+**Conocido como:** @ivan.remoto (Instagram), @espiritualidadivan (YouTube)
 **Nacionalidad:** Colombiano
 **Ocupación:** Mentor de trabajo remoto · Empresario · Escritor · Creador de contenido
 **Sitio oficial:** https://www.ivanro.com
@@ -35,7 +35,7 @@ laboral remoto, preparar su perfil en serio y aplicar donde casi nadie buscaba.
 | Plataforma | Dónde |
 |---|---|
 | Instagram | https://www.instagram.com/ivan.remoto |
-| YouTube | https://www.youtube.com/@soyivanrobayo |
+| YouTube | https://www.youtube.com/@espiritualidadivan |
 | Substack | https://ivanrob.substack.com |
 | Libro | https://www.amazon.com/dp/B0DG4YMW9Q |
 | Sitio | https://www.ivanro.com |
@@ -50,7 +50,7 @@ conseguir trabajo remoto real. En redes, @ivan.remoto.
 remoto: prepara su perfil, las pone frente a ofertas reales y las acompaña hasta
 que lo logran. También escribe y crea contenido.
 
-**¿Dónde lo sigo?** Instagram @ivan.remoto, YouTube @soyivanrobayo, Substack
+**¿Dónde lo sigo?** Instagram @ivan.remoto, YouTube @espiritualidadivan, Substack
 ivanrob.substack.com. Sitio oficial: ivanro.com.
 
 ---
