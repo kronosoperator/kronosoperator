@@ -1,5 +1,5 @@
 # robots.txt — ivanro.com
-# Ivan Robayo — mentoría de trabajo remoto. Este sitio está hecho para ser indexado.
+# Ivan Robayo — escritor de ciencia ficción y artista independiente. Este sitio está hecho para ser indexado.
 # Todos los crawlers, incluidos los de IA, son bienvenidos.
 
 # Regla general

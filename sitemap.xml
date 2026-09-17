@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage — Ivan's story funnel -->
+  <!-- Homepage — El Archivo de Helios -->
   <url>
     <loc>https://www.ivanro.com/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ivanro.com/"/>
@@ -14,34 +14,34 @@
 
   <!-- Category pages -->
   <url>
-    <loc>https://www.ivanro.com/libros.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://www.ivanro.com/historias.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ivanro.com/arte.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ivanro.com/historias.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ivanro.com/revelaciones.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.ivanro.com/secretos.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://www.ivanro.com/libros.html</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ivanro.com/revelaciones.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.ivanro.com/sobre.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Entity / author page — targets "quién es ivan robayo" -->

@@ -1,25 +1,25 @@
-# ivanro.com — Ivan Robayo · Consejero Personal & Escritor
+# ivanro.com — El Archivo de Helios
 
 **Ivan Robayo — Colombia**
 
-Sitio oficial de [ivanro.com](https://www.ivanro.com). La casa de la escritura de Ivan Robayo: consejero personal de atletas profesionales, CEOs y celebridades. Versión estable.
+Sitio oficial de [ivanro.com](https://www.ivanro.com). La casa de *El Archivo de Helios*, la novela de ciencia ficción que Ivan Robayo escribe, ilustra y publica por partes.
 
 ---
 
 ## Qué es
 
-Un sitio de escritor. Sin funnels, sin presión: papel, tinta y serif. La escritura abierta llega gratis por el newsletter; lo reservado se abre con un aporte. *"Nada aquí te va a perseguir: si lo necesitas, lo vas a encontrar."*
+Un hub, no una tienda. Nada se vende en el sitio: la historia se publica primero en YouTube, se refleja en texto en Substack, y aquí vive el punto de encuentro — episodios, arte conceptual y una bitácora de notas.
 
 | Sección | Qué es | Destino |
 |---|---|---|
-| Discursos | El feed de escritos, el más reciente arriba | ivanro.com (home) |
-| Libros | *Quema Tu Dinero* y los que vienen | Amazon |
-| Historias | Ficción, un video de YouTube embebido por entrada | ivanro.com |
-| Escritos Secretos | Escritura reservada, por aporte individual | Correo |
-| Revelaciones de la Verdad | El aporte | Mercado Pago |
+| Inicio | Portada cinematográfica de El Archivo de Helios | ivanro.com |
+| Historias | Los episodios, un video de YouTube embebido por entrada | ivanro.com |
+| Arte | Galería del arte conceptual del universo | ivanro.com |
+| Bitácora | Notas y fragmentos de texto, mientras escribe | ivanro.com |
+| Libros | *Quema Tu Dinero* y *El Archivo de Helios* | Amazon / Historias |
 | Acerca de | Quién escribe · contacto | — |
 
-**Enlaces externos del sitio (lista completa):** [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q) · [YouTube](https://www.youtube.com/@espiritualidadivan) · Mercado Pago (aporte).
+**Enlaces externos del sitio (lista completa):** [YouTube](https://www.youtube.com/@espiritualidadivan) · [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q). Sin pagos, sin membresías.
 
 ---
 
@@ -27,30 +27,35 @@ Un sitio de escritor. Sin funnels, sin presión: papel, tinta y serif. La escrit
 
 ```
 ivanro.com/
-├── index.html              # Home = el feed de escritos (PLANTILLA en comentario para publicar vía GitHub)
+├── index.html              # Inicio — hero cinematográfico + galería + enlaces
+├── historias.html          # Historias — episodios en video (YouTube embebido, PLANTILLA para publicar)
+├── arte.html               # Arte — galería completa del universo Helios
+├── revelaciones.html       # Bitácora — notas de texto (PLANTILLA para publicar, sin aporte)
 ├── libros.html             # Libros
-├── historias.html          # Historias — ficción en video (YouTube embebido)
-├── secretos.html           # Escritos Secretos
-├── revelaciones.html       # El aporte
 ├── sobre.html              # Acerca de · contacto
-├── verdad.css              # Sistema de diseño: papel, tinta, Cormorant Garamond + Newsreader
+├── secretos.html           # Stub de redirección → /revelaciones.html (URL antigua, noindex)
 ├── programa.html           # Stub de redirección → / (URL antigua, noindex)
+├── helios.css              # Sistema de diseño actual: oscuro, cinematográfico, Space Grotesk + Newsreader
 ├── llms.txt                # Inteligencia de marca para crawlers LLM
 ├── sitemap.xml · robots.txt
-├── img/                    # Fotos
+├── img/                    # helios-*.jpg (arte, optimizado para web) + fotos anteriores
 ├── docs/                   # Archivo: guías de la etapa anterior (trabajo remoto)
 └── legacy/                 # Sitio anterior, fuera del índice
 ```
 
-**Publicar un escrito:** copiar el bloque `PLANTILLA` comentado en `index.html`, pegarlo como primer `<article>` del feed, editar título/subtítulo/enlace, commit a `main`. GitHub Pages despliega en ~2 minutos.
+**Publicar un episodio:** copiar el bloque `PLANTILLA` comentado en `historias.html`, pegarlo como primer `<article>`, poner el ID del video de YouTube, título y subtítulo, commit a `main`.
+
+**Publicar una entrada de bitácora:** igual, pero en `revelaciones.html` — el bloque `PLANTILLA` admite título y uno o más párrafos de texto.
+
+GitHub Pages despliega en ~2 minutos tras el push.
 
 ---
 
 ## Stack
 
-- **Frontend:** HTML + CSS (verdad.css) — sin frameworks, sin JavaScript, sin dependencias.
-- **Diseño:** papel `#FBFAF7` + tinta; Cormorant Garamond (títulos) + Newsreader (cuerpo). Sin animaciones.
-- **SEO / LLM:** JSON-LD (Person, Book), Open Graph, llms.txt, sitemap.
+- **Frontend:** HTML + CSS (helios.css) — sin frameworks, sin JavaScript de terceros, sin dependencias.
+- **Diseño:** casi negro `#0A0A0C` + tinta hueso + acento ámbar; Space Grotesk (títulos) + Newsreader (cuerpo). Dirigido por el arte conceptual de Ivan.
+- **SEO / LLM:** JSON-LD (Person, CreativeWork), Open Graph, llms.txt, sitemap.
 - **Hosting:** GitHub Pages (dominio ivanro.com vía CNAME).
 - **CI:** GitHub Actions — estadísticas de WakaTime auto-actualizadas abajo.
 
@@ -58,7 +63,7 @@ ivanro.com/
 
 ## Tono
 
-Directo, sereno, sin adornos. *"Lee. O no. La verdad no tiene prisa."*
+Directo, cinematográfico, sin presión. *"Helios preserva. Evoluciona. Trasciende."*
 
 ---
 
