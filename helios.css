@@ -16,8 +16,8 @@
   --accent:#E2A15C;
   --accent-dim:#8A6236;
   --accent-glow:rgba(226,161,92,.25);
-  --font-display:'Space Grotesk',sans-serif;
-  --font-body:'Inter',sans-serif;
+  --font-display:'JetBrains Mono',monospace;
+  --font-body:'JetBrains Mono',monospace;
   --font-mono:'JetBrains Mono',monospace;
 }
 
@@ -103,7 +103,7 @@ img{max-width:100%;display:block}
 }
 .cine-title{
   font-family:var(--font-display);font-weight:700;
-  font-size:clamp(2.2rem,7vw,4.2rem);line-height:1.05;letter-spacing:-.01em;
+  font-size:clamp(1.9rem,6.2vw,3.6rem);line-height:1.15;
   color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.5);
 }
 .cine-sub{
