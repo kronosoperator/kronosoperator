@@ -80,7 +80,7 @@
 
 - **Feel:** cinematic, dark, quiet confidence. Driven by Ivan's own concept art, not generic sci-fi cliché.
 - Colors: bg `#0A0A0C` · bg-alt `#131317` · ink (bone white) `#ECE8E0` · ink-soft `#938D83` · line `#26252A` · accent (warm ember, from the art's glowing eyes) `#E2A15C`.
-- Type: **Space Grotesk** 500/700 (display/headlines) · **Newsreader** (body/long-form text — kept from the previous era for reading comfort) · **JetBrains Mono** (eyebrows, nav, uppercase wide-tracked labels).
+- Type: **JetBrains Mono only**, site-wide (weights 400/500/600/700 + italic 400) — Ivan tried a display+body split (Space Grotesk headlines, then Newsreader, then Inter for body text) and rejected both body options; he wants ONE font everywhere, the mono he called "perfect" for his name. Do not reintroduce a second typeface without him asking again.
 - Key components: `.cine-hero` (full-bleed background image + gradient overlay + centered title, used once on index.html), `.gallery`/`.gallery-item` (image grid, used on index.html preview + arte.html full gallery), `.post`/`.post-embed` (YouTube-embed feed items, Historias) and `.post`/`.post-date` (plain-text feed items, Bitácora), `.book`/`.book-cover` (Libros), `.btn`/`.btn-solid` (outlined vs filled amber CTA).
 - No payment/pledge components exist in this stylesheet anymore (`.pledge`/`.btn-quiet` from `verdad.css` were NOT carried over — don't add them back).
 - `body{overflow-x:hidden}` guards mobile. Verify new pages at 375px before shipping.

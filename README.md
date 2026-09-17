@@ -35,7 +35,7 @@ ivanro.com/
 ├── sobre.html              # Acerca de · contacto
 ├── secretos.html           # Stub de redirección → /revelaciones.html (URL antigua, noindex)
 ├── programa.html           # Stub de redirección → / (URL antigua, noindex)
-├── helios.css              # Sistema de diseño actual: oscuro, cinematográfico, Space Grotesk + Newsreader
+├── helios.css              # Sistema de diseño actual: oscuro, cinematográfico, una sola fuente (JetBrains Mono)
 ├── llms.txt                # Inteligencia de marca para crawlers LLM
 ├── sitemap.xml · robots.txt
 ├── img/                    # helios-*.jpg (arte, optimizado para web) + fotos anteriores
@@ -54,7 +54,7 @@ GitHub Pages despliega en ~2 minutos tras el push.
 ## Stack
 
 - **Frontend:** HTML + CSS (helios.css) — sin frameworks, sin JavaScript de terceros, sin dependencias.
-- **Diseño:** casi negro `#0A0A0C` + tinta hueso + acento ámbar; Space Grotesk (títulos) + Newsreader (cuerpo). Dirigido por el arte conceptual de Ivan.
+- **Diseño:** casi negro `#0A0A0C` + tinta hueso + acento ámbar; JetBrains Mono en todo el sitio — títulos, cuerpo y navegación. Dirigido por el arte conceptual de Ivan.
 - **SEO / LLM:** JSON-LD (Person, CreativeWork), Open Graph, llms.txt, sitemap.
 - **Hosting:** GitHub Pages (dominio ivanro.com vía CNAME).
 - **CI:** GitHub Actions — estadísticas de WakaTime auto-actualizadas abajo.
