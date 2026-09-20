@@ -5,25 +5,28 @@
 
 ## Who This Is For
 
-**Ivan Robayo** — Colombian **science fiction writer and independent artist**. Handles: **@espiritualidadivan** (YouTube — where episodes of his novel are published first), Substack `ivanrob.substack.com` (the same story, in text). Instagram `@ivan.remoto` exists but is NOT linked on the site (Ivan's ongoing decision).
+**Ivan Robayo** — Colombian **AI researcher and science fiction writer/independent artist**. Handles: **@historicoia** (YouTube — AI research journal, personal notes on AI development in Latin America), **@espiritualidadivan** (YouTube — where episodes of his novel are published first), Substack `ivanrob.substack.com` (the Helios story, in text). Instagram `@ivan.remoto` exists but is NOT linked on the site (Ivan's ongoing decision).
 
-**Identity (v7, 2026-09-17 — evolves; Ivan's latest word ALWAYS overrides this file):** ivanro.com is now the home of **El Archivo de Helios**, the science-fiction novel Ivan is writing and publishing in parts (video first on YouTube, mirrored in text on Substack). He also makes the concept art for its universe — he is a **writer AND an independent artist**, and the site must read that way at a glance. ⚠️ Every previous era is retired: no remote-career mentorship, no "Protocolo Remoto", no Skool, no Oasis, no Kronos, no "consejero personal de atletas/CEOs/celebridades" framing, and — as of this pivot — **no payment gate, no aporte, no pledge mechanics of any kind**. Ivan's words: "the whole thing with consulting high performance is not that important anymore... let's remove the pledge thing." Do not reintroduce any of it.
+**Identity (v8, 2026-09-20 — evolves; Ivan's latest word ALWAYS overrides this file):** ivanro.com is now Ivan's dual portfolio: **AI researcher first, science-fiction writer/artist second.** Ivan is starting a project documenting the development of AI in Latin America — an "AI journal" with personal notes, published on a new YouTube channel, **@historicoia**. This sits alongside **El Archivo de Helios**, the sci-fi novel he's writing and publishing in parts (video first on the original channel @espiritualidadivan, mirrored in text on Substack). His own framing: this is now his portfolio for **employers** as much as for readers/fans — the site has to read as credible to someone hiring in AI/tech, not just as an artist's page. ⚠️ Every previous era stays retired: no remote-career mentorship, no "Protocolo Remoto", no Skool, no Oasis, no Kronos, no "consejero personal" framing, **no payment gate, no aporte, no pledge mechanics of any kind**. Do not reintroduce any of it.
 
-**Visual identity:** dark, cinematic sci-fi — driven directly by Ivan's own concept art (`img/helios-*.jpg`): near-black backgrounds, bone-white ink, warm ember/amber accent (matches the glowing eyes/core-lights in the art), geometric display type, generous full-bleed imagery. Never go back to the previous eras' looks (the "paper/serif writer's blog" `verdad.css`, or the pulsating-CTA sales funnel `oasis.css`) — both are retired, kept only as dead files.
+**Visual identity:** still dark, still `helios.css`, still driven by Ivan's own concept art — but now layered with a **dev-portfolio flavor** ("the site should feel coded"), added this pivot: a terminal-window hero (`.term-hero`/`.term-window`, `$ whoami`-style prompt lines) and repo-card style project cards (`.projects`/`.project-card` with mono `.tag` chips) sit alongside the existing cinematic hero, gallery and post components. Same palette (near-black bg, bone-white ink, warm ember accent), same single font (JetBrains Mono) — the "coded" feel comes from UI conventions (terminal chrome, tag chips, mono labels), not a new color system. Never go back to `verdad.css` or `oasis.css` — both stay retired, dead files.
 
-**The site's structure (all Spanish):**
-- **Inicio (index.html)** — cinematic landing. Full-bleed hero image + "El Archivo de Helios" title, short "quién escribe" intro, a 4-image gallery preview linking to Arte, three links for following the story (Historias / YouTube / Substack), closing line.
-- **Historias (historias.html)** — the novel's episodes, one embedded YouTube video per entry. Publish by copying the PLANTILLA comment block and pasting a new `<article class="post">` at the top (newest first). Currently has ONE entry: "d10s" (video ID `nlAQc_lIGR0`) — note the title is literally **"d10s"**, not "d1os"; Ivan confirmed this and said he needs to fix the video's own on-screen title to match.
-- **Arte (arte.html)** — full gallery of the concept art, all 5 images, full-size on click. New page, added this pivot.
-- **Bitácora (revelaciones.html — filename unchanged, nav label is "Bitácora")** — free-form text blog. This is where Ivan pastes text posts ("I guess I can paste the text here"). Publish via the PLANTILLA comment block (`<article class="post">` with `<span class="post-date">`, `<h2>`, one or more `<p>`). Shipped EMPTY — no fabricated entries. **No payment gate — the old "aporte"/Mercado Pago pledge box was removed entirely from this page.**
-- **Libros (libros.html)** — Quema Tu Dinero (Amazon) AND El Archivo de Helios (linked to Historias, since it's not sold as a book yet — it's serialized in video/text).
-- **Acerca de (sobre.html)** — short bio leading with the sci-fi writer/artist identity; the consulting/remote-career past is mentioned only briefly as prior chapters, not the headline. Contact: navirobayo@gmail.com.
-- **secretos.html** — RETIRED. Now a redirect stub → `/revelaciones.html` (same noindex pattern as `programa.html` → `/`). Do not rebuild it; Escritos Secretos and Revelaciones de la Verdad were merged into the single free Bitácora on this pivot.
-- **Allowed external destinations:** YouTube (@espiritualidadivan), Substack (ivanrob.substack.com), Amazon (the book). **No Mercado Pago / payment links anywhere on the site anymore.** No Instagram for now.
+**The site's structure (all Spanish), nav = Inicio · Investigación · Historias · Arte · Bitácora · Libros · Acerca de:**
+- **Inicio (index.html)** — leads with the AI-researcher identity: a terminal-hero (`$ whoami` → name → role line naming both the AI research and Helios) with CTAs to YouTube (@historicoia) and the Investigación page, then a "Dos proyectos" section with two project-cards (Investigación IA / El Archivo de Helios), then the Helios art-gallery preview (demoted, not removed), then a "Cómo seguir" section linking both YouTube channels + Substack.
+- **Investigación (investigacion.html)** — NEW this pivot. AI-research page: intro + link to @historicoia, then a post-embed feed (same pattern as Historias) for @historicoia videos via the PLANTILLA block. Shipped EMPTY — no fabricated video entries; Ivan hasn't given any video IDs yet.
+- **Historias (historias.html)** — the novel's episodes, one embedded YouTube video per entry (channel @espiritualidadivan). Publish by copying the PLANTILLA comment block and pasting a new `<article class="post">` at the top (newest first). Currently has ONE entry: "d10s" (video ID `nlAQc_lIGR0`) — note the title is literally **"d10s"**, not "d1os"; Ivan confirmed this and said he needs to fix the video's own on-screen title to match.
+- **Arte (arte.html)** — full gallery of the concept art, all 5 images, full-size on click.
+- **Bitácora (revelaciones.html — filename unchanged, nav label is "Bitácora")** — free-form text blog, now spans BOTH tracks (investigation notes + fiction fragments), not Helios-only. Publish via the PLANTILLA comment block. Shipped EMPTY — no fabricated entries.
+- **Libros (libros.html)** — Quema Tu Dinero (Amazon) AND El Archivo de Helios (linked to Historias, since it's not sold as a book yet).
+- **Acerca de (sobre.html)** — bio now leads with the AI-researcher identity (investigación + @historicoia), then the sci-fi writer/artist identity, then the consulting/remote-career past as one brief background sentence. Contact: navirobayo@gmail.com.
+- **secretos.html** — RETIRED. Redirect stub → `/revelaciones.html`. Do not rebuild.
+- **Allowed external destinations:** YouTube @historicoia (AI research), YouTube @espiritualidadivan (fiction), Substack (ivanrob.substack.com), Amazon (the book). **No Mercado Pago / payment links anywhere.** No Instagram for now.
 
-**Brand tone:** Direct, cinematic, quiet confidence. No hype, no scarcity, no persuasion mechanics, and now also **no aphorisms about "la verdad"** (that belonged to the previous era) — the closing line across pages is now **"Helios preserva. Evoluciona. Trasciende."**, pulled directly from the in-universe banners in Ivan's own art.
+**Closing line "Helios preserva. Evoluciona. Trasciende."** stays, but scope narrowed this pivot: it's Helios in-universe copy, so it only belongs on pages that are Helios-specific (Historias, Arte, Libros). It was removed from Inicio, Investigación, Bitácora and Acerca de since those now cover both tracks and the line reads confusing as a universal AI-research-page closer. Don't restore it site-wide without Ivan asking, and don't invent a new universal tagline in its place — pages that lost it just end at the footer.
 
-**What NOT to fabricate:** Ivan mentioned he may give an older YouTube channel handle later — he has not yet. Do not invent one. Do not invent chapter lists, blurbs, or plot details for El Archivo de Helios beyond what Ivan supplies — when he gives a video ID/title, publish it verbatim (see the d10s note above about trusting his exact spelling over what's on-screen).
+**Brand tone:** Direct, quiet confidence. No hype, no scarcity, no persuasion mechanics, no aphorisms about "la verdad" (previous era).
+
+**What NOT to fabricate:** Do not invent AI-research video IDs/titles, chapter lists, blurbs, or plot details beyond what Ivan supplies verbatim — when he gives a video ID/title, publish it as given (see the d10s note above about trusting his exact spelling over what's on-screen). Do not invent specific technical skills, employers, or past AI work for the "employer portfolio" framing beyond what Ivan states — the credibility comes from the site being well-built and the work being real, not from résumé claims.
 
 ---
 
@@ -31,19 +34,20 @@
 
 ```
 /
-├── index.html          — Inicio: cinematic hero (El Archivo de Helios) + gallery preview + links.
+├── index.html          — Inicio: terminal-hero (AI researcher leads) + two project-cards + gallery preview + links.
+├── investigacion.html  — NEW v8. Investigación: AI-research intro + @historicoia post-embed feed, PLANTILLA block.
 ├── historias.html      — Novel episodes, one YouTube embed per entry. PLANTILLA block to publish.
 ├── arte.html           — Full concept-art gallery (5 images, click-through to full size).
-├── revelaciones.html   — "Bitácora" (nav label). Free text-post blog, PLANTILLA block. NO payment gate.
+├── revelaciones.html   — "Bitácora" (nav label). Free text-post blog (both tracks), PLANTILLA block. NO payment gate.
 ├── libros.html         — Quema Tu Dinero (Amazon) + El Archivo de Helios (→ Historias).
-├── sobre.html          — Acerca de · bio (sci-fi writer/artist first) · contacto.
+├── sobre.html          — Acerca de · bio (AI researcher first, then sci-fi writer/artist) · contacto.
 ├── secretos.html       — REDIRECT STUB → /revelaciones.html (noindex). Do not rebuild.
 ├── programa.html       — REDIRECT STUB → / (noindex). Old remote-mentorship URL. Do not rebuild.
-├── helios.css          — CURRENT design system (dark/cinematic/sci-fi). Used by every live page above.
+├── helios.css          — CURRENT design system (dark/cinematic + dev-portfolio terminal/project-card flavor).
 ├── verdad.css          — RETIRED (the "paper writer's blog" era). Dead file, kept for history. Do not use.
 ├── oasis.css           — RETIRED (the pulsating-CTA sales-funnel era). Dead file. Do not use.
 ├── ivanro.css          — Legacy design system, docs/ pages only (unrelated archive, see below).
-├── llms.txt            — AI/LLM brand intelligence — sci-fi writer/artist identity + archive note.
+├── llms.txt            — AI/LLM brand intelligence — AI researcher + sci-fi writer/artist identity + archive note.
 ├── robots.txt          — Allows all bots incl. AI crawlers. Disallows /legacy/.
 ├── sitemap.xml         — Real pages + llms.txt.
 ├── CLAUDE.md           — This file.
@@ -68,20 +72,21 @@
 
 ## How the Site Works (no funnel, no gate)
 
-1. **ivanro.com/** — cinematic landing for people who found Ivan via YouTube. Ivan's own words: "this is the landing page they see after finding me from YouTube... it's not that important" — i.e. keep it short and confident, its only job is to confirm "yes, this is the guy writing El Archivo de Helios" and point to where the story actually lives.
-2. **YouTube (@espiritualidadivan)** — where episodes are published FIRST.
-3. **Substack (ivanrob.substack.com)** — the same story, mirrored in text.
-4. **ivanro.com is a hub, not a store.** Nothing is sold on the site. No payment links, no membership, no pledge.
-5. **docs/** — unrelated SEO archive from the remote-career era, still online, not part of this identity.
+1. **ivanro.com/** — now doubles as an employer-facing portfolio and a landing page for people arriving from either YouTube channel. Leads with the AI-researcher identity, then presents the sci-fi work as the second track — "dos proyectos, una forma de trabajar."
+2. **YouTube (@historicoia)** — AI-research journal, published first.
+3. **YouTube (@espiritualidadivan)** — where Helios episodes are published FIRST.
+4. **Substack (ivanrob.substack.com)** — the Helios story, mirrored in text.
+5. **ivanro.com is a hub, not a store.** Nothing is sold on the site. No payment links, no membership, no pledge.
+6. **docs/** — unrelated SEO archive from the remote-career era, still online, not part of this identity.
 
 ---
 
 ## Design System (helios.css)
 
-- **Feel:** cinematic, dark, quiet confidence. Driven by Ivan's own concept art, not generic sci-fi cliché.
+- **Feel:** dark, quiet confidence, driven by Ivan's own concept art — plus a **dev-portfolio layer** added v8 ("the site should feel coded"): terminal chrome and repo-style cards, same palette, no new colors.
 - Colors: bg `#0A0A0C` · bg-alt `#131317` · ink (bone white) `#ECE8E0` · ink-soft `#938D83` · line `#26252A` · accent (warm ember, from the art's glowing eyes) `#E2A15C`.
 - Type: **JetBrains Mono only**, site-wide (weights 400/500/600/700 + italic 400) — Ivan tried a display+body split (Space Grotesk headlines, then Newsreader, then Inter for body text) and rejected both body options; he wants ONE font everywhere, the mono he called "perfect" for his name. Do not reintroduce a second typeface without him asking again.
-- Key components: `.cine-hero` (full-bleed background image + gradient overlay + centered title, used once on index.html), `.gallery`/`.gallery-item` (image grid, used on index.html preview + arte.html full gallery), `.post`/`.post-embed` (YouTube-embed feed items, Historias) and `.post`/`.post-date` (plain-text feed items, Bitácora), `.book`/`.book-cover` (Libros), `.btn`/`.btn-solid` (outlined vs filled amber CTA).
+- Key components: `.cine-hero` (full-bleed background image + gradient overlay + centered title — no longer used on index.html since v8, kept for potential reuse), `.term-hero`/`.term-window`/`.term-bar`/`.term-line`/`.term-name`/`.term-role` (NEW v8 — terminal-window hero, used once on index.html), `.projects`/`.project-card`/`.project-head`/`.project-dot`/`.project-name`/`.project-desc`/`.project-tags`/`.tag`/`.project-go` (NEW v8 — repo-card style link cards, used on index.html "Dos proyectos"), `.gallery`/`.gallery-item` (image grid, index.html preview + arte.html full gallery), `.post`/`.post-embed` (YouTube-embed feed items, Historias + Investigación) and `.post`/`.post-date` (plain-text feed items, Bitácora), `.book`/`.book-cover` (Libros), `.btn`/`.btn-solid` (outlined vs filled amber CTA).
 - No payment/pledge components exist in this stylesheet anymore (`.pledge`/`.btn-quiet` from `verdad.css` were NOT carried over — don't add them back).
 - `body{overflow-x:hidden}` guards mobile. Verify new pages at 375px before shipping.
 
@@ -89,9 +94,9 @@
 
 ## Writing Voice (for any copy on the site)
 
-- Spanish. Short sentences, cinematic rather than aphoristic-mystical (that was the previous era).
-- Claims stay literally true — El Archivo de Helios is described as "en curso" / "por partes," never as a finished, purchasable book.
-- Closing line across pages: **"Helios preserva. Evoluciona. Trasciende."** (from Ivan's own in-universe art banners — don't paraphrase it).
+- Spanish. Short sentences, direct rather than aphoristic-mystical (that was the previous era).
+- Claims stay literally true — El Archivo de Helios is described as "en curso" / "por partes," never as a finished, purchasable book. The AI-research project is described as starting/ongoing, not with fabricated video counts or past-work claims.
+- Closing line **"Helios preserva. Evoluciona. Trasciende."** (from Ivan's own in-universe art banners — don't paraphrase it) is now scoped to Helios-specific pages only (Historias, Arte, Libros) — see Identity note above. Don't invent a replacement universal tagline for the other pages.
 
 ---
 
@@ -100,8 +105,9 @@
 | Thing | URL | Status |
 |---|---|---|
 | Domain | https://www.ivanro.com | live |
-| YouTube (episodes, first) | https://www.youtube.com/@espiritualidadivan | linked everywhere |
-| Substack (text mirror) | https://ivanrob.substack.com | linked everywhere |
+| YouTube (AI research) | https://www.youtube.com/@historicoia | linked everywhere, NEW v8 |
+| YouTube (fiction episodes) | https://www.youtube.com/@espiritualidadivan | linked everywhere |
+| Substack (Helios text mirror) | https://ivanrob.substack.com | linked everywhere |
 | Book — Quema Tu Dinero | https://www.amazon.com/dp/B0DG4YMW9Q | linked on Libros |
 | Contact | navirobayo@gmail.com | on Acerca de |
 | Instagram | https://www.instagram.com/ivan.remoto | exists, NOT linked (Ivan deciding) |
