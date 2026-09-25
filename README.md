@@ -1,12 +1,10 @@
-# ivanro.com — El Archivo de Helios
+# ivanro.com
 
 **Ivan Robayo — Colombia**
 
-Sitio oficial de [ivanro.com](https://www.ivanro.com). La casa de *El Archivo de Helios*, la novela de ciencia ficción que Ivan Robayo escribe, ilustra y publica por partes.
+Sitio oficial de [ivanro.com](https://www.ivanro.com). 
 
----
-
-**Enlaces externos del sitio (lista completa):** [YouTube](https://www.youtube.com/@espiritualidadivan) · [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q). Sin pagos, sin membresías.
+**Enlaces externos del sitio (lista completa):** [YouTube](https://www.youtube.com/@espiritualidadivan) · [Substack](https://ivanrob.substack.com) · [Amazon](https://www.amazon.com/dp/B0DG4YMW9Q). 
 
 
 ## Coding Stats
