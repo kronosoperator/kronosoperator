@@ -5,7 +5,7 @@
 
 ## Who This Is For
 
-**Ivan Robayo** — Colombian writer. The site is now **one single page**, radically minimal, in the voice he calls "la verdad, directa" (the truth, plainly). He writes *Quema Tu Dinero* (published, Amazon) and *El Archivo de Helios* (a sci-fi novel in progress — video on YouTube @espiritualidadivan, text on Substack). Instagram `@ivan.remoto` exists but is NOT linked on the site (Ivan's ongoing decision).
+**Ivan Robayo** — Colombian writer. The site is now **one single page**, radically minimal, in the voice he calls "la verdad, directa" (the truth, plainly). He writes *Quema Tu Dinero* (published, Amazon) and *El Archivo de Helios* (a sci-fi novel in progress — video on YouTube @archivoscifi, text on Substack; his main channel is @espiritualidadivan). Instagram `@ivan.remoto` exists but is NOT linked on the site (Ivan's ongoing decision).
 
 **Identity (v10, 2026-09-28 — evolves; Ivan's latest word ALWAYS overrides this file):** Ivan dropped the AI-researcher framing entirely ("I decided to keep talking about the truth, not the ai researcher thing") and asked for a **Kapil Gupta approach** — radical minimalism, stark and aphoristic, one page, no explaining. Concretely:
 - **The whole site is index.html.** No nav, no separate category pages. Every other `.html` file is either a bare noindex redirect stub back to `/`, or has been deleted outright.
@@ -52,17 +52,16 @@
 │                          verdad-list, close, footer) — every other page is CSS-free (bare redirect HTML).
 ├── verdad.css          — RETIRED (the original "paper writer's blog" era). Dead file, kept for history.
 ├── oasis.css           — RETIRED (the pulsating-CTA sales-funnel era). Dead file. Do not use.
-├── ivanro.css          — Legacy design system, docs/ pages only (unrelated archive, see below).
+├── ivanro.css          — RETIRED. Was only used by docs/, which was deleted 2026-10-11.
 ├── llms.txt            — AI/LLM brand intelligence — escritor identity, one-page site noted explicitly.
 ├── robots.txt          — Allows all bots incl. AI crawlers. Disallows /legacy/.
-├── sitemap.xml         — Just the homepage + docs/ + llms.txt now (no more category-page entries).
+├── sitemap.xml         — Homepage + llms.txt only.
 ├── CLAUDE.md           — This file.
 ├── README.md           — Repo readme. CONTAINS WakaTime markers — see "Do not touch".
 ├── CNAME               — ivanro.com
 ├── img/                — helios-cybele-ultimate.jpg still used as og:image only (no inline art on the
 │                          page anymore — radical minimalism means no gallery/imagery in the page body).
 │                          Everything else in img/ is unreferenced, left in place, not deleted.
-├── docs/               — ARCHIVE (quien-es-ivan-robayo.html is noindex + out of sitemap since 2026-10-11 — it said "Mentor de Trabajo Remoto"): remote-career SEO guides from a much earlier era. Untouched, unrelated.
 └── legacy/             — Old Villano.ai site. DO NOT TOUCH. Not served (robots disallow).
 ```
 
@@ -79,7 +78,7 @@
 2. **Substack** carries the actual writing (essays if/when he publishes them, El Archivo de Helios in text).
 3. **YouTube (@espiritualidadivan)** carries El Archivo de Helios in video. @historicoia is gone — don't link it, don't mention it.
 4. **Amazon** carries Quema Tu Dinero.
-5. **docs/** — unrelated SEO archive from the remote-career era, still online, not part of this identity.
+5. **docs/ (remote-work guides) — DELETED 2026-10-11** at Ivan's request ("saca todo lo de trabajo remoto"). Do not rebuild.
 
 ---
 
@@ -110,7 +109,7 @@
 | Domain | https://www.ivanro.com | live, single page |
 | Substack | https://ivanrob.substack.com | linked |
 | YouTube (El Archivo de Helios, sci-fi channel) | https://www.youtube.com/@archivoscifi | linked from II. Libros, rel=me, JSON-LD, llms.txt (2026-10-11) |
-| YouTube (@espiritualidadivan) | https://www.youtube.com/@espiritualidadivan | only in rel=me/sameAs; footer now → @archivoscifi (Ivan, 2026-10-11) |
+| YouTube (@espiritualidadivan) | https://www.youtube.com/@espiritualidadivan | Ivan's main channel: footer YouTube link + rel=me/sameAs. Helios specifically → @archivoscifi (Ivan, 2026-10-11) |
 | YouTube (@historicoia, AI research) | — | REMOVED v10, do not re-add |
 | Book — Quema Tu Dinero | https://www.amazon.com/dp/B0DG4YMW9Q | linked |
 | Contact | navirobayo@gmail.com | on the single page |
