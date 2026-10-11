@@ -62,7 +62,7 @@
 ├── img/                — helios-cybele-ultimate.jpg still used as og:image only (no inline art on the
 │                          page anymore — radical minimalism means no gallery/imagery in the page body).
 │                          Everything else in img/ is unreferenced, left in place, not deleted.
-├── docs/               — ARCHIVE: remote-career SEO guides from a much earlier era. Untouched, unrelated.
+├── docs/               — ARCHIVE (quien-es-ivan-robayo.html is noindex + out of sitemap since 2026-10-11 — it said "Mentor de Trabajo Remoto"): remote-career SEO guides from a much earlier era. Untouched, unrelated.
 └── legacy/             — Old Villano.ai site. DO NOT TOUCH. Not served (robots disallow).
 ```
 
@@ -110,7 +110,7 @@
 | Domain | https://www.ivanro.com | live, single page |
 | Substack | https://ivanrob.substack.com | linked |
 | YouTube (El Archivo de Helios, sci-fi channel) | https://www.youtube.com/@archivoscifi | linked from II. Libros, rel=me, JSON-LD, llms.txt (2026-10-11) |
-| YouTube (@espiritualidadivan) | https://www.youtube.com/@espiritualidadivan | footer link + rel=me/sameAs; footer target pending Ivan's call |
+| YouTube (@espiritualidadivan) | https://www.youtube.com/@espiritualidadivan | only in rel=me/sameAs; footer now → @archivoscifi (Ivan, 2026-10-11) |
 | YouTube (@historicoia, AI research) | — | REMOVED v10, do not re-add |
 | Book — Quema Tu Dinero | https://www.amazon.com/dp/B0DG4YMW9Q | linked |
 | Contact | navirobayo@gmail.com | on the single page |
