@@ -109,7 +109,8 @@
 |---|---|---|
 | Domain | https://www.ivanro.com | live, single page |
 | Substack | https://ivanrob.substack.com | linked |
-| YouTube (El Archivo de Helios) | https://www.youtube.com/@espiritualidadivan | linked |
+| YouTube (El Archivo de Helios, sci-fi channel) | https://www.youtube.com/@archivoscifi | linked from II. Libros, rel=me, JSON-LD, llms.txt (2026-10-11) |
+| YouTube (@espiritualidadivan) | https://www.youtube.com/@espiritualidadivan | footer link + rel=me/sameAs; footer target pending Ivan's call |
 | YouTube (@historicoia, AI research) | — | REMOVED v10, do not re-add |
 | Book — Quema Tu Dinero | https://www.amazon.com/dp/B0DG4YMW9Q | linked |
 | Contact | navirobayo@gmail.com | on the single page |
